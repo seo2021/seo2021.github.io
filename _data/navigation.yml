@@ -1,7 +1,7 @@
 # main links
 main:
-  - title: "Archive"
-    url: /year-archive/
+  - title: "JAVA"
+    url: /java/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
