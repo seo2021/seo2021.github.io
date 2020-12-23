@@ -20,7 +20,7 @@ title                    : "서까치의 레포지토리"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "서까치"
-description              : "개발 공부 "
+description              : "개발 공부 기록"
 url                      : "https://seo2021.github.io" # the base hostname & protocol for your site e.g.
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
