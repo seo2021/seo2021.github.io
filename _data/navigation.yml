@@ -4,6 +4,12 @@ main:
     url: /java/
   - title: "DSA"
     url: /dsa/
+  - title: "WEB"
+    url: /web/
+  - title: "SQL&DB"
+    url: /sqldb/
+  - title: "코딩테스트"
+    url: /codingtest/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
