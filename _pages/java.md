@@ -1,6 +1,6 @@
 ---
 title: "JAVA"
-layout: categories
+layout: category
 permalink: /categories/java/
 author_profile: true
 ---
