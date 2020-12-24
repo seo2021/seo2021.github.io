@@ -279,6 +279,7 @@ defaults:
       comments: # true
       share: true
       related: true
+      show_date: true
   # _pages
   - scope:
       path: "_pages"
@@ -286,3 +287,4 @@ defaults:
     values:
       layout: single
       author_profile: true
+      show_date: true
