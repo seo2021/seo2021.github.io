@@ -3,15 +3,15 @@ main:
   - title: "ABOUT"
     url: /about/
   - title: "JAVA"
-    url: /java/
+    url: /categories/java/
   - title: "DSA"
-    url: /dsa/
+    url: /categories/dsa/
   - title: "WEB"
-    url: /web/
+    url: /categories/web/
   - title: "SQL&DB"
-    url: /sqldb/
+    url: /categories/sqldb/
   - title: "코딩테스트"
-    url: /codingtest/
+    url: /categories/codingtest/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
