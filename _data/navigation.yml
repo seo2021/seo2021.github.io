@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "ABOUT"
+    url: /about/
   - title: "JAVA"
     url: /java/
   - title: "DSA"
