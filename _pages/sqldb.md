@@ -1,6 +1,6 @@
 ---
 title: "SQL & DB"
-layout: categories
+layout: category
 permalink: /categories/sqldb/
 author_profile: true
 ---
