@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "seo2021"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Studying web development" #"I am an **amazing** person."
+  bio              : "개발 공부하는 사람" #"I am an **amazing** person."
   location         : #"Somewhere"
   email            : 
   links:
