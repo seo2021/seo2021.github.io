@@ -1,6 +1,6 @@
 ---
 title: "WEB"
 layout: categories
-permalink: /web/
+permalink: /categories/web/
 author_profile: true
 ---
