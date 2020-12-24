@@ -1,6 +1,6 @@
 ---
 title: "Data Structures and Algorithms"
 layout: categories
-permalink: /dsa/
+permalink: /categories/dsa/
 author_profile: true
 ---
