@@ -129,7 +129,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/seo2021"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -274,7 +274,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      #author_profile: true
       read_time: true
       comments: # true
       share: true
@@ -286,5 +286,5 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
+      #author_profile: true
       show_date: true
