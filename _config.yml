@@ -93,11 +93,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "서까치"
+  name             : "seo2021"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : #"I am an **amazing** person."
   location         : #"Somewhere"
-  email            :
+  email            : "https://seo2021.github.io/"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
