@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "서까치"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "개발 공부 중" #"I am an **amazing** person."
+  bio              : "개발자로의 취업을 준비하고 있습니다" #"I am an **amazing** person."
   location         : "South Korea"
   email            : 
   links:
