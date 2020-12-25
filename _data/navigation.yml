@@ -6,9 +6,6 @@ main:
     url: /categories/
   - title: "JAVA"
     url: /categories/java/
-    subnav:
-      - title: "PROGRAMMERS LECTURE"
-        url: /categories/java/programmers-lecture
   - title: "DSA"
     url: /categories/dsa/
   - title: "WEB"
@@ -28,17 +25,17 @@ main:
   
 # sidebar links
 sidebar-navigation:
-  - title: "Parent Page A"
+  - title: "JAVA"
     children:
-      - title: "Child Page A1"
-        url: /
+      - title: "PRAGRAMMERS LECTURE"
+        url: /categories/java/programmers-lecture/
       - title: "Child Page A2"
         url: /
       - title: "Child Page A3"
         url: /
       - title: "Child Page A4"
         url: /
-  - title: "Parent Page B"
+  - title: "DSA"
     children:
       - title: "Child Page B1"
         url: /
@@ -50,7 +47,7 @@ sidebar-navigation:
         url: /
       - title: "Child Page B5"
         url: /
-  - title: "Parent Page C"
+  - title: "SQL&DB"
     children:
       - title: "Child Page C1"
         url: /
@@ -62,7 +59,7 @@ sidebar-navigation:
         url: /
       - title: "Child Page C5"
         url: /
-  - title: "Parent Page D"
+  - title: "CODING INTERVIEW"
     children:
       - title: "Child Page D1"
         url: /
