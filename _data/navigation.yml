@@ -6,8 +6,6 @@ main:
     url: /categories/
   - title: "JAVA"
     url: /categories/java/
-    - title: "프로그래머스 강의"
-      url: /categories/java/programmers
   - title: "DSA"
     url: /categories/dsa/
   - title: "WEB"
