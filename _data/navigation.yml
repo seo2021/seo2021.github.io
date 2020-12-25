@@ -9,9 +9,9 @@ main:
   - title: "WEB"
     url: /categories/web/
   - title: "SQL&DB"
-    url: /categories/sqldb/
-  - title: "코딩테스트"
-    url: /categories/codingtest/
+    url: /categories/sql-db/
+  - title: "CODING INTERVIEW"
+    url: /categories/coding-interview/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
