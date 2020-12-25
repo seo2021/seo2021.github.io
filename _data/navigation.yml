@@ -2,6 +2,8 @@
 main:
   - title: "ABOUT"
     url: /about/
+  - title: "Categories"
+    url: /categories/
   - title: "JAVA"
     url: /categories/java/
   - title: "DSA"
