@@ -6,7 +6,7 @@ main:
     url: /categories/
   - title: "JAVA"
     url: /categories/java/
-    submain:
+    subnav:
       - title: "PROGRAMMERS LECTURE"
         url: /categories/java/programmers-lecture
   - title: "DSA"
