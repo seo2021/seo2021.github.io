@@ -2,7 +2,7 @@
 main:
   - title: "ABOUT"
     url: /about/
-  - title: "Categories"
+  - title: "CATEGORIES"
     url: /categories/
   - title: "JAVA"
     url: /categories/java/
