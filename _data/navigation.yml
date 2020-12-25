@@ -27,7 +27,7 @@ main:
 sidebar-navigation:
   - title: "JAVA"
     children:
-      - title: "PRAGRAMMERS LECTURE"
+      - title: "PROGRAMMERS LECTURE"
         url: /categories/java/programmers-lecture/
       - title: "Child Page A2"
         url: /
