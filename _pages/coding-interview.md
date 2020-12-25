@@ -1,5 +1,5 @@
 ---
-title: "코딩테스트"
+title: "Coding Interview"
 layout: category
 permalink: /categories/coding-interview/
 author_profile: true
