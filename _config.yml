@@ -280,6 +280,9 @@ defaults:
       share: true
       related: true
       show_date: true
+    sidebar:
+      title: "상세 카테고리"
+      nav: sidebar-navigation
   # _pages
   - scope:
       path: "_pages"
@@ -288,3 +291,6 @@ defaults:
       layout: single
       author_profile: true
       show_date: true
+    sidebar:
+      title: "상세 카테고리"
+      nav: sidebar-navigation
