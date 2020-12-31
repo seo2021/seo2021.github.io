@@ -268,9 +268,6 @@ compress_html:
 
 # Defaults Post들에 적용될 기본 설정들
 defaults:
-  sidebar:
-    title: "상세 카테고리"
-    nav: sidebar-navigation
   # _posts
   - scope:
       path: ""
@@ -283,6 +280,9 @@ defaults:
       share: true
       related: true
       show_date: true
+      sidebar:
+        title: "상세 카테고리"
+          nav: sidebar-navigation
   # _pages
   - scope:
       path: "_pages"
@@ -291,3 +291,6 @@ defaults:
       layout: single
       author_profile: true
       show_date: true
+      sidebar:
+        title: "상세 카테고리"
+          nav: sidebar-navigation
