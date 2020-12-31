@@ -4,6 +4,7 @@ layout: single
 related: true
 categories:
   - JAVA
+  - PROGRAMMERS LECTURES
 tags:
   - 프로그래머스
   - 자바 입문
