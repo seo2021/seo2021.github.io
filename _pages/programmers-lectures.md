@@ -1,5 +1,5 @@
 ---
-title: "PROGRAMMERS LECTURES"
+title: "Programmers Lectures"
 layout: category
 permalink: /categories/java/programmers-lectures/
 author_profile: true
