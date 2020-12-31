@@ -26,9 +26,10 @@ main:
 # sidebar links
 sidebar-navigation:
   - title: "JAVA"
+    url: /categories/java/
     children:
-      - title: "PROGRAMMERS LECTURE"
-        url: /categories/java/programmers-lecture/
+      - title: "PROGRAMMERS LECTURES"
+        url: /categories/java/programmers-lectures/
       - title: "Child Page A2"
         url: /
       - title: "Child Page A3"
@@ -36,6 +37,7 @@ sidebar-navigation:
       - title: "Child Page A4"
         url: /
   - title: "DSA"
+    url: /categories/dsa/
     children:
       - title: "Child Page B1"
         url: /
@@ -44,6 +46,7 @@ sidebar-navigation:
       - title: "Child Page B3"
         url: /
   - title: "WEB"
+    url: /categories/web/
     children:
       - title: "Child Page C1"
         url: /
@@ -52,12 +55,14 @@ sidebar-navigation:
       - title: "Child Page C3"
         url: /
   - title: "SQL&DB"
+    url: /categories/sql-db/
     children:
       - title: "Child Page D1"
         url: /
       - title: "Child Page D2"
         url: /
   - title: "CODING INTERVIEW"
+    url: /categories/coding-interview/
     children:
       - title: "Child Page D1"
         url: /
