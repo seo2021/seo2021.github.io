@@ -1,5 +1,5 @@
 ---
-title: [안녕?]연산자 우선순위(Operator Precedence)
+title: '[안녕?]'연산자 우선순위(Operator Precedence)
 layout: single
 related: true
 categories:
