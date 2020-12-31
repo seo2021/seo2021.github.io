@@ -3,8 +3,8 @@ title: \[프로그래머스 \| 자바 입문\]연산자 우선순위(Operator Pr
 layout: single
 related: true
 categories:
-- JAVA
-- PROGRAMMERS LECTURE
+  - JAVA
+  - PROGRAMMERS LECTURE
 tags:
   - 프로그래머스
   - 자바 입문
