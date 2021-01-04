@@ -266,9 +266,9 @@ compress_html:
     envs: development
 
 
-# Defaults Post들에 적용될 기본 설정들
+# Defaults Post들에 적용될 기본 
 defaults:
-# _posts
+  # _posts
   - scope:
       path: ""
       type: posts
