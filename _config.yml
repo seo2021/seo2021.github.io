@@ -266,7 +266,7 @@ compress_html:
     envs: development
 
 
-# Defaults
+# Defaults Post들에 적용될 기본 
 defaults:
   # _posts
   - scope:
