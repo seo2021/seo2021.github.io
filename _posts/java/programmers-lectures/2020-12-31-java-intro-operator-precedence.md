@@ -1,15 +1,14 @@
 ---
-title: \[프로그래머스 \| 자바 입문\] 연산자 우선순위(Operator Precedence)
+title: java 테스트 게시물 2
 layout: single
 related: true
 categories:
-  - JAVA
-  - PROGRAMMERS LECTURES
+- JAVA
 tags:
-  - 프로그래머스
-  - 강의정리
+  - 자바
   - java
-  - 연산자
+  - 테스트
+  - test
 ---
 
 ## 연산자 우선순위
