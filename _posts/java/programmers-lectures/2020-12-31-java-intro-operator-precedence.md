@@ -17,9 +17,9 @@ tags:
 - 최우선 연산자&nbsp;&nbsp;&nbsp; . [] ()
 - 단항 연산자&nbsp;&nbsp;&nbsp; 증감(++, --), 부호(+, -), 비트(~), 논리(!)
   - 부정, bit 반전 > 부호 > 증감
-- 산술 연산자&nbsp;&nbsp;&nbsp; * / % > + -
-  - * / % > + -
-- 쉬프트 연산자&nbsp;&nbsp;&nbsp; shift(>>, <<, >>>)
+- 산술 연산자&nbsp;&nbsp;&nbsp; * / % + -
+  - \* / % > + -
+- 시프트 연산자&nbsp;&nbsp;&nbsp; shift(>>, <<, >>>)
 - 비교 연산자&nbsp;&nbsp;&nbsp; > < >= <= == !=
 - 비트 연산자&nbsp;&nbsp;&nbsp; & | ^
 - 논리 연산자&nbsp;&nbsp;&nbsp; && ||
