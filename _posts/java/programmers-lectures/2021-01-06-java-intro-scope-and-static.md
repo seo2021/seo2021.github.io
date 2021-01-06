@@ -55,7 +55,9 @@ public class VariableScopeExam {
 ```
 - 같은 클래스 안에 있음에도 globalScope 변수를 사용할 수 없다.
 - main은 static한 메소드이다. static한 메소드에서는 static하지 않은 필드를 사용할 수 없다.
-- static한 필드나 메소드는 클래스가 인스턴스화 되지 않아도 사용할 수 있다.
+
+## static
+- 
 
 ## 정리
 - 단항, 이항, 삼항 연산자 순으로 우선순위를 갖는다.
