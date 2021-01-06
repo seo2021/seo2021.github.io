@@ -14,6 +14,7 @@ tags:
 
 ## 변수의 scope
 - 변수가 선언된 블럭이 그 변수의 사용범위이다.
+
 ```java
 public class VariableScopeExam {
 
