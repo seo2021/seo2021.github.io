@@ -6,8 +6,6 @@ categories:
   - JAVA
   - PROGRAMMERS LECTURES
 tags:
-  - 프로그래머스
-  - 강의정리
   - java
   - 연산자
 ---
