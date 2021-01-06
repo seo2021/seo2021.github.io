@@ -16,7 +16,9 @@ tags:
 - 변수가 선언된 블럭이 그 변수의 사용범위이다.
 ```java
 public class VariableScopeExam {
+
   int globalScope = 10; // 인스턴스 변수
+  
   public void
 }
 ```
