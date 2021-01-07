@@ -21,7 +21,7 @@ public class VariableScopeExam {
   int globalScope = 10; // 인스턴스 변수
   
   public void scopeTest(int value) {
-    int localScope = 10;
+    int localScope = 10; // 지역 변수
     System.out.println(globalScope);
     System.out.println(localScope);
     System.out.println(value);
@@ -40,7 +40,7 @@ public class VariableScopeExam {
   int globalScope = 10; // 인스턴스 변수
   
   public void scopeTest(int value) {
-    int localScope = 10;
+    int localScope = 10; // 지역 변수
     System.out.println(globalScope);
     System.out.println(localScope);
     System.out.println(value);
