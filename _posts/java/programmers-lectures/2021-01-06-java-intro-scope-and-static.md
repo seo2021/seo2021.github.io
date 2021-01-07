@@ -47,9 +47,9 @@ public class VariableScopeExam {
   }
   
   public static void main(String[] args) {
-    System.out.println(globalScope); //오류
-    System.out.println(localScope); //오류
-    System.out.println(value); //오류
+    System.out.println(globalScope); // 오류
+    System.out.println(localScope); // 오류
+    System.out.println(value); // 오류
   }
 }
 ```
@@ -57,7 +57,41 @@ public class VariableScopeExam {
 - main은 static한 메소드이다. static한 메소드에서는 static하지 않은 필드를 사용할 수 없다.
 
 ## static
-- 
+- static으로 선언된 변수는 main 메소드에서 사용 가능
+
+```java
+public class VariableScopeExam {
+  
+  int globalScope = 10; // 인스턴스 변수
+  static int staticVal = 7; // static 변수
+  
+  public static void main(String[] args) {
+    System.out.println(staticVal); // 사용가능
+  }
+}
+```
+- static으로 선언된 변수는 공유된다.
+  - static으로 선언된 변수는 값을 저장할 수 있는 공간이 하나만 생성된다. 그러므로, 인스턴스가 여러 개 생성되어도 static 변수는 하나다.
+
+```java
+VariableScopeExam v1 = new VariableScopeExam();
+VariableScopeExam v2 = new VariableScopeExam();
+v1.globalScope = 20; // 인스턴스 변수
+v2.globalScope = 30;
+
+System.out.println(v1.globalScope); // 20 출력
+System.out.println(v1.globalScope); // 30 출력
+
+v1.staticVal = 10; // static 변수
+v2.staticVal = 20;
+
+System.out.println(v1.staticVal); // 20 출력
+System.out.println(v1.staticVal); // 20 출력
+```
+- globalScope같은 변수(필드)는 인스턴스가 생성될 때 생성되기 때문에, 인스턴스 변수라고 한다.
+- staticVal같은 static한 필드를 클래스 변수라고 한다.
+- 클래스 변수는 '레퍼런스.변수명'보다는 '클래스명.변수명'으로 사용하는 것이 바람직하다.
+  - ex) VariableScopeExam.staicVal
 
 ## 정리
 - 단항, 이항, 삼항 연산자 순으로 우선순위를 갖는다.
