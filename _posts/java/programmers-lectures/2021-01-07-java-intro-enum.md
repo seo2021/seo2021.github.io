@@ -16,8 +16,22 @@ tags:
 - JDK5 이전에는 상수를 열거형 대신 사용
   - 상수를 이용하는 방법
   ```java
-  public
+  public class EnumExam {
+    
+    public static final String MALE = "MALE";
+    public static final String FEMALE = "FEMALE";
+    
+    public static void main(String[] args) {
+      
+      String gender1;
+      
+      gender1 = EnumExam.MALE;
+      gender1 = EnumExam.FEMALE;
+    }
+  }
   ```
+  - 상수를 사용했을 때 문제점
+    - String으로 선언된
 
 
 
