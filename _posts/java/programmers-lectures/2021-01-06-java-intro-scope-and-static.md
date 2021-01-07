@@ -57,7 +57,7 @@ public class VariableScopeExam {
 - main은 static한 메소드이다. static한 메소드에서는 static하지 않은 필드를 사용할 수 없다.
 
 ## static
-- static으로 선언된 변수는 main 메소드에서 사용 가능
+- static으로 선언된 변수는 static한 메소드인 main 메소드에서 사용 가능
 
 ```java
 public class VariableScopeExam {
