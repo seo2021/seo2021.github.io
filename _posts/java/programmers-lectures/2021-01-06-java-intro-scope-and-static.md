@@ -93,7 +93,7 @@ System.out.println(v2.staticVal); // 20 출력
 - globalScope같은 변수(필드)는 인스턴스가 생성될 때 생성되기 때문에, 인스턴스 변수라고 한다.
 - staticVal같은 static한 필드를 클래스 변수라고 한다.
 - 클래스 변수는 '레퍼런스.변수명'보다는 '클래스명.변수명'으로 사용하는 것이 바람직하다.
-  - ex) VariableScopeExam.staicVal
+  - ex) VariableScopeExam.staticVal
  
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 변수의 scope와 static](https://programmers.co.kr/learn/courses/5/lessons/231)
