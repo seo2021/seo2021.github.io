@@ -56,7 +56,6 @@ tags:
   gender2 = Gender.FEMALE;
   ```
 
-:exclamation:
 ## 특정 값만 가져야 한다면 열거형을 사용하는 것이 좋다.
  
 ## 출처
