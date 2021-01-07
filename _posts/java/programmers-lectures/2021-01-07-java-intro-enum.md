@@ -40,21 +40,21 @@ tags:
 - 위와 같은 문제를 발생시키지 않기 위해 열거형을 사용
 - 열거형의 정의 방법
 
-```java
-enum Gender {
-  MALE, FEMALE;
-}
-```
+  ```java
+  enum Gender {
+    MALE, FEMALE;
+  }
+  ```
 
 - 열거형 사용 방법
 
-```java
-Gender gender2;
+  ```java
+  Gender gender2;
 
-// Gender 타입의 변수에는 MALE이나 FEMALE만 대입 가능. 다른 값은 저장할 수 없다.
-gender2 = Gender.MALE;
-gender2 = Gender.FEMALE;
-```
+  // Gender 타입의 변수에는 MALE이나 FEMALE만 대입 가능. 다른 값은 저장할 수 없다.
+  gender2 = Gender.MALE;
+  gender2 = Gender.FEMALE;
+  ```
 
 ## 특정 값만 가져야 한다면 열거형을 사용하는 것이 좋다.
  
