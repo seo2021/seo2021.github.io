@@ -63,7 +63,7 @@ public class VariableScopeExam {
 public class VariableScopeExam {
   
   int globalScope = 10; // 인스턴스 변수
-  static int staticVal = 7; // static 변수
+  static int staticVal = 7; // 클래스 변수
   
   public static void main(String[] args) {
     System.out.println(staticVal); // 사용가능
@@ -82,7 +82,7 @@ v2.globalScope = 30;
 System.out.println(v1.globalScope); // 20 출력
 System.out.println(v1.globalScope); // 30 출력
 
-v1.staticVal = 10; // static 변수
+v1.staticVal = 10; // 클래스 변수
 v2.staticVal = 20;
 
 System.out.println(v1.staticVal); // 20 출력
@@ -92,12 +92,6 @@ System.out.println(v1.staticVal); // 20 출력
 - staticVal같은 static한 필드를 클래스 변수라고 한다.
 - 클래스 변수는 '레퍼런스.변수명'보다는 '클래스명.변수명'으로 사용하는 것이 바람직하다.
   - ex) VariableScopeExam.staicVal
-
-## 정리
-- 단항, 이항, 삼항 연산자 순으로 우선순위를 갖는다.
-- 산술, 비교, 논리, 대입 연산자 순으로 우선순위를 갖는다.
-- 단항과 대입 연산자를 제외한 모든 연산 방향은 왼쪽에서 오른쪽이다.
  
 ## 출처
-- [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 연산자우선순위](https://programmers.co.kr/learn/courses/5/lessons/116)
-- [Kephi Javatory \| 4. Java 자바 - 연산자 종류, 연산자 우선순위](https://kephilab.tistory.com/28)
+- [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 변수의 scope와 static](https://programmers.co.kr/learn/courses/5/lessons/231)
