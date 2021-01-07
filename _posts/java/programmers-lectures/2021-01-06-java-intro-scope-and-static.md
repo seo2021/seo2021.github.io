@@ -55,9 +55,11 @@ public class VariableScopeExam {
 ```
 - 같은 클래스 안에 있음에도 globalScope 변수를 사용할 수 없다.
 - main은 static한 메소드이다. static한 메소드에서는 static하지 않은 필드를 사용할 수 없다.
+  - static하지 않은 필드를 main 메소드에서 사용하려면 객체를 생성한 뒤 사용 가능하다.
+    - ex) VariableScopeExam v1 = new VariableScopeExam();
 
 ## static
-- static으로 선언된 변수는 static한 메소드인 main 메소드에서 사용 가능
+- static으로 선언된 변수는 (static한 메소드인) main 메소드에서 사용 가능
 
 ```java
 public class VariableScopeExam {
@@ -80,13 +82,13 @@ v1.globalScope = 20; // 인스턴스 변수
 v2.globalScope = 30;
 
 System.out.println(v1.globalScope); // 20 출력
-System.out.println(v1.globalScope); // 30 출력
+System.out.println(v2.globalScope); // 30 출력
 
 v1.staticVal = 10; // 클래스 변수
 v2.staticVal = 20;
 
 System.out.println(v1.staticVal); // 20 출력
-System.out.println(v1.staticVal); // 20 출력
+System.out.println(v2.staticVal); // 20 출력
 ```
 - globalScope같은 변수(필드)는 인스턴스가 생성될 때 생성되기 때문에, 인스턴스 변수라고 한다.
 - staticVal같은 static한 필드를 클래스 변수라고 한다.
