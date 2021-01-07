@@ -47,7 +47,6 @@ enum Gender {
 - 열거형 사용 방법
 ```java
 Gender gender2;
-
 // Gender 타입의 변수에는 MALE이나 FEMALE만 대입 가능. 다른 값은 저장할 수 없다.
 gender2 = Gender.MALE;
 gender2 = Gender.FEMALE;
