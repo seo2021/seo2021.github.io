@@ -56,7 +56,7 @@ tags:
   gender2 = Gender.FEMALE;
   ```
 
-## 특정 값만 가져야 한다면 열거형을 사용하는 것이 좋다.
+## :sparkles: 특정 값만 가져야 한다면 열거형을 사용하는 것이 좋다.
  
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 열거형(enum)](https://programmers.co.kr/learn/courses/5/lessons/423)
