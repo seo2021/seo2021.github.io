@@ -20,6 +20,7 @@ tags:
   ```java
   public class EnumExam {
     
+    // 상수 선언
     public static final String MALE = "MALE";
     public static final String FEMALE = "FEMALE";
     
@@ -33,7 +34,7 @@ tags:
   }
   ```
 - 상수를 사용했을 때 문제점
-  - String으로 선언된 gender1이 MALE, FEMALE 둘 중 한 가지 값만을 가질 수 있을 때, gender1의 type이 String이기 때문에 'gender1 = "소년";' 이렇게 수행되어도 전혀 문제가 되지 않는다.
+  - String으로 선언된 gender1이 MALE, FEMALE 둘 중 한 가지 값만 갖게 하고 싶을 때, gender1의 type이 String이기 때문에 'gender1 = "BOY";' 이렇게 수행되어도 전혀 문제가 되지 않는다.
   - 따라서 실행할 때, 원했던 값인 MALE, FEMALE이 아닌 다른 값이 들어오게 되므로 문제를 발생시킬 수 있다.
 
 ## 열거형의 사용
@@ -42,7 +43,7 @@ tags:
 
   ```java
   enum Gender {
-    MALE, FEMALE;
+    MALE, FEMALE; // 넣고 싶은 값만 열거
   }
   ```
 
