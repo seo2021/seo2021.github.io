@@ -12,21 +12,22 @@ tags:
 ---
 
 ## 메소드 오버로딩
-- 매개변수의 유형과 개수를 다르게 하여, 같은 이름의 메소드를 여러 개 가질 수 있게 하는 기술
+- **매개변수의 유형과 개수**를 다르게 하여, **같은 이름의 메소드를 여러 개** 가질 수 있게 하는 기술
+- 매개변수는 다르지만, **비슷한 기능**을 하는 메소드(ex. 매개변수를 더한 뒤 반환)들을 **하나의 이름**으로 사용할 수 있음
 - 메소드 오버로딩은 매개변수 부분이 달라야 한다.
 
   ```java
   class MyClass2 {
   
-    public int plus(int x, int y) {
-      return x+y;
+    public int plus(int x, int y) { // int 2개
+      return x + y;
     }
     
-    public int plus(int x, int y, int z) {
+    public int plus(int x, int y, int z) { // int 3개
       return x + y + z;
     }
     
-    public String plus(String x, String y) {
+    public String plus(String x, String y) { // String 2개
       return x + y;
     }
   }
@@ -47,11 +48,11 @@ public MethodOverloadExam {
   
   public static void main(String[] args) {
   
-    MyClass2 m = new MyClass2();
+    MyClass2 m = new MyClass2(); // 객체 생성
     
-    System.out.println(m.plus(5, 10));
-    System.out.println(m.plus(5, 10, 15));
-    System.out.println(m.plus("hello", " world"));
+    System.out.println(m.plus(5, 10)); // int 2개
+    System.out.println(m.plus(5, 10, 15)); // int 3개
+    System.out.println(m.plus("hello", " world")); // String 2개
   }
 }
 ```
