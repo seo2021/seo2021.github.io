@@ -50,6 +50,7 @@ tags:
     
       public static void main(String[] args) {
       
+        // Car 객체를 생성할 때, name 필드를 초기화
         Car c1 = new Car("소방차");
         Car c2 = new Car("구급차");
         // Car c3 = new car(); // 컴파일 오류 발생(기본 생성자가 없으므로)
