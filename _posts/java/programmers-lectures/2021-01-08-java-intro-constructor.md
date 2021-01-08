@@ -13,6 +13,7 @@ tags:
 
 ## 💡 모든 클래스는 인스턴스화될 때 생성자를 사용한다.
 - ex) `Car()` 부분이 생성자
+
   ```java
   public static void main(String[] args) {
     Car c1 = new Car();
