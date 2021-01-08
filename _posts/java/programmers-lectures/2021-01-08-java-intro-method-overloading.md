@@ -7,9 +7,8 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - java
-  - 메소드
   - 오버로딩
-  - Overloading
+  - overloading
 ---
 
 ## 연산자 우선순위
