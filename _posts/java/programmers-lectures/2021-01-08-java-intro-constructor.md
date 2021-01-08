@@ -38,7 +38,7 @@ tags:
     
     // 생성자
     public Car(String n) {
-      name = n;
+      name = n; // 매개변수를 n을 받아서 name 속성을 
     }
   }
   ```
