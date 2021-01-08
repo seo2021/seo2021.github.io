@@ -29,6 +29,7 @@ tags:
   ```
 
 - n이라는 변수명은 무엇을 의미하는지 쉽게 알 수 없으므로, n보다는 name으로 사용하는 것이 좋다.
+
   ```java
     public Car(String name) {
       name = name;
@@ -38,11 +39,13 @@ tags:
 - 위와 같이 `name = name`으로 코드를 바꾸면, **가깝게 선언된 변수를 우선 사용**하기 때문에 이는 **매개변수 name의 값을 매개변수 name에 대입**하라는 의미가 된다.
 - 즉, 필드의 값이 초기화되지 않는다.
 - 이런 경우 필드라는 것을 컴파일러와 JVM에게 알려주기 위해서 this 키워드를 사용해야 한다.
+
   ```java
   public Car(String name) {
     this.name = name;
   }
   ```
+  
   - 앞의 `this.name`은 필드 name을 의미하고, 그 뒤의 `name`은 매개변수를 의미한다.
   - 즉, 매개변수의 값을 필드에 대입하라는 의미가 된다.
 
