@@ -38,7 +38,7 @@ tags:
     
     // 생성자
     public Car(String n) {
-      name = n; // 매개변수를 n을 받아서 name 속성을 
+      name = n; // 매개변수를 n을 받아서 name 속성에 대입
     }
   }
   ```
@@ -54,8 +54,8 @@ tags:
         Car c2 = new Car("구급차");
         // Car c3 = new car(); // 컴파일 오류 발생(기본 생성자가 없으므로)
         
-        System.out.println(c1.name);
-        System.out.println(c2.name);
+        System.out.println(c1.name); // 소방차
+        System.out.println(c2.name); // 구급차
       }
     }
     ```
