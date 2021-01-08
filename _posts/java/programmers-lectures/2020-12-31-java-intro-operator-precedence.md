@@ -33,4 +33,4 @@ tags:
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 연산자우선순위]: (https://programmers.co.kr/learn/courses/5/lessons/116)
 - [Kephi Javatory \| 4. Java 자바 - 연산자 종류, 연산자 우선순위](https://kephilab.tistory.com/28)
-- 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
+- [프로그래머스 코딩 테스트 연습], https://programmers.co.kr/learn/challenges
