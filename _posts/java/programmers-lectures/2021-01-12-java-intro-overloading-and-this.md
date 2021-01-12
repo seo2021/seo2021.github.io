@@ -19,7 +19,6 @@ tags:
 
   ```java
   public class Car {
-  
     String name;
     int number;
     
@@ -28,13 +27,11 @@ tags:
     
     // String 매개변수 1개
     public Car(String name) {
-    
       this.name = name;
     }
     
     // String, int 매개변수 2개
     public Car(String name, int number) {
-    
       this.name = name;
       this.number = number;
     }
@@ -47,7 +44,6 @@ tags:
   public class CarExam4 {
   
     public static void main(String args[]) {
-    
       Car c1 = new Car();
       Car c2 = new Car("소방차");
       Car c3 = new Car("구급차", 1234);
@@ -60,7 +56,6 @@ tags:
 
   ```java
   public Car() {
-  
     this.name = "이름없음";
     this.number = 0;
   }
@@ -71,7 +66,6 @@ tags:
 
   ```java
   public Car() {
-  
     this("이름없음", 0);
   }
   ```
