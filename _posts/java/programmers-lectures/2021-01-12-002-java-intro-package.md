@@ -12,6 +12,7 @@ tags:
 
 ## 접근 제한자란?
 - 클래스 내에서 멤버의 접근을 제한하는 역할을 한다.
+- 필드, 메소드, 클래스 앞에 붙여서 사용.
 
 ## 접근 제한자의 종류
 - public
@@ -73,7 +74,7 @@ tags:
   ```
   
 - ex 3) AccessObj를 상속받은 AccessObjExam을 사용(서로 다른 패키지)
-  - 패키지는 다르지만, 상속관계에 있으므로 protected 접근 제한자로 지정된 필드 p2에서 접근할 수 있다.
+  - 패키지는 다르지만, 상속관계에 있으므로 protected 접근 제한자로 지정된 필드 p2에 접근할 수 있다.
 
   ```java
   public class AccessObjExam extends AccessObj {
@@ -89,8 +90,6 @@ tags:
     }
   }
   ```
-  
-## 💡 정리
- 
+
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 접근제한자](https://programmers.co.kr/learn/courses/5/lessons/187)
