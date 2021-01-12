@@ -22,13 +22,13 @@ tags:
     String name;
     int number;
     
-    public Car() {}
+    public Car() {} // 기본 생성자
     
-    public Car(String name) {
+    public Car(String name) { // String 인자 1개
       this.name = name;
     }
     
-    public Car(String name, int number) {
+    public Car(String name, int number) { // String, int 인자 2개
       this.name = name;
       this.number = number;
     }
@@ -41,9 +41,9 @@ tags:
   public class CarExam4 {
   
     public static void main(String args[]) {
-      Car c1 = new Car(); // 기본 생성자
-      Car c2 = new Car("소방차"); // String 매개변수 1개
-      Car c3 = new Car("구급차", 1234); // String, int 매개변수 2개
+      Car c1 = new Car(); 
+      Car c2 = new Car("소방차"); 
+      Car c3 = new Car("구급차", 1234); 
     }
   }
   ```
@@ -63,7 +63,7 @@ tags:
   }
   ```
   
-- 위처럼 작성할 경우 생성자끼리 코드가 중복된다.
+- 위처럼 작성할 경우 **생성자끼리 코드가 중복**된다.
   - String, int 매개변수 2개를 받는 생성자가 이미 있다.
 - 'this()'를 이용해 코드 중복을 피하는 것이 좋다.
   - 'this()'는 자기 자신의 생성자를 의미
