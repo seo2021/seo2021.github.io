@@ -1,5 +1,5 @@
 ---
-title: \[프로그래머스 \| 자바 입문\] 생성자 오버로딩과 this(Constructor Overloading and this\(\))
+title: \[프로그래머스 \| 자바 입문\] 생성자 오버로딩(Constructor Overloading)과 this()
 layout: single
 related: true
 categories:
