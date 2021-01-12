@@ -38,7 +38,6 @@ tags:
 
   ```java
   public int plus(int i, int f) {
-  
     return i + f;
   }
   ```
@@ -56,6 +55,7 @@ tags:
       System.out.println(m.plus(5, 10)); // int 2개
       System.out.println(m.plus(5, 10, 15)); // int 3개
       System.out.println(m.plus("hello", " world")); // String 2개
+      
     }
   }
   ```
