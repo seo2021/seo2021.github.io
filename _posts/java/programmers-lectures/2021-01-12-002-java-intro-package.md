@@ -25,8 +25,7 @@ tags:
 - default
   - 접근 제한자 설정하지 않을 경우
   - **자기 자신과 같은 패키지**에서만 접근할 수 있다.  
-
-  `public > protected > default > private`
+- `public > protected > default > private`
 
   ```java
   public class AccessObj {
