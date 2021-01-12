@@ -15,14 +15,14 @@ tags:
 
 ## 접근 제한자의 종류
 - public
-  - <u>어떤 클래스</u>든 접근할 수 있다.
+  - **어떤 클래스**든 접근할 수 있다.
 - protected
-  - <u>자기 자신(같은 클래스), 같은 패키지, 서로 다른 패키지이지만 상속받은 자식 클래스</u>에서는 접근할 수 있다.
+  - **자기 자신(같은 클래스), 같은 패키지, 서로 다른 패키지이지만 상속받은 자식 클래스**에서는 접근할 수 있다.
 - private
-  - <u>자기 자신(같은 클래스)만</u> 접근할 수 있다.
+  - **자기 자신(같은 클래스)만** 접근할 수 있다.
 - default
   - 접근 제한자 설정하지 않을 경우
-  - <u>자기 자신(같은 클래스)과 같은 패키지</u>에서만 접근할 수 있다.
+  - **자기 자신(같은 클래스)과 같은 패키지**에서만 접근할 수 있다.
 
   ```java
   public class AccessObj {
@@ -33,7 +33,7 @@ tags:
   }
   ```
   
-- ex 1) AccessObj를 사용하는 AccessObjExam
+- ex 1) AccessObj를 다른 클래스에서 사용
   
   ```java
   public class AccessObjExam {
@@ -49,17 +49,48 @@ tags:
     }
   }
   ```
-  - AccessObj의 **필드 i의 접근 제한자는 private**이므로, <u>다른 클래스인 AccessObjExam에서 접근할 수 없다.</u>
+  
+  - AccessObj의 **필드 i의 접근 제한자는 private**이므로, 다른 클래스인 AccessObjExam에서 접근할 수 없다.
+  
+- ex 2) AccessObj를 다른 패키지에서 사용
+  
+  ```java
+  public class AccessObjExam {
+ 
+    public static void main(String[] args) {
+    
+      AccessObj po = new AccessObj();
+      
+      System.out.println(po.i); // 컴파일 오류 발생(private)
+      System.out.println(po.k); // 컴파일 오류 발생(default)
+      System.out.println(po.p);
+      System.out.println(po.p2); // 컴파일 오류 발생(protected)
+    }
+  }
+  ```
+  
+  - 패키지가 달라졌기 때문에 **public 접근 제한자**만 접근 가능.
+  
+- ex 3) AccessObj를 상속받은 AccessObjExam을 사용(서로 다른 패키지)
 
-
+  ```java
+  public class AccessObjExam extends AccessObj {
+    
+    public static void main(String[] args) {
+    
+      AccessObjExam obj = new AccessObjExam();
+      
+      System.out.println(po.i); // 컴파일 오류 발생(private)
+      System.out.println(po.k); // 컴파일 오류 발생(default)
+      System.out.println(po.p);
+      System.out.println(po.p2);
+    }
+  }
+  ```
+  
+  - 패키지는 다르지만, 상속관계에 있으므로 protected 접근 제한자로 지정된 필드 p2에서 접근할 수 있다.
+  
 ## 💡 정리
-- 단항, 이항, 삼항 연산자 순으로 우선순위를 갖는다.
-- 산술, 비교, 논리, 대입 연산자 순으로 우선순위를 갖는다.
-- 단항과 대입 연산자를 제외한 모든 연산 방향은 왼쪽에서 오른쪽이다.
  
 ## 출처
-- [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 연산자우선순위](https://programmers.co.kr/learn/courses/5/lessons/116)
-- [Kephi Javatory \| 4. Java 자바 - 연산자 종류, 연산자 우선순위](https://kephilab.tistory.com/28)
-
-
-
+- [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 접근제한자](https://programmers.co.kr/learn/courses/5/lessons/187)
