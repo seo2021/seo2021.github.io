@@ -56,18 +56,29 @@ tags:
     this.name = "이름없음";
     this.number = 0;
   }
+  
+  public Car(String name, int number) {
+    this.name = name;
+    this.number = number;
+  }
   ```
   
-- 위처럼 작성할 경우 코드의 중복이 일어난다.
-  - String, int 인자 2개를 가지는 생성자가 이미 있다.
-- 'this()'를 사용
+- 위처럼 작성할 경우 생성자끼리 코드가 중복된다.
+  - String, int 매개변수 2개를 받는 생성자가 이미 있다.
+- 'this()'를 이용해 코드 중복을 피하는 것이 좋다.
   - 'this()'는 자기 자신의 생성자를 의미
   - 입력한 매개변수의 유형과 개수에 맞는 생성자가 알아서 호출
   - 비슷한 코드를 중복해서 작성하는 것을 방지할 수 있다.
 
   ```java
   public Car() {
+    // 기본 생성자 안에서 자기 자신의 생성자를 호출
     this("이름없음", 0);
+  }
+  
+  public Car(String name, int number) {
+    this.name = name;
+    this.number = number;
   }
   ```
 
