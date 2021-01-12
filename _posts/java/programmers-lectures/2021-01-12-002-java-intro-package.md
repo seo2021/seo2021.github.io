@@ -37,6 +37,7 @@ tags:
   ```
   
 - ex 1) AccessObj를 다른 클래스에서 사용
+  - AccessObj의 **필드 i의 접근 제한자는 private**이므로, 다른 클래스인 AccessObjExam에서 접근할 수 없다.
   
   ```java
   public class AccessObjExam {
@@ -53,9 +54,8 @@ tags:
   }
   ```
   
-  - AccessObj의 **필드 i의 접근 제한자는 private**이므로, 다른 클래스인 AccessObjExam에서 접근할 수 없다.
-  
 - ex 2) AccessObj를 다른 패키지에서 사용
+  - 패키지가 달라졌기 때문에 **public 접근 제한자**만 접근 가능.
   
   ```java
   public class AccessObjExam {
@@ -72,9 +72,8 @@ tags:
   }
   ```
   
-  - 패키지가 달라졌기 때문에 **public 접근 제한자**만 접근 가능.
-  
 - ex 3) AccessObj를 상속받은 AccessObjExam을 사용(서로 다른 패키지)
+  - 패키지는 다르지만, 상속관계에 있으므로 protected 접근 제한자로 지정된 필드 p2에서 접근할 수 있다.
 
   ```java
   public class AccessObjExam extends AccessObj {
@@ -90,8 +89,6 @@ tags:
     }
   }
   ```
-  
-  - 패키지는 다르지만, 상속관계에 있으므로 protected 접근 제한자로 지정된 필드 p2에서 접근할 수 있다.
   
 ## 💡 정리
  
