@@ -50,10 +50,12 @@ tags:
 
   ```java
   public class Duck extends Bird { // 추상 클래스인 Bird 상속받음
+  
     @Override
     public void sing() { // 상속받은 추상 메소드 오버라이딩
       System.out.println("꽥꽥");
     }
+    
   }
   ```
 
