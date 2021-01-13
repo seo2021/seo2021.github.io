@@ -94,6 +94,22 @@ tags:
   }
   ```
 - 💡 이와 같은 오류를 방지하기 위해, 매개변수를 가지는 생성자를 선언해야 할 경우에는 되도록이면 **기본 생성자까지 명시적으로 선언**하는 것이 좋다.
+
+  ```java
+  // 부모 클래스
+  public class Car { 
+  
+    public Car() {
+      System.out.println("Car의 기본 생성자입니다.");
+    }
+  
+    // 사용자 정의 생성자
+    public Car(String name) {
+      System.out.println(name + " 을 받아들이는 생성자입니다.");
+    }
+    
+  }
+  ```
  
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| super와 부모생성자](https://programmers.co.kr/learn/courses/5/lessons/192)
