@@ -99,6 +99,7 @@ tags:
   // 부모 클래스
   public class Car { 
   
+    // 기본 생성자
     public Car() {
       System.out.println("Car의 기본 생성자입니다.");
     }
