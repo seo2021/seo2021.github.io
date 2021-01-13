@@ -74,6 +74,6 @@ tags:
   ```
  
 ## 출처
-- [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 연산자우선순위](https://programmers.co.kr/learn/courses/5/lessons/116)
+- [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 추상클래스](https://programmers.co.kr/learn/courses/5/lessons/188)
 - [코딩의 시작, TCP School \| JAVA \| 추상 클래스](https://www.tcpschool.com/java/java_polymorphism_abstract)
 - [코딩의 시작, TCP School \| JAVA \| 메소드 오버라이딩](https://www.tcpschool.com/java/java_inheritance_overriding)
