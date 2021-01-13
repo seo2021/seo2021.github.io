@@ -16,17 +16,30 @@ tags:
 - 클래스가 인스턴스화될 때, 생성자가 실행되면서 객체의 초기화를 한다. 이 때, 자신의 생성자만 실행되는 것이 아니고 **부모의 생성자부터** 실행된다.
 
   ```java
-  public class Car {
+  public class Car { // 부모 클래스
     public Car() {
       System.out.println("Car의 기본 생성자입니다.");
     }
   }
   
-  public class Bus extends Car {
+  public class Bus extends Car { // 자식 클래스
     public Bus() {
       System.out.println("Bus의 기본 생성자입니다.");
     }
   }
+  
+  public class BusExam {
+    public static void main(String[] args) {
+      Bus b = new Bus(); // 자식 클래스의 객체 생성
+    }
+  }
+  ```
+  
+- 실행 결과
+
+  ```java
+  Car의 기본 생성자입니다.
+  Bus의 기본 생성자입니다.
   ```
 
 
