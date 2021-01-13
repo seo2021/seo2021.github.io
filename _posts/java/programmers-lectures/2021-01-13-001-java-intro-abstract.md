@@ -59,6 +59,7 @@ tags:
 
 ## 사용하기
 - 추상 클래스인 Bird는 객체를 생성할 수 없으므로, 이를 상속받은 자식 클래스인 Duck의 객체를 생성하여 사용한다.
+
   ```java
   public class DuckExam {
     public static void main(String[] args) {
