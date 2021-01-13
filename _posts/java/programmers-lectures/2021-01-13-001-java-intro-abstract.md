@@ -49,7 +49,6 @@ tags:
 
   ```java
   public class Duck extends Bird { // 추상 클래스인 Bird 상속받음
-  
     @Override
     public void sing() { // 상속받은 추상 메소드 오버라이딩
       System.out.println("꽥꽥");
@@ -61,7 +60,6 @@ tags:
 - 추상 클래스인 Bird는 객체를 생성할 수 없으므로, 이를 상속받은 자식 클래스인 Duck의 객체를 생성하여 사용한다.
   ```java
   public class DuckExam {
-    
     public static void main(String[] args) {
     
       // Bird b = new Bird(); // 추상 클래스는 객체 생성 불가
