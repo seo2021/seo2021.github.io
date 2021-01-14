@@ -7,7 +7,7 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - java
-  - abstract
+  - 
 ---
 
 ## 추상 메소드(abstract method)
