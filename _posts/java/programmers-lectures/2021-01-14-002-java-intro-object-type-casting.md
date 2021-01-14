@@ -34,6 +34,57 @@ tags:
     - 참조 변수가 사용할 수 있는 멤버의 개수가 실제 인스턴스 **멤버 개수보다 많기** 때문이다.
 
 ## 참조 변수의 형 변환
+- 부모 타입으로 자식 객체를 참조할 수 있다.
+- 부모 타입으로 자식 객체를 참조하게 되면, **부모가 가지고 있는 메소드만 사용**할 수 있다.
+
+  ```java
+  // 부모 클래스
+  public class Car {
+    public void run() {
+      System.out.println("Car의 run 메소드");
+    }
+  }
+  
+  // 자식 클래스
+  public class Bus extends Car {
+    public void ppangppang() {
+      System.out.println("빵빵");
+    }
+  }
+  
+  public class BusExam {
+    public static void main(String[] args) {
+      // 부모 타입으로 자식 객체 참조
+      Car car = new Bus(); 
+      car.run();
+      car.ppangppang(); // 컴파일 오류 발생
+    }
+  }
+  ```
+
+- 자식 객체가 가지고 있는 메소드나 속성을 사용하고 싶다면 **형 변환**을 해야 한다.
+
+  ```java
+  public class BusExam {
+    public static void main(String[] args) {
+      // 부모 타입으로 자식 객체 참조
+      Car car = new Bus(); 
+      car.run();
+      // car.ppangppang(); // 컴파일 오류 발생
+      
+      // 부모 타입을 자식 타입으로 형 변환
+      Bus bus = (Bus)car;
+      bus.run();
+      bus.ppangppang();
+    }
+  }
+  ```
+  - ppangppang() 메소드를 호출하고 싶다면, Bus 타입의 참조 변수로 참조해야 한다.
+- 객체들끼리도 형 변환이 가능하다. 단, 상속관계에 있을 때만 가능하다.
+- 부모 타입으로 자식 타입의 객체를 참조할 때는 묵시적으로 형변환이 일어난다.
+- 부모 타이
+
+
 
     
   
