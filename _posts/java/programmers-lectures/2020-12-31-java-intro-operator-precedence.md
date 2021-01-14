@@ -7,7 +7,7 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - java
-  - 연산자
+  - operator
 ---
 
 ## 연산자 우선순위
