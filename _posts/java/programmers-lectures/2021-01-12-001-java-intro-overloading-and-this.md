@@ -6,11 +6,8 @@ categories:
   - JAVA
   - PROGRAMMERS LECTURES
 tags:
-  - java
   - 오버로딩
-  - overloading
   - 생성자
-  - constructor
   - this
 ---
 
