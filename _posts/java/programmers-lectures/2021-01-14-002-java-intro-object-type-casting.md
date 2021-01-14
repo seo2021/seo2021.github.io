@@ -7,7 +7,7 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - java
-  - typeCasting
+  - 형변환
 ---
 
 ## 추상 메소드(abstract method)
