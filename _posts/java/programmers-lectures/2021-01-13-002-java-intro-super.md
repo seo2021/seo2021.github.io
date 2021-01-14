@@ -9,7 +9,6 @@ tags:
   - java
   - super
   - 부모생성자
-  - constructor
 ---
 
 ## 부모 생성자
