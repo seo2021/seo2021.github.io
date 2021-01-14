@@ -7,7 +7,6 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - 접근제한자
-  - AccessModifier
 ---
 
 ## 접근 제한자란?
