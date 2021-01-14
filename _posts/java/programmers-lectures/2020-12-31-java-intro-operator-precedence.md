@@ -8,6 +8,7 @@ categories:
 tags:
   - java
   - operator
+  - 연산자
 ---
 
 ## 연산자 우선순위
