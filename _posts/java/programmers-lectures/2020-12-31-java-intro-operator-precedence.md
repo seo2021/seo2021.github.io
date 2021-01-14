@@ -7,7 +7,6 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - java
-  - operator
   - 연산자
 ---
 
