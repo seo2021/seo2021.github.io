@@ -7,7 +7,7 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - java
-  - 변수
+  - variable
   - scope
   - static
 ---
