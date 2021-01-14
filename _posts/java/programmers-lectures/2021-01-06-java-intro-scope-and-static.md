@@ -7,7 +7,9 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - java
+  - 변수
   - scope
+  - 
 ---
 
 ## 변수의 Scope
