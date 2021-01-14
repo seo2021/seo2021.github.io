@@ -7,7 +7,7 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - java
-  - overriding
+  - 오버라이딩
 ---
 
 ## 메소드 오버라이딩(method overriding) 
