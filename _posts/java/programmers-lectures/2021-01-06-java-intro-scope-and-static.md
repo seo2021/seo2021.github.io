@@ -6,7 +6,6 @@ categories:
   - JAVA
   - PROGRAMMERS LECTURES
 tags:
-  - java
   - scope
   - static
 ---
