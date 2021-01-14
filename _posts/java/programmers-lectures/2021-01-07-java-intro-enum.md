@@ -6,7 +6,6 @@ categories:
   - JAVA
   - PROGRAMMERS LECTURES
 tags:
-  - java
   - 열거형
   - Enum
   - 상수
