@@ -6,7 +6,6 @@ categories:
   - JAVA
   - PROGRAMMERS LECTURES
 tags:
-  - java
   - 오버라이딩
 ---
 
