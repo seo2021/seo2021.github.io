@@ -83,7 +83,7 @@ tags:
       Car car = new Bus(); 
       
       car.run(); // 부모의 메소드 참조 가능
-      car.ppangppang(); // 자식 메소드 참조 시, 컴파일 오류 발생
+      car.ppangppang(); // **자식 메소드 참조 시, 컴파일 오류 발생
     }
   }
   ```
