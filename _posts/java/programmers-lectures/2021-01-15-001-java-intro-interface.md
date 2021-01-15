@@ -136,10 +136,10 @@ tags:
   interface Cat extends Animal { public abstract void cry(); } 
   interface Dog extends Animal { public abstract void cry(); }
   
-  // 
+  // 상속받은 메소드 정의
   class MyPet implement Cat, Dog { public void cry() {...} }
   ```
-  - 인터페이스에서는 메소드 구현부를 작성하지 않고, Cat, Dog 인터페이스를 구현한 MyPet 클래스에서만 cry() 메소드를 정의하므로
+  - 인터페이스에서는 메소드 구현부를 작성하지 않고, **Cat, Dog 인터페이스를 구현한 MyPet 클래스에서만 cry() 메소드를 정의**하므로
   앞에서 발생한 메소드 호출의 모호성이 없다.
 
 ## 출처
