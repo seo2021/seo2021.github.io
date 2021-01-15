@@ -53,12 +53,6 @@ tags:
 - 하지만, 부모 클래스 타입에서 자식 클래스 타입으로의 형 변환은 반드시 명시해야 한다.
 
   ```java
-  class Parent { ... }
-  class Child extends Parent { ... }
-  ...
-  Parent pa01 = null;
-  Child ch = new Child();
-  
   ch = (Child)pa01; // 타입 변환을 생략할 수 없음
   ```
   - '작은 그릇'인 자식에 '큰 그릇'인 부모를 담을 수 없음.
