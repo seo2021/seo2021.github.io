@@ -87,7 +87,6 @@ tags:
     }
   }
   ```
-  - Bus는 Car이기도 함. 따라서 Car로 Bus를 가리킬 수 있음.
 
 - 자식 객체가 가지고 있는 메소드나 속성을 사용하고 싶다면 **형 변환**을 해야 한다.
 
@@ -97,9 +96,11 @@ tags:
   bus.run();
   bus.ppangppang();
   ```
-  - Car는 Truck일 수도 있고, Sports Car일 수도 있다. 따라서 Bus로 Car를 가리킬 수 없다.
-    - Truck을 Bus라고 가리킬 수 없다.
   - ppangppang() 메소드를 호출하고 싶다면, Bus 타입의 참조 변수로 참조해야 한다.
+  
+- Bus는 Car이기도 함. 따라서 Car로 Bus를 가리킬 수 있음.
+- 하지만, Car는 Truck일 수도 있고, Sports Car일 수도 있다. 따라서 Bus로 Car를 가리킬 수 없다.
+  - Truck을 Bus라고 가리킬 수 없다.
  
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 클래스 형변환](https://programmers.co.kr/learn/courses/5/lessons/193)
