@@ -92,19 +92,10 @@ tags:
 - 자식 객체가 가지고 있는 메소드나 속성을 사용하고 싶다면 **형 변환**을 해야 한다.
 
   ```java
-  public class BusExam {
-    public static void main(String[] args) {
-      // 부모 타입으로 자식 객체 참조
-      Car car = new Bus(); 
-      car.run();
-      // car.ppangppang(); // 컴파일 오류 발생
-      
-      // 부모 타입을 자식 타입으로 형 변환
-      Bus bus = (Bus)car;
-      bus.run();
-      bus.ppangppang();
-    }
-  }
+  // 부모 타입을 자식 타입으로 형 변환
+  Bus bus = (Bus)car;
+  bus.run();
+  bus.ppangppang();
   ```
   - Car는 Truck일 수도 있고, Sports Car일 수도 있다. 따라서 Bus로 Car를 가리킬 수 없다.
     - Truck을 Bus라고 가리킬 수 없다.
