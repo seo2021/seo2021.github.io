@@ -143,8 +143,9 @@ tags:
   앞에서 발생한 메소드 호출의 모호성이 없다.
   - 💡 인터페이스는 인터페이스로부터만 상속을 받을 수 있으며, 여러 인터페이스를 상속받을 수도 있다.
   
-## 인터페이스의 default method
+## 인터페이스의 default method와 static method
 - **JAVA 8**이 등장하면서 interface에 대한 정의 몇 가지가 변경되었다.
+  - **default method**와 **static method** 정의 가능
 - 인터페이스 내 메소드가 **default 키워드**로 선언되면, **메소드를 정의**할 수 있다.
 - 또한, 이를 구현하는 클래스는 **default 메소드를 오버라이딩**할 수 있다.
 - 인터페이스가 변경되면 인터페이스를 구현하는 모든 클래스들이 해당 메소드를 구현해야 하는 문제가 있다. 이런 문제를 해결하기 위해 인터페이스에
@@ -156,13 +157,13 @@ tags:
     public int plus(int i, int j);
     public int multiple(int i, int j);
     
-    // default로 선언하여, 메소드 구현부를 작성
+    // default 키워드를 이용하여 메소드 구현이 가능
     default int exec(int i, int j) { 
       return i + j;
     }
   }
   
-  // Calculator 인터페이스 구현
+  // Calculator 인터페이스 구현하는 클래스
   public class MyCalculator implements Calculator {
     
     @Override
@@ -180,8 +181,9 @@ tags:
   
     public static void main(String[] args) {
     
-      Calculator cal = new MyCalculator(); // 부모 타입으로 자식 참조
-      int value = cal.exec(5, 10); // 인터페이스에서 구현한 default 메소드 호출
+      Calculator cal = new MyCalculator(); // 인터페이스 타입으로 참조
+      cal.plus(3, 4);
+      int value = cal.exec(5, 10); // 인터페이스에서 구현한 default 메소드
       
       System.out.println(value);
     }
@@ -190,17 +192,11 @@ tags:
   
 - static 메소드
   - 인터페이스에 static 메소드를 선언함으로써, 인터페이스를 이용하여 간단한 기능을 가지는 유틸리성 인터페이스를 만들 수 있게 되었다.
-  - 인터페이스에서 정의한 static 메소드는 반드시 `인터페이스명.메소드` 형식으로 호출해야 한다.
+  - 인터페이스에서 정의한 static 메소드는 반드시 `인터페이스명.메소드명()` 형식으로 호출해야 한다.
   
   ```java
   public interface Calculator {
   
-    public int plus(int i, int j);
-    public int multiple(int i, int j);
-    default int exec(int i, int j) { 
-      return i + j;
-    }
-    
     public static int exec2(int i, int j) { // static 메소드
       return i * j;
     }
@@ -209,12 +205,8 @@ tags:
   public class MyCalculatorExam {
   
     public static void main(String[] args) {
-    
-      Calculator cal = new MyCalculator();
-      int value = cal.exec(5, 10); 
-      System.out.println(value);
       
-      int value2 = Calculator.exec2(5, 10); // static 메소드 호출
+      int value2 = Calculator.exec2(5, 10); // '인터페이스명.메소드명()' 형식으로 호출
       System.out.println(value2);
     }
   }
