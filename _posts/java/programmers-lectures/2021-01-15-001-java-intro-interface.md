@@ -163,7 +163,7 @@ tags:
     }
   }
   
-  // Calculator 인터페이스 구현하는 클래스
+  // Calculator 인터페이스를 구현하는 클래스
   public class MyCalculator implements Calculator {
     
     @Override
@@ -183,7 +183,7 @@ tags:
     
       Calculator cal = new MyCalculator(); // 인터페이스 타입으로 참조
       cal.plus(3, 4);
-      int value = cal.exec(5, 10); // 인터페이스에서 구현한 default 메소드
+      int value = cal.exec(5, 10); // 인터페이스에서 구현한 default 메소드 사용
       
       System.out.println(value);
     }
