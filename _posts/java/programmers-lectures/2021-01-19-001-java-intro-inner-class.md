@@ -7,7 +7,7 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - 내부클래스
-  - 익명
+  - 익명클래스 
 ---
 
 ## 내부 클래스(inner class)란?
