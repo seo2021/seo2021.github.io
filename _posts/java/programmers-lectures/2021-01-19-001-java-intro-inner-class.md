@@ -107,7 +107,9 @@ tags:
     - 다른 내부 클래스와는 달리 **이름을 가지지 않는 클래스**.
     - 익명 클래스는 **클래스의 선언과 동시에 객체를 생성**하므로, **단 하나의 객체만을 생성**하는 일회용 클래스.
     - 따라서 생성자를 선언할 수도 없으며, 오로지 **단 하나의 클래스나 단 하나의 인터페이스를 상속받거나 구현**할 수 있다.
-    - 매우 제한적인 용도에 사용되며, **구현해야 하는 메소드가 매우 적은 클래스를 구현할 때** 사용
+    - 매우 제한적인 용도에 사용되며, **구현해야 하는 메소드가 매우 적은 클래스를 구현할 때** 사용.
+      - 상속받는 클래스를 만들 필요가 없을 경우.
+      - 상속받는 클래스가 해당 클래스에서만 사용되고 다른 클래스에서는 사용되지 않는 경우.
     
     ```java
     // 익명 클래스는 선언과 동시에 생성하여 참조변수에 대입
@@ -122,7 +124,7 @@ tags:
       public abstract void exec();
     }
     
-    // 추상 클래스 Action을 상속받는 클래스 MyAction
+    // 추상 클래스 Action을 상속받는 자식 클래스 MyAction
     public class MyAction extends Action {
       // 메소드 오버라이딩
       public void exec() {
@@ -133,27 +135,28 @@ tags:
     // MyAction을 사용하는 클래스
     public class ActionExam {
       public static void main(String[] args) {
-        Action action = new MyAction(); // 부모 타입으로 자식 객체 참조
+        Action action = new MyAction();
         action.exec(); // 오버라이딩한 메소드 사용
       }
     }
     
-    // MyAction 클래스를 사용하지 않고, Action 클래스를 바로 상속받는 익명 클래스를 만들어서 사용
+    // 자식 클래스인 MyAction을 만들지 않고, Action 클래스를 바로 상속받는 익명 클래스를 만들어서 사용
     public class ActionExam {
       public static void main(Strin[] args) {
-        // 익명 클래스
+        // 익명 클래스. Action 클래스를 상속받는 이름없는 객체를 만든다.
         Action action = new Action() {
+          // 상속받은 메소드 구현
           public void exec() {
             System.out.println("exec");
           }
         };
-        
+        // 이름 없는 객체를 action이라는 참조변수가 참조
         action.exec();
       }
     }
-    
     ```
 
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 내부클래스](https://programmers.co.kr/learn/courses/5/lessons/242)
+- [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 익명클래스](https://programmers.co.kr/learn/courses/5/lessons/243)
 - [코딩의 시작, TCP School \| JAVA \| 내부 클래스](https://www.tcpschool.com/java/java_usingClass_innerClass)
