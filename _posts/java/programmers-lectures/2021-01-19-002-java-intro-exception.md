@@ -66,13 +66,19 @@ tags:
       
       // 예외 처리
       try {
+      
         int k = i / j;
         System.out.println(k);
+        
       } catch(ArithmeticException e) {
+      
         // 예외클래스변수명.toString(): 예외 정보를 알려주는 메소드
         System.out.println("0으로 나눌 수 없습니다. : " + e.toString());
+        
       } finally {
+      
         System.out.println("오류 여부와 상관없이 실행");
+        
       }
     }
   }
@@ -81,7 +87,7 @@ tags:
   
     ```java
     0으로 나눌 수 없습니다. : java.lang.ArithmeticException: / by zero
-    오류가 발생하든 안하든 무조건 실행되는 블록입니다.
+    오류 여부와 상관없이 실행
     ```
     - 예외 처리를 하지 않았을 때는 프로그램이 강제 종료되었으나, 예외 처리를 한 후에는 강제 종료되지 않고 잘 실행된다.
     
