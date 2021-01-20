@@ -62,7 +62,7 @@ tags:
   public class ExceptionExam {
     public static void main(String[] args) {
       int i = 10;
-      int j = 5;
+      int j = 0;
       
       // 예외 처리
       try {
