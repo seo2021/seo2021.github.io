@@ -63,11 +63,14 @@ tags:
   }
   ```
 
-## Throwable 클래스
-- 모든 예외의 조상이 되는 **Exception 클래스**와 모든 오류의 조상이 되는 **Error 클래스**의 ***부모 클래스**.
-- Throwable 타입과 이 클래스를 상속받은 서브 타입만이 자바 가상 머신 
+## 자주 사용되는 예외 클래스
 
+| 클래스 | 설명 |
+|:-----:|:-----:|
+| ClassCastException | 수행할 수 없는 타입 변환이 진행될 경우 |
+| ArrayIndexOutOfBoundsException | 배열에 잘못된 인덱스를 사용하여 접근할 경우 |
+| NullPointerException | null 객체의 인스턴스 메소드를 호출하는 등의 경우 |
+| ArithmeticException | 산술 연산에서 정수를 0으로 나누는 등 연산을 수행할 수 없는 경우 |
 
-   
 ## 출처
 - [코딩의 시작, TCP School \| JAVA \| 예외 클래스](https://www.tcpschool.com/java/java_exception_class)
