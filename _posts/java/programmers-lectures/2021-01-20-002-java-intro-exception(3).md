@@ -30,7 +30,7 @@ tags:
     }
   }
   ```
-
+  <br/>  
 - 위의 divide 메소드를 수정하여, divide 메소드에서 발생하는 **ArithmeticException을 호출하는 쪽에서 처리**하도록 한다.
 - divide 메소드를 호하는 main 메소드에서 예외를 처리하도록 코드를 수정한다.
 
