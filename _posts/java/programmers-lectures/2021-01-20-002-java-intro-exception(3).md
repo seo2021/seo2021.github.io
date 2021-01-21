@@ -12,6 +12,7 @@ tags:
 ## 예외 회피하기(throws)
 - **throws**는 예외가 발생했을 때, 예외를 **호출한 쪽에서 처리하도록 던져준다**.
 - **메소드 선언부에 throws 키워드**를 사용하여 해당 메소드를 사용할 때 발생할 수 있는 **예외를 미리 명시**할 수 있다.
+
 - ex) 정수 2개를 매개변수로 받아 나눗셈한 결과를 반환하는 divide 메소드. main 메소드에서는 divide 메소드를 호출한다.
 
   ```java
@@ -29,6 +30,7 @@ tags:
     }
   }
   ```
+
 
 - 위의 divide 메소드를 수정하여, divide 메소드에서 발생하는 **ArithmeticException을 호출하는 쪽에서 처리**하도록 한다.
 - divide 메소드를 호츨하는 main 메소드에서 예외를 처리하도록 코드를 수정한다.
@@ -98,7 +100,8 @@ tags:
   - 예외가 발생하면, **throws 키워드로 해당 예외를 호출한 쪽으로 넘긴다**.
     
 ## 사용자 정의 예외 클래스
-- **Exception 클래스를 상속받아** 자신만의 새로운 예외 클래스를 정의하여 사용할 수 있다.
+- **Exception이나 Exception의 후손 클래스를 상속받아** 자신만의 새로운 예외 클래스를 정의하여 사용할 수 있다.
+- 클래스의 이름만으로 어떤 오류가 발생했는지 알려주어 **코드의 직관성**을 높일 수 있다.
 - 사용자 정의 예외 클래스에는 **생성자**뿐만 아니라 **필드 및 메소드**도 원하는 만큼 추가할 수 있다.
 
 - 사용자 정의 예외 클래스는 다음과 같이 2가지로 나눌 수 있다.
@@ -107,11 +110,12 @@ tags:
   2. **RuntimeException 클래스**를 상속받아 정의한 **unChecked Exception**
     - 예외 처리를 하지 않아도 컴파일 시 오류를 발생시키지 않는다.
     
+    
 - ex) RuntimeException을 상속받은 BizException 클래스
 
   ```java
   public class BizException extends RuntimeException {
-    // 생성자
+    // (5)
     public BizException(String msg) {
       super(msg);
     }
@@ -126,12 +130,12 @@ tags:
 
   ```java
   public class BizService {
-    // BizExcepton 예외를 호출한 곳으로 넘긴다.
+    // BizExcepton 예외를 호출한 곳으로 넘긴다. (4)
     public void bizMethod(int i) throws BizExcepton {
     
-      System.out.println("비지니스 로직이 시작합니다.");
+      System.out.println("비지니스 로직이 시작합니다."); // (2)
       
-      if(i < 0) { // 강제로 예외를 발생시킨다.
+      if(i < 0) { // 예외가 발생하면 (3)
         throw new BizException("매개변수 i는 0이상이어야 합니다.");
       }
       
@@ -141,7 +145,6 @@ tags:
   ```
   
 - ex) 앞에서 만든 BizService를 이용하는 BizExam 클래스
-
   ```java
   public class BizExam {
     public staic void main(String[] args) {
@@ -150,7 +153,7 @@ tags:
       
       try {
       
-        biz.bizMethod(-3); // 예외를 일으키는 인수 전달
+        biz.bizMethod(-3); // 예외 발생(1)
         
       } catch(Exception ex) {
       
