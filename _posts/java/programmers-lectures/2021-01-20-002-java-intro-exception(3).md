@@ -14,6 +14,7 @@ tags:
 - **메소드 선언부에 throws 키워드**를 사용하여 해당 메소드를 사용할 때 발생할 수 있는 **예외를 미리 명시**할 수 있다.
 
 - ex) 정수 2개를 매개변수로 받아 나눗셈한 결과를 반환하는 divide 메소드. main 메소드에서는 divide 메소드를 호출한다.
+
   ```java
   public class ExceptionExam2 [
     public static voiid main(String[] args) {
@@ -29,9 +30,10 @@ tags:
     }
   }
   ```
-
+<br/>
 - 위의 divide 메소드를 수정하여, divide 메소드에서 발생하는 **ArithmeticException을 호출하는 쪽에서 처리**하도록 한다.
 - divide 메소드를 호하는 main 메소드에서 예외를 처리하도록 코드를 수정한다.
+
   ```java
   public class ExceptionExam2 [
     
@@ -62,6 +64,7 @@ tags:
 ## 예외 발생시키기(throw)
 - **throw** 키워드를 사용하여 **강제로 예외를 발생**시킬 수 있다.
 - 오류를 떠넘기는 **throws와 주로 같이 사용**된다.
+
   ```java
   public class ExceptionExam3 {
   
@@ -106,10 +109,10 @@ tags:
   2. **RuntimeException 클래스**를 상속받아 정의한 **unChecked Exception**
     - 예외 처리를 하지 않아도 컴파일 시 오류를 발생시키지 않는다.
 <br/>    
-
 - ex) RuntimeException을 상속받은 사용자 정의 예외 클래스 RuntimeException
-  - 부모 클래스인 RuntimeException에 이미 같은 기능을 가지는 생성자가 있기 때문에, 매개변수로 받아들인 값을 부모 생성자에게 전달해주기만 하면 된다.
+  - 부모 클래스인 RuntimeException에 이미 같은 기능을 가지는 생성자가 있기 때문에, **매개변수로 받아들인 값을 부모 생성자에게 전달**해주기만 하면 된다.
   - 비즈니스 로직이 수행될 때 발생하는 예외
+  
   ```java
   public class BizException extends RuntimeException {
   
@@ -128,6 +131,7 @@ tags:
 - ex) 업무 처리 메소드를 가진 BizService 클래스.
   - 사용자 정의 예외를 발생시키는 BizException를 사용.
   - 업무와 관련하여 예외가 발생했음을 호출한 곳에 알린다.
+  
   ```java
   public class BizService {
     // BizExcepton 예외를 호출한 곳으로 넘긴다. (5)
@@ -146,6 +150,7 @@ tags:
   ```
   
 - ex) 앞에서 만든 BizService를 이용하는 BizExam 클래스
+
   ```java
   public class BizExam {
     public staic void main(String[] args) {
@@ -165,6 +170,7 @@ tags:
   ```
 
 - 실행 결과
+
   ```java
   비지니스 로직이 시작합니다.
   비지니스 로직이 종료됩니다.
