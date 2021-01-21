@@ -118,11 +118,13 @@ tags:
   
     // 문자열 오류메시지를 받는 생성자 (4)
     public BizException(String msg) {
-      super(msg);
+      // 부모 생성자에게 메세지를 넘김
+      super(msg); 
     }
     
     // 실제 발생한 예외를 받는 생성자
     public BizException(Exception ex) {
+      // 부모 생성자에게 예외 를 넘김
       super(ex);
     }
   }
