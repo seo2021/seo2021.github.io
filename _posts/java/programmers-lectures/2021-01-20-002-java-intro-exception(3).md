@@ -108,8 +108,7 @@ tags:
     - 반드시 오류를 처리해야만 하는 Exception
   2. **RuntimeException 클래스**를 상속받아 정의한 **unChecked Exception**
     - 예외 처리를 하지 않아도 컴파일 시 오류를 발생시키지 않는다.
-
-
+<br/>
 - ex) **RuntimeException을 상속받은 사용자 정의 예외 클래스 RuntimeException**
   - 부모 클래스인 RuntimeException에 이미 같은 기능을 가지는 생성자가 있기 때문에, **매개변수로 받아들인 값을 부모 생성자에게 전달**해주기만 하면 된다.
   - 비즈니스 로직이 수행될 때 발생하는 예외에 대한 
