@@ -105,32 +105,38 @@ tags:
     - 반드시 오류를 처리해야만 하는 Exception
   2. **RuntimeException 클래스**를 상속받아 정의한 **unChecked Exception**
     - 예외 처리를 하지 않아도 컴파일 시 오류를 발생시키지 않는다.
-    
-    
-- ex) RuntimeException을 상속받은 BizException 클래스
+<br/>    
+
+- ex) RuntimeException을 상속받은 사용자 정의 예외 클래스 RuntimeException
+  - 부모 클래스인 RuntimeException에 이미 같은 기능을 가지는 생성자가 있기 때문에, 매개변수로 받아들인 값을 부모 생성자에게 전달해주기만 하면 된다.
+  - 비즈니스 로직이 수행될 때 발생하는 예외
   ```java
   public class BizException extends RuntimeException {
-    // (5)
+  
+    // 문자열 오류메시지를 받는 생성자 (4)
     public BizException(String msg) {
       super(msg);
     }
     
+    // 실제 발생한 예외를 받는 생성자
     public BizException(Exception ex) {
       super(ex);
     }
   }
   ```
 
-- ex) 업무 처리 메소드를 가진 BizService 클래스
+- ex) 업무 처리 메소드를 가진 BizService 클래스.
+  - 사용자 정의 예외를 발생시키는 BizException를 사용.
   - 업무와 관련하여 예외가 발생했음을 호출한 곳에 알린다.
   ```java
   public class BizService {
-    // BizExcepton 예외를 호출한 곳으로 넘긴다. (4)
+    // BizExcepton 예외를 호출한 곳으로 넘긴다. (5)
     public void bizMethod(int i) throws BizExcepton {
     
       System.out.println("비지니스 로직이 시작합니다."); // (2)
       
-      if(i < 0) { // 예외가 발생하면 (3)
+      if(i < 0) { 
+        // 예외를 발생시킨다 (3)
         throw new BizException("매개변수 i는 0이상이어야 합니다.");
       }
       
@@ -147,19 +153,29 @@ tags:
       biz.bizMethod(5);
       
       try {
-      
-        biz.bizMethod(-3); // 예외 발생(1)
-        
+        // 메소드 호출. 예외를 발생시키는 인자 전달 (1)
+        biz.bizMethod(-3);
+        // 메소드를 호출한 곳에서 예외 처리 (6)
       } catch(Exception ex) {
       
-        ex.printStackStrace();
+        ex.printStackStrace(); 
       }
     }
   }
   ```
 
-
- 
+- 실행 결과
+  ```java
+  비지니스 로직이 시작합니다.
+  비지니스 로직이 종료됩니다.
+  비지니스 로직이 시작합니다.
+  javaStudy.BizException: 매개변수 i는 0이상이어야 합니다.
+          at javaStudy.BizService.bizMethod(BizService.java:7)
+          at javaStudy.BizExam.main(BizExam.java:9)
+  ```
+  
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| Throws](https://programmers.co.kr/learn/courses/5/lessons/245)
+- [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| Exception 발생시키기](https://programmers.co.kr/learn/courses/5/lessons/315)
+- [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 사용자 정의 Exception](https://programmers.co.kr/learn/courses/5/lessons/316)
 - [코딩의 시작, TCP School \| JAVA \| 예외 발생 및 회피](https://www.tcpschool.com/java/java_exception_throw)
