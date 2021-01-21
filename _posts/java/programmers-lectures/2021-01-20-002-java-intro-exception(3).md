@@ -31,7 +31,7 @@ tags:
   ```
 
 - 위의 divide 메소드를 수정하여, divide 메소드에서 발생하는 **ArithmeticException을 호출하는 쪽에서 처리**하도록 한다.
-- divide 메소드를 호츨하는 main 메소드에서 예외를 처리하도록 코드를 수정한다.
+- divide 메소드를 호하는 main 메소드에서 예외를 처리하도록 코드를 수정한다.
   ```java
   public class ExceptionExam2 [
     
@@ -106,6 +106,7 @@ tags:
   2. **RuntimeException 클래스**를 상속받아 정의한 **unChecked Exception**
     - 예외 처리를 하지 않아도 컴파일 시 오류를 발생시키지 않는다.
     
+    
 - ex) RuntimeException을 상속받은 BizException 클래스
   ```java
   public class BizException extends RuntimeException {
@@ -121,6 +122,7 @@ tags:
   ```
 
 - ex) 업무 처리 메소드를 가진 BizService 클래스
+  - 업무와 관련하여 예외가 발생했음을 호출한 곳에 알린다.
   ```java
   public class BizService {
     // BizExcepton 예외를 호출한 곳으로 넘긴다. (4)
