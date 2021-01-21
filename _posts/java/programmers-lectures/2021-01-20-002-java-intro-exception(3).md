@@ -165,7 +165,7 @@ tags:
         // 메소드를 호출한 곳에서 예외 처리 (6)
       } catch(Exception ex) {
       
-        ex.printStackStrace(); 
+        ex.printStackTrace(); 
       }
     }
   }
