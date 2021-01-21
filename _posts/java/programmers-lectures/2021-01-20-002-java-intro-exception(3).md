@@ -9,11 +9,9 @@ tags:
   - 예외
 ---
 
-## 예외 발생시키기(throw)
-- **throw** 키워드를 사용하여 **강제로 예외를 발생**시킬 수 있다.
-
 ## 예외 회피하기(throws)
 - **throws**는 예외가 발생했을 때, 예외를 **호출한 쪽에서 처리하도록 던져준다**.
+- **메소드 선언부에 throws 키워드**를 사용하여 해당 메소드를 사용할 때 발생할 수 있는 **예외를 미리 명시**할 수 있다.
 - ex) 정수 2개를 매개변수로 받아 나눗셈한 결과를 반환하는 divide 메소드. main 메소드에서는 divide 메소드를 호출한다.
 
   ```java
@@ -26,7 +24,7 @@ tags:
     }
    
     public static int divide(int i, int j) {
-      int k = i / j;
+      int k = i / j; // ArithmeticException 발생
       return k;
     }
   }
@@ -53,13 +51,116 @@ tags:
       }
     }
     
-    // 예외 발생 메소드
+    // ArithmeticException 발생 메소드. 예외를 호출한 쪽으로 넘긴다.
     public static int divide(int i, int j) throws ArithmeticException {
       int k = i / j;
       return k;
     }
   }
   ```
+  - 💡 Exception 클래스는 모든 예외의 조상이므로 `throws Exception`을 하면, 해당 메소드 내에서 발생하는 **모든 예외를 모두 넘길 수 있다**.
+  
+## 예외 발생시키기(throw)
+- **throw** 키워드를 사용하여 **강제로 예외를 발생**시킬 수 있다.
+- 오류를 떠넘기는 **throws와 주로 같이 사용**된다.
+
+  ```java
+  public class ExceptionExam3 {
+  
+    public static void main(String[] args) {
+      int i = 10;
+      int j = 0;
+      
+      try {
+        // 예외 발생 메소드 호출
+        int k = divide(i, j);
+        System.out.println(k);
+       
+      } catch(ArithmeticException e) {
+        // 호출하는 쪽에서 예외 처리
+        System.out.println("0으로 나눌 수 없습니다.");
+      }
+    }
+    
+    // 예외를 호출한 쪽으로 넘긴다.
+    public static int divide(int i, int j) throws IllegalArgumentException {
+      // **2번째 매개변수가 0으로 전달될 경우 강제로 예외를 발생시킨다.
+      if(j == 0) { 
+        throw new IllegalArgumentException("0으로 나눌 수 없어요.");
+      }
+      int k = i / j;
+      return k;
+    }
+  }
+  ```
+  - 0으로 잘못된 나누기를 하여 ArithmeticException을 발생시키기 전에, **두 번째 매개변수가 0이 아닌지 먼저 확인해 예외 처리**하려 한다.
+  - j가 0일 경우 **new 연산자**를 통하여 **IllegalArgumentException 객체**를 만들고, **throw** 키워드로 **강제로 예외를 발생**시킨다.
+  - 예외가 발생하면, **throws 키워드로 해당 예외를 호출한 쪽으로 넘긴다**.
+    
+## 사용자 정의 예외 클래스
+- **Exception 클래스를 상속받아** 자신만의 새로운 예외 클래스를 정의하여 사용할 수 있다.
+- 사용자 정의 예외 클래스에는 **생성자**뿐만 아니라 **필드 및 메소드**도 원하는 만큼 추가할 수 있다.
+
+- 사용자 정의 예외 클래스는 다음과 같이 2가지로 나눌 수 있다.
+  1. **Exception 클래스**를 상속받아 정의한 **checked Exception**
+    - 반드시 오류를 처리해야만 하는 Exception
+  2. **RuntimeException 클래스**를 상속받아 정의한 **unChecked Exception**
+    - 예외 처리를 하지 않아도 컴파일 시 오류를 발생시키지 않는다.
+    
+- ex) RuntimeException을 상속받은 BizException 클래스
+
+  ```java
+  public class BizException extends RuntimeException {
+    // 생성자
+    public BizException(String msg) {
+      super(msg);
+    }
+    
+    public BizException(Exception ex) {
+      super(ex);
+    }
+  }
+  ```
+
+- ex) 업무 처리 메소드를 가진 BizService 클래스
+
+  ```java
+  public class BizService {
+    // BizExcepton 예외를 호출한 곳으로 넘긴다.
+    public void bizMethod(int i) throws BizExcepton {
+    
+      System.out.println("비지니스 로직이 시작합니다.");
+      
+      if(i < 0) { // 강제로 예외를 발생시킨다.
+        throw new BizException("매개변수 i는 0이상이어야 합니다.");
+      }
+      
+      System.out.println("비지니스 로직이 종료됩니다.");
+    }
+  }
+  ```
+  
+- ex) 앞에서 만든 BizService를 이용하는 BizExam 클래스
+
+  ```java
+  public class BizExam {
+    public staic void main(String[] args) {
+      BizService biz = new BizService();
+      biz.bizMethod(5);
+      
+      try {
+      
+        biz.bizMethod(-3); // 예외를 일으키는 인수 전달
+        
+      } catch(Exception ex) {
+      
+        ex.printStackStrace();
+      }
+    }
+  }
+  ```
+
+
  
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| Throws](https://programmers.co.kr/learn/courses/5/lessons/245)
