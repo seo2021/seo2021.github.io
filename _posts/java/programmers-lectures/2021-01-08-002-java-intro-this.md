@@ -7,6 +7,7 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - this
+  - 자바입문
 ---
 
 ## 💡 this는 현재 객체, 자기 자신을 나타낸다.
