@@ -1,5 +1,5 @@
 ---
-title: \[프로그래머스 \| 자바 입문\] 변수의 Scope와 Static
+title: "[프로그래머스 자바 입문] 변수의 Scope와 Static"
 layout: single
 related: true
 categories:
