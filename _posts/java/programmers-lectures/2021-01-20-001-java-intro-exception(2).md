@@ -1,5 +1,5 @@
 ---
-title: \[프로그래머스 \| 자바 입문\] 예외(Exception)-2
+title: "[프로그래머스 자바 입문] 예외(Exception)-2"
 layout: single
 related: true
 categories:
