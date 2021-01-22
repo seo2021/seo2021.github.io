@@ -1,5 +1,5 @@
 ---
-title: \[프로그래머스 \| 자바 입문\] 열거형(Enum)
+title: "[프로그래머스 자바 입문] 열거형(Enum)"
 layout: single
 related: true
 categories:
