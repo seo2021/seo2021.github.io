@@ -8,6 +8,7 @@ categories:
 tags:
   - scope
   - static
+  - 자바입문
 ---
 
 ## 변수의 Scope
