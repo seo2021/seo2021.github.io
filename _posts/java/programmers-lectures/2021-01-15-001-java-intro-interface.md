@@ -7,6 +7,7 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - 인터페이스
+  - 자바입문
 ---
 
 ## 인터페이스(interface)
