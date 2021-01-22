@@ -1,5 +1,5 @@
 ---
-title: \[프로그래머스 \| 자바 입문\] 오버라이딩(Overriding)
+title: "[프로그래머스 자바 입문] 오버라이딩(Overriding)"
 layout: single
 related: true
 categories:
