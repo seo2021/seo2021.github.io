@@ -7,6 +7,7 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - 연산자
+  - 자바입문
 ---
 
 ## 연산자 우선순위
