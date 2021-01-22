@@ -1,5 +1,5 @@
 ---
-title: \[프로그래머스 \| 자바 입문\] 내부 클래스(Inner Class)
+title: "[프로그래머스 자바 입문] 내부 클래스(Inner Class)"
 layout: single
 related: true
 categories:
