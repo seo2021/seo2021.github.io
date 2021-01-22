@@ -1,5 +1,5 @@
 ---
-title: \[프로그래머스 \| 자바 입문\] super와 부모 생성자
+title: "[프로그래머스 자바 입문] super와 부모 생성자"
 layout: single
 related: true
 categories:
