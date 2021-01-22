@@ -7,6 +7,7 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - 예외
+  - 자바입문
 ---
 
 ## 예외 회피하기(throws)
