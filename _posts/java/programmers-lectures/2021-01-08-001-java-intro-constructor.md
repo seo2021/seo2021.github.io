@@ -1,5 +1,5 @@
 ---
-title: \[프로그래머스 \| 자바 입문\] 생성자(Constructor)
+title: "[프로그래머스 자바 입문] 생성자(Constructor)"
 layout: single
 related: true
 categories:
