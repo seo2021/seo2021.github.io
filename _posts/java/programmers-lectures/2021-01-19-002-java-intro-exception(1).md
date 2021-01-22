@@ -7,6 +7,7 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - 예외
+  - 자바입문
 ---
 
 ## 오류(error)와 예외(exception)
