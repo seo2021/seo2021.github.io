@@ -7,6 +7,7 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - abstract
+  - 자바입문
 ---
 
 ## 추상 메소드(abstract method)
