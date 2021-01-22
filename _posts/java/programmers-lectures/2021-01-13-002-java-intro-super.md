@@ -7,6 +7,7 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - super
+  - 자바입문
 ---
 
 ## 부모 생성자
