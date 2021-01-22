@@ -1,5 +1,5 @@
 ---
-title: \[프로그래머스 \| 자바 입문\] this
+title: "[프로그래머스 자바 입문] this"
 layout: single
 related: true
 categories:
