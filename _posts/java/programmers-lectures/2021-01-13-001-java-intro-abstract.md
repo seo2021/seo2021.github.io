@@ -1,5 +1,5 @@
 ---
-title: \[프로그래머스 \| 자바 입문\] 추상 클래스(Abstract Class)
+title: "[프로그래머스 자바 입문] 추상 클래스(Abstract Class)"
 layout: single
 related: true
 categories:
