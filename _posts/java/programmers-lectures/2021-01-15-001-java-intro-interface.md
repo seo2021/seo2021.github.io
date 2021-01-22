@@ -1,5 +1,5 @@
 ---
-title: \[프로그래머스 \| 자바 입문\] 인터페이스(Interface)
+title: "[프로그래머스 자바 입문] 인터페이스(Interface)"
 layout: single
 related: true
 categories:
