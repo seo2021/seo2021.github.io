@@ -8,6 +8,7 @@ categories:
 tags:
   - 내부클래스
   - 익명클래스 
+  - 자바입문
 ---
 
 ## 내부 클래스(inner class)란?
