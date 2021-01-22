@@ -7,6 +7,7 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - 형변환
+  - 자바입문
 ---
 
 ## 다형성(polymorphism)이란?
