@@ -7,6 +7,7 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - 접근제한자
+  - 자바입문
 ---
 
 ## 접근 제한자란?
