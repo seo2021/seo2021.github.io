@@ -27,7 +27,7 @@ tags:
   - 객체의 해시코드 값 반환.
   - 해시코드는 되도록 서로 다른 값을 가지는 것이 좋다.
   
--  ex) Object 클래스로 부터 상속받은 메소드 사용
+-  ex) Object 클래스로부터 상속받은 메소드 사용
   ```java
   public class Student {
     String name;
@@ -57,9 +57,9 @@ tags:
     }
   }
   ```
-  - Object로 부터 상속받은 equals() 메소드를 그대로 사용하기 때문에, hashcode로 객체를 비교한다.
+  - Object로부터 상속받은 equals() 메소드를 그대로 사용하기 때문에, hashcode로 객체를 비교한다.
 
-- ex) Object로 부터 상속받은 메소드를 오버라이딩하여 사용
+- ex) Object로부터 상속받은 메소드를 오버라이딩하여 사용
   ```java
   // hashcode 구하기
   @Override
