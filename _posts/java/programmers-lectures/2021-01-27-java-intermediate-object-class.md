@@ -28,7 +28,7 @@ tags:
   - 객체의 해시코드 값 반환.
   - 해시코드는 되도록 서로 다른 값을 가지는 것이 좋다.
   
--  ex) Object 클래스로부터 상속받은 메소드 equals(), hashCode() 사용
+- ex) Object 클래스로부터 상속받은 메소드 equals(), hashCode() 사용
 
   ```java
   public class Student {
@@ -98,36 +98,36 @@ tags:
   
   - 다시 두 객체를 비교하고 hashcode를 살펴보면 동일한 것으로 나온다
   
-  ```java
-  public static void main(String[] args) {
-    ...
-    // "s1 == s2" 출력
-    if(s1.equals(s2))
-      System.out.println("s1 == s2");
-    else
-      System.out.println("s1 != s2"); 
+    ```java
+    public static void main(String[] args) {
+      ...
+      // "s1 == s2" 출력
+      if(s1.equals(s2))
+        System.out.println("s1 == s2");
+      else
+        System.out.println("s1 != s2"); 
 
-    System.out.println(s1.hashCode()); // 1509473
-    System.out.println(s2.hashCode()); // 1509473
-  }
-  ```
+      System.out.println(s1.hashCode()); // 1509473
+      System.out.println(s2.hashCode()); // 1509473
+    }
+    ```
 
 - ex) toString() 오버라이딩
   - 객체가 가진 속성값을 출력하도록 작성
   
-  ```java
-  @Override
-  public String toString() {
-    return "Student [name=" + name + ", number=" + number + ", birthYear=" + birthYear + "]";
-  }
-  
-  public static void main(String[] args) {
-    ...
-    // Student [name=홍길동, number=1234, birthYear1995]
-    System.out.println(s1.toString()); 
-    System.out.println(s1); 
-  }
-  ```
+    ```java
+    @Override
+    public String toString() {
+      return "Student [name=" + name + ", number=" + number + ", birthYear=" + birthYear + "]";
+    }
+
+    public static void main(String[] args) {
+      ...
+      // Student [name=홍길동, number=1234, birthYear1995]
+      System.out.println(s1.toString()); 
+      System.out.println(s1); 
+    }
+    ```
   
   - `s1`과 `s1.toString()`의 출력 결과는 동일.
     - 객체를 출력하면 내부적으로 toString() 메소드를 호출하여 출력.
