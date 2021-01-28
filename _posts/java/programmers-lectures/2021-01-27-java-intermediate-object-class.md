@@ -26,8 +26,8 @@ tags:
   - 객체가 가진 값을 문자열로 반환.
 - hashCode()
   - 객체의 해시코드 값 반환.
-  - 해시코드는 되도록 서로 다른 값을 가지는 것이 좋다.  
-
+  - 해시코드는 되도록 서로 다른 값을 가지는 것이 좋다.
+  
 - ex) Object 클래스로부터 상속받은 메소드 equals(), hashCode() 사용
 
   ```java
@@ -59,8 +59,8 @@ tags:
     }
   }
   ```
-  - Object로부터 상속받은 equals() 메소드를 그대로 사용하기 때문에, hashcode로 객체를 비교한다.  
-
+  - Object로부터 상속받은 equals() 메소드를 그대로 사용하기 때문에, hashcode로 객체를 비교한다.
+  
 - ex) equals(), hashCode() 오버라이딩
 
   ```java
@@ -94,7 +94,8 @@ tags:
       
     return true;
   }
-  ```  
+  ```
+  
   - 다시 두 객체를 비교하고 hashcode를 살펴보면 동일한 것으로 나온다
   
     ```java
