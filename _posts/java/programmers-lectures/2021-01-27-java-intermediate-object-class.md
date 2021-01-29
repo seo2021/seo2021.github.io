@@ -23,7 +23,6 @@ tags:
 - 총 11개의 메소드만으로 구성되어 있다.
 
 ## Object 클래스의 메소드
-- 사용할 때 반드시 오버라이딩해서 사용한다.
 
   | 메소드 | 설명 |
   |:------|:------|
@@ -57,8 +56,8 @@ tags:
   
   - 💡 자바에서 toString() 메소드는 기본적으로 각 API 클래스마다 자체적으로 오버라이딩을 통해 재정의되어 있다.
   
-  - ex) String 클래스에 재정의되어 있는 toString() 메소드
-    - 인스턴스가 가진 속성값을 출력하도록 재정의되어 있다.
+  - ex) **String 클래스에 재정의**되어 있는 toString() 메소드
+    - 인스턴스가 가진 **속성값을 출력**하도록 재정의되어 있다.
     - 어떠한 속성값을 출력할지 지정할 수 있다.
     
     ```java
@@ -82,7 +81,7 @@ tags:
 - **equals()**
   - 해당 **인스턴스**를 매개변수로 전달받는 **참조 변수와 비교**하여, 그 결과를 반환.
   - 참조 변수가 가리키는 **값(주소)을 비교**하므로, 서로 다른 두 인스턴스는 언제나 false를 반환.
-  - 하위 클래스에서 재정의하여 원하는 기준으로 비교 가능하다.
+  - **하위 클래스에서 재정의**하여 **원하는 기준으로 비교 가능**하다.
   
   - ex) equals() 메소드를 이용하여 두 인스턴스를 서로 비교
   
@@ -99,10 +98,10 @@ tags:
     
   - 💡 자바에서 equals() 메소드는 기본적으로 각 API 클래스마다 자체적으로 오버라이딩을 통해 재정의되어 있다.
   
-  - ex) String 클래스에 재정의되어 있는 equals() 메소드
-    - 문자열 내용이 같으면 true를 반환하도록 재정의되어 있다(내용이 같은지 비교).
+  - ex) **String 클래스에 재정의**되어 있는 equals() 메소드
+    - **문자열 내용이 같으면 true를 반환**하도록 재정의되어 있다(내용이 같은지 비교).
     - 문자열을 char 단위로 한 글자씩 모두 비교하여 동일하면 true를 반환.
-    - 따라서, 서로 다른 인스턴스라도 같은 문자열을 가지고 있으면 동일하다고 판단.
+    - 따라서, **서로 다른 인스턴스라도 같은 문자열을 가지고 있으면 동일하다고 판단**.
     
     ```java
     String s1 = new String("abc");
@@ -112,6 +111,7 @@ tags:
     System.out.println(s1.equals(s2)); // true, 동일한 문자열
     ```
     - 동일한 문자열을 가진 String 인스턴스이기 때문에 재정의된 equals()의 결과로 true가 반환.
+    
     
   - ex) Car 클래스의 equals() 메소드 재정의
     
@@ -135,7 +135,7 @@ tags:
     }
     ```
     - 멤버 변수인 modelName의 문자열이 동일한지 비교
-    - equals()는 사용자가 어떻게 재정의하느냐에 따라 원하는 기준으로 비교 가능하다.
+    - equals()는 **사용자가 어떻게 재정의하느냐에 따라 원하는 기준으로 비교 가능**하다.
     
 - **hashCode()**
   - 인스턴스의 해시 코드 값 반환.
@@ -151,9 +151,9 @@ tags:
     System.out.println(s1.hashCode()); // 705927765
     System.out.println(s2.hashCode()); // 366172642
     ```
-    - `s1`과 `s2`의 해시 코드는 당연히 다르다. 해시 코드는 주소값을 기반으로 생성된 정수값이기 때문이다.
+    - 서로 다른 인스턴스인 `s1`과 `s2`의 해시 코드는 당연히 다르다. 해시 코드는 주소값을 기반으로 생성된 정수값이기 때문이다.
     
-  - String 클래스의 hashCode()
+  - **String 클래스**의 hashCode()
     - 문자열에서 한 글자씩 가져와 정수값으로 변경한다.
     - 결국 서로 다른 String 인스턴스도 **문자열이 같으면 해시 코드가 같다**.
     
@@ -166,8 +166,9 @@ tags:
     ```
     - `s1`과 `s2`는 **주소값이 서로 다른 인스턴스**이지만, **동일한 문자열**을 가졌으므로 **해시 코드가 동일**하다.
     
+    
   - ex) Car 클래스의 hashCode() 메소드 재정의
-    - equals()가 true이면 동일한 해시 코드를 가질 수 있도록 hashCode()를 재정의
+    - **equals()가 true**이면 **동일한 해시 코드를 가질 수 있도록** hashCode()를 재정의
     - equals() 기준에 맞추어 hashCode()도 재정의하는 것이 좋다.
     
     ```java
@@ -197,12 +198,12 @@ tags:
       }
     }    
     ```
-    - Car 인스턴스의 modelName이 동일한 문자열이면 같은 해시 코드를 가지도록 재정의.
+    - Car 인스턴스의 **modelName이 동일한 문자열이면 같은 해시 코드를 가지도록 재정의**.
     - 결국 String 클래스처럼 된 형태이다(문자열로 비교).
-    - 서로 다른 인스턴스이지만 equals()에서 어떤 기준(ex. 문자열)에 의한 결과가 동일하도록 재정의하고, hashCode()에서도 해당 기준을 기반으로 재정의하면 된다.
+    - 서로 다른 인스턴스이지만 **equals()에서 어떤 기준(ex. 문자열)에 의한 결과가 동일하도록 재정의**하고, **hashCode()에서도 해당 기준을 기반으로 재정의**하면 된다.
     
 ## 출처
-- [프로그래머스 | 프로그래밍 강의 | 자바 중급 | Object와 오버라이딩](https://programmers.co.kr/learn/courses/9/lessons/249#)
-- [코딩의 시작, TCP School | JAVA | Object 클래스](https://www.tcpschool.com/java/java_api_object)
-- [브런치 by 서준수 | 자바의 == 연산자와 equals()](https://brunch.co.kr/@mystoryg/132#comment)
-- [브런치 by 서준수 | 자바의 hashCode()](https://brunch.co.kr/@mystoryg/132#comment)
+- [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| Object와 오버라이딩](https://programmers.co.kr/learn/courses/9/lessons/249#)
+- [코딩의 시작, TCP School \| JAVA \| Object 클래스](https://www.tcpschool.com/java/java_api_object)
+- [브런치 by 서준수 \| 자바의 == 연산자와 equals()](https://brunch.co.kr/@mystoryg/132#comment)
+- [브런치 by 서준수 \| 자바의 hashCode()](https://brunch.co.kr/@mystoryg/133)
