@@ -52,6 +52,50 @@ tags:
   char c = ch; // char c = ch.charValue(); - 오토언박싱
   System.out.println(c); // X
   ```
+  - 래퍼 클래스에는 **intValue(), charValue()와 같은 언박싱을 위한 메소드가 포함**되어 있다.
+  - **오토 박싱**을 이용하면 new 키워드를 사용하지 않고도 자동으로 Character 인스턴스를 생성할 수 있다.
+  - 반대로, **오토 언박싱**을 이용하여 인스턴스에 저장된 값을 바로 참조할 수 있다.
+  
+- ex) 오토 박싱과 오토 언박싱을 통한 기본 타입과 래퍼 클래스 간의 연산
+
+  ```java
+  public class Wrapper02 {
+    public static void main(String[] args) {
+      Integer num1 = new Integer(7); // 박싱
+      Integer num2 = new Integer(3); // 박싱
+      
+      int int1 = num1.intValue(); // 언박싱
+      int int2 = num2.intValue(); // 언박싱
+      
+      // 래퍼 클래스를 오토 언박싱하여 기본 타입으로 연산하고, 기본 타입 연산 결과를 오토 박싱
+      Integer result1 = num1 + num2; // 10
+      // 기본 타입 연산 결과를 오토박싱
+      Integer result2 = int1 - int2; // 4
+      // 래퍼 클래스를 오토 언박싱하여 기본 타입으로 연산
+      int result3 = num1 * int2; // 21
+    }
+  }
+  ```
+  - 내부적으로 래퍼 클래스인 피연산자를 오토언박싱하여 기본 타입끼리의 연산을 수행한다.
+  
+- ex) 래퍼 클래스의 객체 비교
+
+  ```java
+  public class Wrapper03 {
+    public static void main(String[] args) {
+      // 박싱
+      Integer num1 = new Integer(10);
+      Integer num2 = new Integer(20);
+      Integer num3 = new Integer(10);
+      
+      System.out.println(num1 < num2); // true, 비교 연산도 오토언박싱을 통해 가능
+      System.out.println(num1 == num3); // false, 동등 연산자로 동등 여부 판단 X
+      System.out.println(num1.equals(num3)); // true, equals()로 동등 여부 판단
+    }
+  }
+  ```
+  - **래퍼 클래스도 객체**이므로 **동등 연산자(==)**를 사용하게 되면, **두 인스턴스의 주소값을 비교**한다.
+  - 인스턴스에 저장된 **값의 동등 여부**를 정확히 판단하려면 **equals() 메소드**를 사용해야 한다.
 
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| java.lang 패키지/오토박싱](https://programmers.co.kr/learn/courses/9/lessons/251)
