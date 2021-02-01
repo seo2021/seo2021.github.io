@@ -1,5 +1,5 @@
 ---
-title: "[프로그래머스 자바 중급] Object 클래스와 오버라이딩(Overriding)"
+title: "[프로그래머스 자바 중급] java.lang 패키지 : Object 클래스와 오버라이딩(Overriding)"
 layout: single
 related: true
 categories:
