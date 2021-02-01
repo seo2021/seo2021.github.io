@@ -1,5 +1,5 @@
 ---
-title: "[프로그래머스 자바 입문] java.lang 패키지 : 래퍼 클래스(Wrapper Class)와 Boxing"
+title: "[프로그래머스 자바 중급] java.lang 패키지 : 래퍼 클래스(Wrapper Class)와 Boxing"
 layout: single
 related: true
 categories:
