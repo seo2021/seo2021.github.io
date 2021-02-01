@@ -75,7 +75,7 @@ tags:
       System.out.println(car01); 
     }
     ```
-    - `s1`과 `s1.toString()`의 출력 결과는 동일.
+    - `car01`과 `car01.toString()`의 출력 결과는 동일.
       - 인스턴스를 출력하면 내부적으로 toString() 메소드를 호출하여 출력.  
       
 - **equals()**
