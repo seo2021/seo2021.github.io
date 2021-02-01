@@ -90,7 +90,7 @@ tags:
     Car car02 = new Car();
     
     System.out.println(car01.equals(car02)); // false
-    car 01 = car02; // 두 참조 변수가 같은 주소를 가리킴
+    car01 = car02; // 두 참조 변수가 같은 주소를 가리킴
     System.out.println(car01.equals(car02)); // true
     ```
     
@@ -134,7 +134,7 @@ tags:
       }
     }
     ```
-    - 멤버 변수인 modelName의 문자열이 동일한지 비교
+    - 멤버 변수인 modelName의 문자열로 두 인스턴스를 비교하도록 재정의.
     - equals()는 **사용자가 어떻게 재정의하느냐에 따라 원하는 기준으로 비교 가능**하다.
     
 - **hashCode()**
@@ -165,7 +165,6 @@ tags:
     System.out.println(s2.hashCode()); // 96354
     ```
     - `s1`과 `s2`는 **주소값이 서로 다른 인스턴스**이지만, **동일한 문자열**을 가졌으므로 **해시 코드가 동일**하다.
-    
     
   - ex) Car 클래스의 hashCode() 메소드 재정의
     - **equals()가 true**이면 **동일한 해시 코드를 가질 수 있도록** hashCode()를 재정의
