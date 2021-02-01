@@ -95,7 +95,7 @@ tags:
     System.out.println(car01.equals(car02)); // true
     ```
     
-    ![Car 객체의 참조변수가 가지는 값(가리키는 주소)](/assets/images/java/address_of_reference_variable_and_object(Instance).PNG)
+    ![Car 객체의 참조변수가 가지는 값(가리키는 주소)](/assets/images/java/address_of_car_reference_variable.png)
     
   - 💡 자바에서 equals() 메소드는 기본적으로 각 API 클래스마다 자체적으로 오버라이딩을 통해 재정의되어 있다.
   
