@@ -31,8 +31,8 @@ tags:
     // 내부적으로 실행되는 코드
     String str4 = new StringBuffer().append(str1).append(str2).toString();
     ```
-    - 문자열을 더하게 되면 내부적으로 StringBuffer 인스턴스가 만들어지고, 이를 반복문 안에서 수행하면 StringBuffer 인스턴스를 계속 생성해야 하므로 성능상 좋지 않다.
-    - 따라서, 반복적으로 문자열 결합을 수행할 경우 StringBuffer 인스턴스를 처음부터 만들고 append() 메소드로 수행하는 것이 좋다.
+      - 문자열을 더하게 되면 내부적으로 StringBuffer 인스턴스가 만들어지고, 이를 반복문 안에서 수행하면 StringBuffer 인스턴스를 계속 생성해야 하므로 성능상 좋지 않다.
+      - 따라서, 반복적으로 문자열 결합을 수행할 경우 StringBuffer 인스턴스를 처음부터 만들고 append() 메소드로 수행하는 것이 좋다.
 
 ## charAt() 메소드
 - 문자열의 **특정 인덱스에 해당하는 문자를 반환**.
