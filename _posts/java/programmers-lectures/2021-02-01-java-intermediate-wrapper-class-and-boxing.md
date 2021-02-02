@@ -99,6 +99,16 @@ tags:
   ```
   - **래퍼 클래스도 객체**이므로 **동등 연산자(==)**를 사용하게 되면, **두 인스턴스의 주소값을 비교**한다.
   - 인스턴스에 저장된 **값의 동등 여부**를 정확히 판단하려면 **equals() 메소드**를 사용해야 한다.
+  
+- 💡 래퍼 클래스도 '클래스'이기 때문에 속성과 메소드를 가진다.
+  - ex) Integer 클래스의 필드와 메소드 사용
+  
+     ```java
+     Integer i1 = 5;
+     int max_int = i1.MAX_VALUE; // 2147483647
+     long i1_long = i1.longValue(); // 5
+     ```
+     - [참고: Integer 클래스의 필드와 메소드](https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html)
 
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| java.lang 패키지/오토박싱](https://programmers.co.kr/learn/courses/9/lessons/251)
