@@ -29,7 +29,7 @@ tags:
   | double | Double |
   | char | **Character** |
   | boolean | Boolean |
-  - Byte, Short, Integer 등 위의 8개의 클래스들을 통틀어 래퍼 클래스라고 한다.
+  - Byte, Short, Integer 등 위 8개의 클래스들을 통틀어 래퍼 클래스라고 한다.
   
 ## 박싱(boxing)과 언박싱(unboxing)
 - 래퍼 클래스는 산술 연산을 위해 정의된 클래스가 아니므로, **인스턴스에 저장된 값을 변경할 수 없다**.
