@@ -111,10 +111,18 @@ tags:
   | int compareToIgnoreCase(String str) | 문자열을 인수로 전달된 문자열과 대소문자를 구분하지 않고 사전순으로 비교 |
   | String concat(String str) | 문자열의 뒤에 인수로 전달된 문자열을 추가한 새로운 문자열을 반환 |
   | int indexOf(int ch)<br/>int indexOf(String str) | 문자열에서 특정 문자나 문자열이 처음으로 등장하는 위치의 인덱스를 반환 |
+  | int indexOf(int ch, int fromIndex)<br/>int indexOf(String str, int fromIndex) | 문자열에서 특정 문자나 문자열이 **인수로 전달된 인덱스 이후에** 처음으로 등장하는 위치의 인덱스를 반환 |
+  | int lastIndexOf(int ch) | 문자열에서 특정 문자가 마지막으로 등장하는 위치의 인덱스를 반환 |
+  | int lastIndexOf(int ch, int fromIndex) | 문자열에서 특정 문자가 **인수로 전달된 인덱스 이후에** 마지막으로 등장하는 위치의 인덱스를 반환 |
+  | String[] split(String regex) | 문자열을 인수로 전달된 정규 표현식(regular expression)에 따라 나눠서 반환 |
+  | String substring(int beginIndex) | 인수로 전달된 인덱스부터 끝까지 문자열을 잘라 새로운 문자열로 반환 |
+  | String substring(int begin, int end) | 인수로 전달된 시작 인덱스부터 마지막 인덱스까지 문자열을 잘라 새로운 문자열로 반환 |
+  | String toLowerCase() | 문자열의 모든 문자를 소문자로 변환 |
+  | String toUpperCase() | 문자열의 모든 문자를 대문자로 변환 |
+  | String trim() | 문자열의 맨 앞과 맨 뒤에 포함된 모든 공백 문자를 제거 |
+  | length() | 문자열의 길이를 반환 |
+  | isEmpty() | 문자열의 길이가 0이면 true를 반환하고, 아니면 false를 반환 |
   
-  
-
-
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 스트링 클래스의 문제점](https://programmers.co.kr/learn/courses/9/lessons/254)
 - [코딩의 시작, TCP School \| JAVA \| String 클래스](https://www.tcpschool.com/java/java_api_string)
