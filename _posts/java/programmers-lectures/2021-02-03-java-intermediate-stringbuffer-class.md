@@ -1,5 +1,5 @@
 ---
-title: "[프로그래머스 자바 중급] java.lang 패키지 : 스트링 클래스(String Class)"
+title: "[프로그래머스 자바 중급] java.lang 패키지 : 스트링버퍼 클래스(StringBuffer Class)"
 layout: single
 related: true
 categories:
@@ -7,7 +7,7 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - java.lang패키지
-  - String
+  - stringbuffer
   - 자바중급
 ---
 
