@@ -7,7 +7,7 @@ categories:
   - PROGRAMMERS LECTURES
 tags:
   - java.lang패키지
-  - String
+  - string
   - 자바중급
 ---
 
