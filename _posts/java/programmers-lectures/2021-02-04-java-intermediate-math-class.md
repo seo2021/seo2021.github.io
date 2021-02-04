@@ -82,12 +82,28 @@ tags:
       double pie = 3.14159265358979;
       System.out.println(Math.round(pie*100)/100.0); // 3.14
       ```
-      1. 3.14159265358979 * 100 = 314.159265358979
-      2. round(314.159265358979) = 314
-      3. 314 / 100 = 3.14
+      - 3.14159265358979 * 100 = 314.159265358979
+      - round(314.159265358979) = 314
+      - 314 / 100 = 3.14
+      
+## pow() 메소드와 sqrt() 메소드
+- pow() 메소드는 전달된 두 개의 double형 값을 가지고 제곱 연산을 수행한다.
+  - 예를 들어 pow(a, b)는 a^b를 반환한다.
+- 반대로, sqrt() 메소드는 전달된 double형 값의 제곱근 값을 반환한다.
+  - 예를 들어, sqrt(a)는 √a를 반환한다.
+  
+  ```java
+  System.out.println((int)Math.pow(5, 2)); // 25
+  System.out.println((int)Math.sqrt(25)); // 5
+  ```
+  
+## 그 외 대표적인 Math() 메소드
 
-
-
+  | 메소드 | 설명 |
+  |:------|:------|
+  | static double rint(double a) | 전달된 double형 값과 가장 가까운 정수값을 double형으로 반환 |
+  | max(), min() | 전달된 두 값을 비교하여 큰 값, 작은 값을 반환 |
+  | static double sin(double a)<br/>static double cos(double a)<br/>static double tan(double a) | 전달된 double형 값에 해당하는 각각의 삼각 함숫값을 반환 |
   
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| Math](https://programmers.co.kr/learn/courses/9/lessons/261)
