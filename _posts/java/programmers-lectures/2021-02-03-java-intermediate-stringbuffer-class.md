@@ -90,11 +90,12 @@ tags:
   
 ## 메소드 체이닝(method chaining)
 - 자기 자신의 메소드를 호출하여 자기 자신의 값을 바꿔나가는 것을 메소드 체이닝이라고 한다.
-- StringBuffer 클레스는 메소드 체인 방식으로 사용할 수 있도록 만들어져 있다.
+- StringBuffer 클래스는 메소드 체인 방식으로 사용할 수 있도록 만들어져 있다.
 
   ```java
   String str2 = new StringBuffer().append("hello").append(" ").append("world").toString();
   ```
+  - StringBuffer 클래스가 가진 toString() 메소드를 이용하여 String 객체로 반환했다.
   
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 스트링버퍼](https://programmers.co.kr/learn/courses/9/lessons/253)
