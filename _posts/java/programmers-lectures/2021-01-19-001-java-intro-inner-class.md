@@ -4,7 +4,7 @@ layout: single
 related: true
 categories:
   - JAVA
-  - PROGRAMMERS LECTURES
+  - PROGRAMMERS-LECTURES
 tags:
   - 내부클래스
   - 익명클래스 
