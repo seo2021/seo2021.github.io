@@ -4,7 +4,7 @@ layout: single
 related: true
 categories:
   - JAVA
-  - PROGRAMMERS LECTURES
+  - PROGRAMMERS-LECTURES
 tags:
   - java.lang패키지
   - stringbuffer
