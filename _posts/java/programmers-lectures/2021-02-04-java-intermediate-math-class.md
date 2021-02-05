@@ -106,6 +106,13 @@ tags:
   | max(), min() | 전달된 두 값을 비교하여 큰 값, 작은 값을 반환 |
   | static double sin(double a)<br/>static double cos(double a)<br/>static double tan(double a) | 전달된 double형 값에 해당하는 각각의 삼각 함숫값을 반환 |
   
+## 관련 포스트 - java.lang 패키지
+- [Object 클래스와 오버라이딩(Overriding)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-object-class/)
+- [래퍼 클래스(Wrapper Class)와 Boxing](https://seo2021.github.io/java/programmers-lectures/java-intermediate-wrapper-class-and-boxing/)
+- [스트링 클래스(String Class)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-string-class/)
+- [스트링버퍼 클래스(StringBuffer Class)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-stringbuffer-class/)
+- [Enum 클래스](https://seo2021.github.io/java/001-java-intermediate-enum-class/)
+  
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| Math](https://programmers.co.kr/learn/courses/9/lessons/261)
 - [코딩의 시작, TCP School \| JAVA \| Math 클래스](https://www.tcpschool.com/java/java_api_math)
