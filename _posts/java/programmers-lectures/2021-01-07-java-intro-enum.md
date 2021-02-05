@@ -1,5 +1,5 @@
 ---
-title: "[프로그래머스 자바 입문] 열거형(Enum)"
+title: "[프로그래머스 자바 입문] 열거형(Enumeration Type)과 Enum"
 layout: single
 related: true
 categories:
@@ -15,6 +15,10 @@ tags:
 ## 자바는 변수를 선언할 때, 열거 타입을 변수 타입으로 사용할 수 있다
 - 열거형은 JDK5에서 추가되었다.
 - JDK5 이전에는 상수를 열거형 대신 사용
+
+- 자바의 열거체는 다음과 같은 장점을 가진다.
+  1. 열거체를 비교할 때 실제 값뿐만 아니라 타입까지도 체크한다.
+  2. 열거체의 상숫값이 재정의되더라도 다시 컴파일할 필요가 없다.
 
 ## 열거형 대신 상수를 사용하는 방법
   ```java
@@ -61,3 +65,4 @@ tags:
  
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 열거형(enum)](https://programmers.co.kr/learn/courses/5/lessons/423)
+- [코딩의 시작, TCP School \| JAVA \| Enum 클래스](https://www.tcpschool.com/java/java_api_enum)
