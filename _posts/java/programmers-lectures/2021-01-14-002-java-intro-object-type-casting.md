@@ -4,7 +4,7 @@ layout: single
 related: true
 categories:
   - JAVA
-  - PROGRAMMERS LECTURES
+  - PROGRAMMERS-LECTURES
 tags:
   - 형변환
   - 자바입문
