@@ -12,7 +12,7 @@ main:
     url: /categories/web/
   - title: "SQL&DB"
     url: /categories/sql-db/
-  - title: "CODING INTERVIEW"
+  - title: "CODING-INTERVIEW"
     url: /categories/coding-interview/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
@@ -28,7 +28,7 @@ sidebar-navigation:
   - title: "JAVA"
     url: /categories/java/
     children:
-      - title: "PROGRAMMERS LECTURES"
+      - title: "PROGRAMMERS-LECTURES"
         url: /categories/java/programmers-lectures/
       - title: "Child Page A1"
         url: /
