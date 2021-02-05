@@ -30,11 +30,9 @@ sidebar-navigation:
     children:
       - title: "PROGRAMMERS LECTURES"
         url: /categories/java/programmers-lectures/
+      - title: "Child Page A1"
+        url: /
       - title: "Child Page A2"
-        url: /
-      - title: "Child Page A3"
-        url: /
-      - title: "Child Page A4"
         url: /
   - title: "DSA"
     url: /categories/dsa/
@@ -43,16 +41,12 @@ sidebar-navigation:
         url: /
       - title: "Child Page B2"
         url: /
-      - title: "Child Page B3"
-        url: /
   - title: "WEB"
     url: /categories/web/
     children:
       - title: "Child Page C1"
         url: /
       - title: "Child Page C2"
-        url: /
-      - title: "Child Page C3"
         url: /
   - title: "SQL&DB"
     url: /categories/sql-db/
