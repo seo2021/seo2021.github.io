@@ -102,13 +102,19 @@ tags:
   
 - 💡 래퍼 클래스도 '클래스'이기 때문에 속성과 메소드를 가진다.
   - ex) Integer 클래스의 필드와 메소드 사용
-  
-     ```java
-     Integer i1 = 5;
-     int max_int = i1.MAX_VALUE; // 2147483647
-     long i1_long = i1.longValue(); // 5
-     ```
-     - [참고: Integer 클래스의 필드와 메소드](https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html)
+    ```java
+    Integer i1 = 5;
+    int max_int = i1.MAX_VALUE; // 2147483647
+    long i1_long = i1.longValue(); // 5
+    ```
+    - [참고: Integer 클래스의 필드와 메소드](https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html)
+
+## 관련 포스트 - java.lang 패키지
+- [Object 클래스와 오버라이딩(Overriding)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-object-class/)
+- [스트링 클래스(String Class)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-string-class/)
+- [스트링버퍼 클래스(StringBuffer Class)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-stringbuffer-class/)
+- [Math 클래스](https://seo2021.github.io/java/programmers-lectures/java-intermediate-math-class/)
+- [Enum 클래스](https://seo2021.github.io/java/001-java-intermediate-enum-class/)
 
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| java.lang 패키지/오토박싱](https://programmers.co.kr/learn/courses/9/lessons/251)
