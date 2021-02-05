@@ -4,7 +4,7 @@ layout: single
 related: true
 categories:
   - JAVA
-  - PROGRAMMERS LECTURES
+  - PROGRAMMERS-LECTURES
 tags:
   - 접근제한자
   - 자바입문
