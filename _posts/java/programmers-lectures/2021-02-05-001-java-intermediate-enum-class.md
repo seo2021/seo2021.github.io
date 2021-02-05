@@ -68,6 +68,13 @@ tags:
   |:------|:------|
   | protected void finalize() | 해당 Enum 클래스가 final 메소드를 가질 수 없게 됨 |
   | String name() | 해당 열거체 상수의 이름을 반환 |
+  
+## 관련 포스트 - java.lang 패키지
+- [Object 클래스와 오버라이딩(Overriding)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-object-class/)
+- [래퍼 클래스(Wrapper Class)와 Boxing](https://seo2021.github.io/java/programmers-lectures/java-intermediate-wrapper-class-and-boxing/)
+- [스트링 클래스(String Class)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-string-class/)
+- [스트링버퍼 클래스(StringBuffer Class)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-stringbuffer-class/)
+- [Math 클래스](https://seo2021.github.io/java/programmers-lectures/java-intermediate-math-class/)
 
 ## 출처
 - [코딩의 시작, TCP School \| JAVA \| Enum 클래스](https://www.tcpschool.com/java/java_api_enum)
