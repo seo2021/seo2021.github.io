@@ -137,6 +137,13 @@ tags:
   | length() | 문자열의 길이를 반환 |
   | isEmpty() | 문자열의 길이가 0이면 true를 반환하고, 아니면 false를 반환 |
   
+## 관련 포스트 - java.lang 패키지
+- [Object 클래스와 오버라이딩(Overriding)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-object-class/)
+- [래퍼 클래스(Wrapper Class)와 Boxing](https://seo2021.github.io/java/programmers-lectures/java-intermediate-wrapper-class-and-boxing/)
+- [스트링버퍼 클래스(StringBuffer Class)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-stringbuffer-class/)
+- [Math 클래스](https://seo2021.github.io/java/programmers-lectures/java-intermediate-math-class/)
+- [Enum 클래스](https://seo2021.github.io/java/001-java-intermediate-enum-class/)
+  
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 스트링 클래스의 문제점](https://programmers.co.kr/learn/courses/9/lessons/254)
 - [코딩의 시작, TCP School \| JAVA \| String 클래스](https://www.tcpschool.com/java/java_api_string)
