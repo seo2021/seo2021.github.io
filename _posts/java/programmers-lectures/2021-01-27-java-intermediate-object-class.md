@@ -203,11 +203,11 @@ tags:
     - 서로 다른 인스턴스이지만 **equals()에서 어떤 기준(ex. 문자열)에 의한 결과가 동일하도록 재정의**하고, **hashCode()에서도 해당 기준을 기반으로 재정의**하면 된다.
     
 ## 관련 포스트 - java.lang 패키지
-- [[프로그래머스 자바 중급] java.lang 패키지 : 래퍼 클래스(Wrapper Class)와 Boxing](https://seo2021.github.io/java/programmers-lectures/java-intermediate-wrapper-class-and-boxing/)
-- [[프로그래머스 자바 중급] java.lang 패키지 : 스트링 클래스(String Class)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-string-class/)
-- [[프로그래머스 자바 중급] java.lang 패키지 : 스트링버퍼 클래스(StringBuffer Class)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-stringbuffer-class/)
-- [[프로그래머스 자바 중급] java.lang 패키지 : Math 클래스](https://seo2021.github.io/java/programmers-lectures/java-intermediate-math-class/)
-- [[자바] java.lang 패키지 : Enum 클래스](https://seo2021.github.io/java/001-java-intermediate-enum-class/)
+- [래퍼 클래스(Wrapper Class)와 Boxing](https://seo2021.github.io/java/programmers-lectures/java-intermediate-wrapper-class-and-boxing/)
+- [스트링 클래스(String Class)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-string-class/)
+- [스트링버퍼 클래스(StringBuffer Class)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-stringbuffer-class/)
+- [Math 클래스](https://seo2021.github.io/java/programmers-lectures/java-intermediate-math-class/)
+- [Enum 클래스](https://seo2021.github.io/java/001-java-intermediate-enum-class/)
     
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| Object와 오버라이딩](https://programmers.co.kr/learn/courses/9/lessons/249#)
