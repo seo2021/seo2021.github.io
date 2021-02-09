@@ -47,46 +47,72 @@ tags:
   MyArray<Integer> myArr = new MyArray<>();
   ```
   
-  - ex) 제네릭에서 적용되는 타입 변수의 다형성
-  
+- ex) 제네릭을 이용한 MyArrayExam 클래스
+
   ```java
-    import java.util.*;
-
-    class LandAnimal { public void crying() { System.out.println("육지동물"); } }
-    class Cat extends LandAnimal { public void crying() { System.out.println("냐옹냐옹"); } }
-    class Dog extends LandAnimal { public void crying() { System.out.println("멍멍"); } }
-    class Sparrow { public void crying() { System.out.println("짹짹"); } }
-
-    // 제네릭 클래스 선언
-    class AnimalList<T> {
-      ArrayList<T> al = new ArrayList<T>();
-
-      void add(T animal) { al.add(animal); }
-      T get(int index) { return al.get(index); }
-      boolean remove(T animal) { return al.remove(animal); }
-      int size() { return al.size(); }
+  public class MyArrayExam<T> {
+    public static void main(String[] args) {
+      // 타입을 Object로 한 인스턴스 생성
+      MyArray<Object> myArr1 = new MyArray<>();
+      myArr1.setElement(new Object());
+      Object obj = box.getElement();
+      
+      // 타입을 String으로 한 인스턴스 생성
+      MyArray<String> myArr2 = new MyArray<>();
+      myArr2.setElement("hello");
+      String str = myArr2.getElement();
+      
+      // 타입을 Integer로 한 인스턴스 생성
+      MyArray<Integer> myArr3 = new MyArray<>();
+      myArr3.setElement(1);
+      int num = (int)myArr3.getElement();
     }
+  }
+  ```
+  - 참조 타입으로 `<Object>`, `<String>`, `<Integer>`를 사용했다.
+  - 제네릭 클래스를 선언할 때는 **가상의 타입으로 선언**하고, **사용 시에는 구체적인 타입을 설정**함으로써 다양한 타입으로 클래스를 만들 수 있다.
+  - 제네릭을 사용하는 대표적인 클래스는 컬렉션 프레임워크와 관련된 클래스.
+  
+- ex) 제네릭에서 적용되는 타입 변수의 다형성
 
-    public class Generic01 {
-      public static void main(String[] args) {
-        // LandAnimal을 타입으로 제네릭 클래스 생성
-        AnimalList<LandAnimal> landAnimal = new AnimalList<>();	// Java SE 7부터 생략가능
+```java
+  import java.util.*;
 
-        landAnimal.add(new LandAnimal());
-        landAnimal.add(new Cat());
-        landAnimal.add(new Dog());
-        // landAnimal.add(new Sparrow());	// 오류 발생
+  class LandAnimal { public void crying() { System.out.println("육지동물"); } }
+  class Cat extends LandAnimal { public void crying() { System.out.println("냐옹냐옹"); } }
+  class Dog extends LandAnimal { public void crying() { System.out.println("멍멍"); } }
+  class Sparrow { public void crying() { System.out.println("짹짹"); } }
 
-        for (int i = 0; i < landAnimal.size() ; i++) {
-          // 육지동물
-          // 냐옹냐옹
-          // 멍멍
-          landAnimal.get(i).crying();
-        }
+  // 제네릭 클래스 선언
+  class AnimalList<T> {
+    ArrayList<T> al = new ArrayList<T>();
+
+    void add(T animal) { al.add(animal); }
+    T get(int index) { return al.get(index); }
+    boolean remove(T animal) { return al.remove(animal); }
+    int size() { return al.size(); }
+  }
+
+  public class Generic01 {
+    public static void main(String[] args) {
+      // LandAnimal을 타입으로 제네릭 클래스 생성
+      AnimalList<LandAnimal> landAnimal = new AnimalList<>();	// Java SE 7부터 생략가능
+
+      landAnimal.add(new LandAnimal());
+      landAnimal.add(new Cat());
+      landAnimal.add(new Dog());
+      // landAnimal.add(new Sparrow());	// 오류 발생
+
+      for (int i = 0; i < landAnimal.size() ; i++) {
+        // 육지동물
+        // 냐옹냐옹
+        // 멍멍
+        landAnimal.get(i).crying();
       }
     }
-    ```
-    - Cat과 Dog 클래스는 LandAnimal 클래스를 상속받는 자식 클래스이므로, AnimalList<LandAnimal>에 추가할 수 있다.
+  }
+  ```
+  - Cat과 Dog 클래스는 LandAnimal 클래스를 상속받는 자식 클래스이므로, AnimalList<LandAnimal>에 추가할 수 있다.
     
 ## 제네릭의 제거 시기
 - 자바 코드에서 선언되고 사용된 제네릭 타입은 컴파일 시 컴파일러에 의해 자동으로 검사되어 타입 변환된다.
