@@ -91,6 +91,8 @@ tags:
   | int size() | 컬렉션 요소의 총 개수 반환 |
   | Object[] toArray() | 컬렉션의 모든 요소를 Object 타입의 배열로 반환 |
   
+  - Iterator는 꺼낼 요소가 있는지 살펴보는 hasNext() 메소드와 요소를 하나씩 꺼낼 때 사용하는 next() 메소드를 가지고 있다.
+  
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 컬렉션 프레임워크](https://programmers.co.kr/learn/courses/9/lessons/256)
 - [코딩의 시작, TCP School \| JAVA \| 컬렉션 프레임워크의 개념](https://www.tcpschool.com/java/java_collectionFramework_concept)
