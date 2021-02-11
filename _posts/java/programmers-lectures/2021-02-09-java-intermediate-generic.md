@@ -75,7 +75,7 @@ tags:
   
 - ex) 제네릭에서 적용되는 타입 변수의 다형성
 
-```java
+  ```java
   import java.util.*;
 
   class LandAnimal { public void crying() { System.out.println("육지동물"); } }
