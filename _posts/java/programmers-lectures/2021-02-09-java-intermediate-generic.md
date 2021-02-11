@@ -55,7 +55,7 @@ tags:
       // 타입을 Object로 한 인스턴스 생성
       MyArray<Object> myArr1 = new MyArray<>();
       myArr1.setElement(new Object());
-      Object obj = box.getElement();
+      Object obj = myArr1.getElement();
       
       // 타입을 String으로 한 인스턴스 생성
       MyArray<String> myArr2 = new MyArray<>();
