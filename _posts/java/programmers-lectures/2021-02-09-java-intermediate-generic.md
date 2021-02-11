@@ -50,7 +50,7 @@ tags:
 - ex) 제네릭을 이용한 MyArrayExam 클래스
 
   ```java
-  public class MyArrayExam<T> {
+  public class MyArrayExam {
     public static void main(String[] args) {
       // 타입을 Object로 한 인스턴스 생성
       MyArray<Object> myArr1 = new MyArray<>();
