@@ -141,3 +141,4 @@ tags:
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| Generic](https://programmers.co.kr/learn/courses/9/lessons/257)
 - [코딩의 시작, TCP School \| JAVA \| 제네릭의 개념](https://www.tcpschool.com/java/java_generic_concept)
+- [코딩의 시작, TCP School \| JAVA \| 다양한 제네릭 표현](https://www.tcpschool.com/java/java_generic_various)
