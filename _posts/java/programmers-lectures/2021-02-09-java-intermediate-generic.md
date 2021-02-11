@@ -47,7 +47,7 @@ tags:
   MyArray<Integer> myArr = new MyArray<>();
   ```
   
-- ex) 제네릭을 이용한 MyArrayExam 클래스
+- ex) 제네릭 클래스를 사용하는 MyArrayExam 클래스
 
   ```java
   public class MyArrayExam {
