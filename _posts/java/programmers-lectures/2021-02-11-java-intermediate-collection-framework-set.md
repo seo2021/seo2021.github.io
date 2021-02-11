@@ -67,7 +67,23 @@ tags:
   ```
   - 요소의 저장 순서를 바꿔도 실제 **저장되는 순서에는 영향이 없는 것**을 확인할 수 있다.
   - 또한, HashSet에 이미 존재하는 요소를 추가하려고 하면 해당 요소를 저장하지 않고 false가 반환된다.
+    - HashSet에 이미 존재하는 요소인지 파악하기 위해 내부에서 일어나는 과정
+      1. 해당 요소에 hashCode() 메소드를 호출하여 반환된 해시값으로 검색할 범위를 결정.
+      2. 해당 범위 내 요소들을 equals() 메소드로 비교
+    - 💡 따라서, HashSet에서 add() 메소드를 사용하여 **중복없이 새로운 요소를 추가**하기 위해서는 **hashCode()와 equals() 메소드를 상황에 맞게 오버라이딩**해야 한다.
 
+- ex) 사용자가 정의한 Animal 클래스의 인스턴스를 HashSet에 저장하기 위해 hashCode()와 equals() 메소드를 오버라이딩
+
+  ```java
+  class Animal {
+    String species;
+    String habitat;
+    
+    Animal(String species, String habitat) {
+      
+    }
+  }
+  ```
 
   
 ## 출처
