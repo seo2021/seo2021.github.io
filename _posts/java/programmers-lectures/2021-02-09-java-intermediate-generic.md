@@ -98,6 +98,7 @@ tags:
       // LandAnimal을 타입으로 제네릭 클래스 생성
       AnimalList<LandAnimal> landAnimal = new AnimalList<>();	// Java SE 7부터 생략가능
 
+      // LandAnimal과 LandAnimal을 상속받는 자손 클래스 타입만 사용 가능
       landAnimal.add(new LandAnimal());
       landAnimal.add(new Cat());
       landAnimal.add(new Dog());
@@ -131,7 +132,6 @@ tags:
       
       class AnimalList<T extends LandAnimal & WarmBlood> { ... }
       ```
-  
     
 ## 제네릭의 제거 시기
 - 자바 코드에서 선언되고 사용된 제네릭 타입은 컴파일 시 컴파일러에 의해 자동으로 검사되어 타입 변환된다.
