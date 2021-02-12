@@ -44,7 +44,7 @@ tags:
       System.out.println(hs01.add("임꺽정")); // true
       System.out.println(hs01.add("임꺽정")); // false, 중복된 요소의 저장
 
-      // Enhanced for문, get() 메소드를 이용한 요소의 출력
+      // 요소의 출력
       for(String e : hs01) {
         System.out.print(e + " "); // 홍길동 이순신 임꺽정
       }
@@ -133,10 +133,43 @@ tags:
     - 1,000,002를 10으로 나눈 나머지가 2이므로, **배열의 세 번째 요소**에 연결된 **연결 리스트**에서 검색
     
 ## TreeSet\<E> 클래스
--
+- 데이터가 **정렬**된 상태로 저장되는 **이진 검색 트리(binary search tree)**의 형태로 요소를 저장.
+  - 이진 검색 트리는 데이터를 **추가**하거나 **제거**하는 등의 기본 동작 시간이 매우 **빠르다**.
+- JDK 1.2부터 제공되는 TreeSet 클래스는 **NavigableSet 인터페이스**를 기존의 이진 검색 트리의 성능을 향상시킨 **레드-블랙 트리(Red-Black Tree)로 구현**.
+
+  > - NavigableSet
+  >   - SortedSet을 확장한 인터페이스.
+  >   - SortedSet과 다르게 요소를 역순으로 정렬하여 접근할 수 있으며, 주어진 값을 기준으로 가장 근접한 원소 탐색 등을 할 수 있다.
+  
+  > - 레드-블랙 트리(Red-Black Tree)
+  >  - BST(Binary Search Tree)를 기반으로 하는 트리 형식의 자료구조.
+  >  - 완전 이진 트리의 형태로 구성되므로, 동일한 노드의 개수일 때 depth가 최소화되어 시간 복잡도를 줄이는 것이 핵심 아이디어.
+  
+- Set 인터페이스를 구현하므로, 요소를 **순서에 상관없이 저장하고 중복된 값은 저장하지 않는다**.
+
+- ex) TreeSet 메소드를 이용하여 집합을 생성하고 조작하는 예제
+
+  ```java
+  TreeSet<Integer> ts = new TreeSet<Integer>();
+  
+  // add() 메소드를 이용한 요소의 저장
+  ts.add(30);
+  ts.add(40);
+  ts.add(20);
+  ts.add(10);
+  
+  // 요소의 출력
+  for(int e : ts) {
+    System.out.print(e + " ");
+  }
+  ```
+
+
 
 
   
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| Set](https://programmers.co.kr/learn/courses/9/lessons/258)
 - [코딩의 시작, TCP School \| JAVA \| Set 컬렉션 클래스](https://www.tcpschool.com/java/java_collectionFramework_set)
+- [Engineering Blog by Dale Seo \| [자바] NavigableSet 사용법](https://www.daleseo.com/java-navigable-set/)
+- [어제보다 한 걸음 더 by Chanyoung Lee \| [자료구조] Red Black Tree (레드 블랙 트리) 란 ?](https://k39335.tistory.com/17)
