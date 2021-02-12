@@ -133,43 +133,85 @@ tags:
     - 1,000,002를 10으로 나눈 나머지가 2이므로, **배열의 세 번째 요소**에 연결된 **연결 리스트**에서 검색
     
 ## TreeSet\<E> 클래스
-- 데이터가 **정렬**된 상태로 저장되는 **이진 검색 트리(binary search tree)**의 형태로 요소를 저장.
-  - 이진 검색 트리는 데이터를 **추가**하거나 **제거**하는 등의 기본 동작 시간이 매우 **빠르다**.
-- JDK 1.2부터 제공되는 TreeSet 클래스는 **NavigableSet 인터페이스**를 기존의 이진 검색 트리의 성능을 향상시킨 **레드-블랙 트리(Red-Black Tree)로 구현**.
-
-  > - NavigableSet
-  >   - SortedSet을 확장한 인터페이스.
-  >   - SortedSet과 다르게 요소를 역순으로 정렬하여 접근할 수 있으며, 주어진 값을 기준으로 가장 근접한 원소 탐색 등을 할 수 있다.
+- 데이터가 **정렬**된 상태로 저장되는 **이진 탐색 트리(binary search tree)**의 형태로 요소를 저장.
+  - **natural ordering**을 지원하며, **생성자의 매개변수를 Comparator 객체로 하여 정렬 방법을 임의로 지정해줄 수 있다**.
+- 이진 탐색 트리 중에서도 성능을 향상시킨 **레드-블랙 트리(Red-Black Tree)로 구현되어 있다**.
+  - 따라서, 요소의 추가, 삭제에는 시간이 걸리지지만 **검색과 정렬이 뛰어나다**는 장점이 있다.  
+- Set 인터페이스를 구현하므로, 요소를 **저장 순서에 상관없이 저장하고 중복된 값은 저장하지 않는다**.
+  - 저장 순서에 상관없이 정렬된 상태로 .
   
   > - 레드-블랙 트리(Red-Black Tree)
-  >  - BST(Binary Search Tree)를 기반으로 하는 트리 형식의 자료구조.
-  >  - 완전 이진 트리의 형태로 구성되므로, 동일한 노드의 개수일 때 depth가 최소화되어 시간 복잡도를 줄이는 것이 핵심 아이디어.
-  
-- Set 인터페이스를 구현하므로, 요소를 **순서에 상관없이 저장하고 중복된 값은 저장하지 않는다**.
+  >   - 트리에 값이 편향되게 입력될 때 한쪽으로 치우쳐진 트리가 되는 것을 보완하기 위해 등장했다.
+  >   - 부모 노드보다 작은 값을 가지는 노드는 왼쪽 자식으로, 큰 값을 가지는 노드를 오른쪽 자식으로 배치하여 데이터의 추가나 삭제 시 트리가 한쪽으로 치우쳐지지 않도록 균형을 맞춰준다.
 
 - ex) TreeSet 메소드를 이용하여 집합을 생성하고 조작하는 예제
 
   ```java
-  TreeSet<Integer> ts = new TreeSet<Integer>();
+  import java.util.TreeSet;
+  import java.util.Iterator;
   
-  // add() 메소드를 이용한 요소의 저장
-  ts.add(30);
-  ts.add(40);
-  ts.add(20);
-  ts.add(10);
-  
-  // 요소의 출력
-  for(int e : ts) {
-    System.out.print(e + " ");
+  public class SetExam03 {
+    public static void main(String[] args) {
+      TreeSet<Integer> ts = new TreeSet<Integer>();
+
+      // add() 메소드를 이용한 요소의 저장
+      ts.add(30);
+      ts.add(40);
+      ts.add(20);
+      ts.add(10);
+
+      // 요소의 출력
+      for(int e : ts) {
+        // 정렬된 상태로 출력
+        System.out.print(e + " "); // 10 20 30 40 
+      }
+      
+      // remove() 메소드를 이용한 요소의 제거
+      ts.remove(40);
+      
+      // iterator() 메소드를 이용한 요소의 출력
+      Iterator<Integer> iter = ts.iterator();
+      while(iter.hasNext()) {
+        System.out.print(iter.next() + " "); // 10 20 30 
+      }
+      
+      // size() 메소드를 이용한 요소의 총 개수
+      System.out.println(ts.size()); // 3
+      
+      // subSet() 메소드를 이용한 부분 집합의 출력
+      System.out.println(ts.subSet(10, 20)); // (fromElement, toElement) -> 10
+      System.out.println(ts.subSet(10, true, 20, true)); // (fromElement, fromInclusive, toElement, toInclusive) -> 10, 20
+    }
   }
   ```
+  - TreeSet 인스턴스에 저장되는 요소들은 모두 **정렬된 상태로 저장**되는 것을 볼 수 있다.
+  - `subSet()` 메소드는 TreeSet 인스턴스에 저장되는 요소가 모두 정렬된 상태이기에 동작 가능하며, 트리의 부분 집합을 보여준다.
+    
+    ```java
+    public NavigableSet<E> subSet(E fromElement, E toElement)
+    public NavigableSet<E> subSet(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive)
+    ```
+    - 첫 번째 `subSet()` 메소드는 **첫 번째 매개변수로 전달된 값**에 해당하는 요소부터 시작하여, **두 번째 매개변수로 전달된 값에 해당하는 요소의 바로 직전 요소까지**를 반환.
+    - 두 번째 `subSet()` 메소드는 **두 번째와 네 번째 매개변수**로 각각 첫 번째와 세 번째 매개변수로 전달된 값에 해당하는 **요소를 포함할 것인지 아닌지를 명시**할 수 있다.
+    
+## Set 인터페이스 메소드
+- Set 인터페이스는 Collection 인터페이스를 상속받으므로, Collection 인터페이스에서 정의한 메소드도 모두 사용할 수 있다.
+- Set 인터페이스에서 제공하는 주요 메소드는 다음과 같다.
 
-
-
-
+  | 메소드 | 설명 |
+  |:------|:------|
+  | boolean add(E e) | 집합(set)에 전달된 요소를 추가(선택적 기능) |
+  | void clear() | 집합의 모든 요소를 제거(선택적 기능) |
+  | boolean contains(Object o) | 집합이 전달된 객체를 포함하고 있는지 확인 |
+  | boolean equals(Object o) | 집합과 전달된 객체가 같은지 확인 |
+  | boolean isEmpty() | 집합이 비어있는지 확인 |
+  | Iterator<E> iterator() | 집합의 반복자(iterator)를 반환 |
+  | boolean remove(Object o) | 집합에서 전달된 객체를 제거(선택적 기능) |
+  | int size() | 집합의 요소 총 개수를 반환 |
+  | Object[] toArray() | 집합의 모든 요소를 Object 타입의 배열로 반환 |
   
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| Set](https://programmers.co.kr/learn/courses/9/lessons/258)
 - [코딩의 시작, TCP School \| JAVA \| Set 컬렉션 클래스](https://www.tcpschool.com/java/java_collectionFramework_set)
-- [Engineering Blog by Dale Seo \| [자바] NavigableSet 사용법](https://www.daleseo.com/java-navigable-set/)
-- [어제보다 한 걸음 더 by Chanyoung Lee \| [자료구조] Red Black Tree (레드 블랙 트리) 란 ?](https://k39335.tistory.com/17)
+- [MyCloud by Swalloow \| JAVA의 HashSet, TreeSet](https://swalloow.tistory.com/36)
+- [코딩팩토리 \| [Java] 자바 TreeSet 사용법 & 예제 총정리](https://coding-factory.tistory.com/555)
