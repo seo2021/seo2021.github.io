@@ -113,7 +113,7 @@ tags:
     }
   }
   ```
-  - Cat과 Dog 클래스는 LandAnimal 클래스를 상속받는 자식 클래스이므로, AnimalList<LandAnimal>에 추가할 수 있다.
+  - Cat과 Dog 클래스는 LandAnimal 클래스를 상속받는 자식 클래스이므로, AnimalList\<LandAnimal>에 추가할 수 있다.
   - 하지만, Sparrow 클래스는 타입이 다르므로 추가할 수 없다.
   
   - 💡 **extends 키워드**를 사용하여 **클래스의 타입 변수**에 특정 타입만을 사용하도록 **제한**을 걸어 놓을 수 있다. 타입 변수에 제한을 걸어 놓으면 클래스 내부에 사용된 모든 타입 변수에 제한이 걸린다.
