@@ -35,9 +35,9 @@ tags:
 
   | 인터페이스 | 설명 | 구현 클래스 |
   |:---------:|:-----|:-----------|
-  | List<E> | 순서가 있는 데이터의 집합으로, 데이터의 중복을 허용. | Vector, ArrayList, LinkedList, Stack, Queue |
-  | Set<E> | 순서가 없는 데이터의 집합으로, 데이터의 중복을 허용하지 않음. | HashSet, TreeSet |
-  | Map<K, V> | 키와 값의 한 쌍으로 이루어지는 데이터의 집합으로, 순서가 없음.<br/>이때 키는 중복을 허용하지 않지만, 값은 중복될 수 있음 | HashMap, TreeMap, Hashtable, Properties |
+  | List\<E> | 순서가 있는 데이터의 집합으로, 데이터의 중복을 허용. | Vector, ArrayList, LinkedList, Stack, Queue |
+  | Set\<E> | 순서가 없는 데이터의 집합으로, 데이터의 중복을 허용하지 않음. | HashSet, TreeSet |
+  | Map\<K, V> | 키와 값의 한 쌍으로 이루어지는 데이터의 집합으로, 순서가 없음.<br/>이때 키는 중복을 허용하지 않지만, 값은 중복될 수 있음 | HashMap, TreeMap, Hashtable, Properties |
 
 ## 컬렉션 클래스(collection class)
 - **컬렉션 프레임워크에 속하는 인터페이스를 구현한 클래스**를 컬렉션 클래스(collection class)라고 한다.
@@ -85,7 +85,7 @@ tags:
   | boolean contains(Object o) | 컬렉션이 전달된 객체를 포함하고 있는지 확인 |
   | boolean equals(Object o) | 켈력션과 전달된 객체가 같은지 확인 |
   | boolean isEmpty() | 컬렉션이 비어있는지 확인 |
-  | Iterator<E> iterator() | 컬렉션의 반복자(iterator) 반환 |
+  | Iterator\<E> iterator() | 컬렉션의 반복자(iterator) 반환 |
   | boolean remove(Object o) | 컬렉션에서 전달된 객체 제거(선택적 기능) |
   | int size() | 컬렉션 요소의 총 개수 반환 |
   | Object[] toArray() | 컬렉션의 모든 요소를 Object 타입의 배열로 반환 |
