@@ -56,7 +56,8 @@ tags:
 
       // iterator() 메소드를 이용한 요소의 출력
       Iterator<String> iter02 = hs02.iterator();
-      while(iter02.hasNext()) {
+      while(iter02.hasNext()) { // 꺼낼 것이 있다면 true 반환
+        // next() 메소드는 하나를 꺼낸다. 하나를 꺼내면 자동을 다음 것을 첨조한다.
         System.out.print(iter02.next() + " "); // 홍길동 이순신 임꺽정
       }
 
@@ -171,7 +172,8 @@ tags:
       
       // iterator() 메소드를 이용한 요소의 출력
       Iterator<Integer> iter = ts.iterator();
-      while(iter.hasNext()) {
+      while(iter.hasNext()) { // 꺼낼 것이 있다면 true 반환
+        // next() 메소드는 하나를 꺼낸다. 하나를 꺼내면 자동으로 다음 것을 참조한다.
         System.out.print(iter.next() + " "); // 10 20 30 
       }
       
