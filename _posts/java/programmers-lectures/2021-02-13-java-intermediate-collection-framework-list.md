@@ -47,7 +47,7 @@ tags:
       
       // for문, get() 메소드를 이용한 요소의 출력
       for(int i = 0; i < arrList.size(); i++) {
-        System.out.print(arrList.get(i) + " ");
+        System.out.print(arrList.get(i) + " "); // 40 20 30 10
       }
       
       // remove() 메소드를 이용한 요소의 제거
