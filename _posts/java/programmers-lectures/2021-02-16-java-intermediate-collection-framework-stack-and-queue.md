@@ -98,9 +98,36 @@ tags:
   
 - ex) 여러 LinkedList 메소드를 이용하여 큐 메모리 구조를 구현한 예제
 
+  ```java
+  import java.util.*;
   
-
-
+  public class QueueExam {
+    public static void main(String[] args) {
+      LinkedList<String> qu = new LinkedList<String>(); // 큐의 생성
+      // Deque<String> qu = new ArrayDeque<String>();
+      
+      // add 메소드를 이용한 요소의 저장
+      qu.add("넷");
+      qu.add("둘");
+      qu.add("셋");
+      qu.add("하나");
+      
+      // peek() 메소드를 이용한 요소의 반환
+      System.out.println(qu.peek()); // 넷
+      System.out.println(qu); // [넷, 둘, 셋, 하나]
+      
+      // poll() 메소드를 이용한 요소의 반환 및 제거
+      System.out.println(qu.poll()); // 넷
+      System.out.println(qu); // [둘, 셋, 하나]
+      
+      // remove() 메소드를 이용한 요소의 제거
+      qu.remove("하나");
+      System.out.println(qu); // [둘, 셋]
+    }
+  }
+  ```
+  
+- Java SE 6부터 지원되는 **ArrayDeque 클래스**는 **스택**과 **큐** 메모리 구조를 모두 구현하는데 가장 적합한 클래스다.
   
 ## 출처
 - [코딩의 시작, TCP School \| JAVA \| Stack과 Queue](https://www.tcpschool.com/java/java_collectionFramework_stackQueue)
