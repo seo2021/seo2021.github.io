@@ -31,6 +31,7 @@ tags:
   - 물론 이 과정은 자동으로 수행되지만, **요소의 추가 및 삭제 작업에 걸리는 시간이 매우 길어지는 단점**이 있다.
 
 - ☝ 리스트 vs 배열
+
   ![리스트와 배열의 차이](/assets/images/java/list_vs_array.png)
 
 - ex) 여러 ArrayList 메소드를 이용하여 리스트를 생성하고 조작
@@ -98,6 +99,7 @@ tags:
   - 하지만, 단일 연결 리스트는 현재 요소에서 이전 요소로 접근하기가 어렵다. 따라서, **이전 요소를 가리키는 참조**도 가지는 **이중 연결 리스트(doubly linked list)**가 좀 더 많이 사용된다.
   
     ![이중 연결 리스트](/assets/images/java/doubly_linked_list.png)
+    
     
   - **LinkedList 클래스**도 위와 같은 **이중 연결 리스트**를 내부적으로 구현한 것.
   - 또한, LinkedList 클래스 역시 List 인터페이스를 구현하므로 ArrayList 클래스와 사용할 수 있는 메소드가 거의 같다.<br/>
