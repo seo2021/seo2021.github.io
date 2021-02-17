@@ -70,6 +70,7 @@ tags:
       
       // replace() 메소드를 이용한 요소의 수정
       hm.replace("이십", 200);
+      // hm.put("이십", 200); -> 이와 같이 덮어씌워서 value를 변경할 수도 있다.
       
       for (String key : hm.keySet()) {
         // 키 : 이십, 값 : 200
