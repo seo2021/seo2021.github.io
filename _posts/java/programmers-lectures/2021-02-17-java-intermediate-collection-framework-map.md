@@ -28,14 +28,14 @@ tags:
 ## HashMap\<K, V> 클래스
 - Map 컬렉션 클래스에서 가장 많이 사용되는 클래스 중 하나.
 - JDK 1.2부터 제공된 HashMap 클래스는 **해시 알고리즘(hash algorithm)**을 사용하여 **검색 속도가 매우 빠르다**.
-- Map 인터페이스를 구현하므로 **중복된 키로는 값을 저장할 수 없으나**, 같은 값을 다른 키로 저장하는 것은 가능하다.
+- Map 인터페이스를 구현하므로 요소를 **저장 순서에 상관없이 저장**하고 **중복된 키로는 값을 저장할 수 없으나**, 같은 값을 다른 키로 저장하는 것은 가능하다.
 
 - ex) 여러 HashMap 메소드를 이용하여 맵을 생성하고 조작
 
   ```java
   import java.util.*;
   
-  public class MapExam {
+  public class MapExam01 {
     public static void main(String[] args) {
       HashMap<String, Integer> hm = new HashMap(String, Integer>();
       
@@ -84,7 +84,85 @@ tags:
   }
   ```
   - 위의 예제에서 사용된 **keySet() 메소드**는 해당 맵에 포함된 **모든 키 값들을 하나의 집합(Set)으로 반환**해준다.
+
+## Hashtable\<K, V> 클래스
+- JDK 1.0부터 사용해왔으며, HashMap 클래스와 같은 동작을 하는 클래스.
+- 현재의 Hashtable 클래스는 HashMap 클래스와 마찬가지로 **Map 인터페이스를 상속받는다**.
+  - 따라서, Hashtable 클래스에서 사용할 수 있는 메소드는 HashMap 클래스에서 사용할 수 있는 메소드와 거의 같다.
+- 하지만, 현재 기존 코드와의 호환성을 위해서만 남아있으므로, **Hashtable 클래스보다는 HashMap 클래스를 사용하는 것이 좋다**.
+
+## TreeMap\<K, V> 클래스
+- **키와 값을 한 쌍**으로 하는 데이터를 **이진 검색 트리(binary search tree)**의 형태로 저장.
+  - 데이터를 **키를 기준으로 정렬된 상태**로 저장. 
+  - **natural ordering**을 지원하며, 생성자의 매개변수를 **Comparator 객체로 하여 정렬 방법을 임의로 지정**해줄 수 있다.
+  - 이진 검색 트리는 데이터를 추가하거나 제거하는 등의 기본 동작 시간이 매우 빠르다.
+- JDK 1.2부터 제공된 TreeMap 클래스는 기존의 이진 검색 트리의 성능을 향상시킨 **레드-블랙 트리(Red-Black Tree)**로 구현된다.
+
+  >- 레드-블랙 트리(Red-Black Tree)
+  >   - 트리에 값이 편향되게 입력될 때 한쪽으로 치우쳐진 트리가 되는 것을 보완하기 위해 등장했다.
+  >   - 부모 노드보다 작은 값을 가지는 노드는 왼쪽 자식으로, 큰 값을 가지는 노드를 오른쪽 자식으로 배치하여 데이터의 추가나 삭제 시 트리가 한쪽으로 치우쳐지지 않도록 균형을 맞춰준다.
+
+- Map 인터페이스를 구현하므로 요소를 **저장 순서에 상관없이 저장**하고, **중복된 키로는 값을 저장할 수 없으나** 같은 값을 다른 키로 저장하는 것은 가능하다.
+  - 저장 순서에 상관없이 키를 기준으로 정렬된 상태로 저장된다.
+
+- ex) 여러 TreeMap 메소드를 이용하여 맵을 생성하고 조작
+
+  ```java
+  import java.util.*;
+  
+  public class MapExam02 {
+	  public static void main(String[] args) {
+      TreeMap<Integer, String> tm = new TreeMap<Integer, String>();
+      
+      // put() 메소드를 이용한 요소의 저장
+      tm.put(30, "삼십");
+      tm.put(10, "십");
+      tm.put(40, "사십");
+      tm.put(20, "이십");
+      
+      // Enhanced for문, get() 메소드를 이용한 요소의 출력
+      System.out.println("맵에 저장된 키들의 집합 : " + tm.keySet()); // [10, 20, 30, 40]
+      for(Integer key : tm.keySet()) {
+        // 키 : 10, 값 : 십
+        // 키 : 20, 값 : 이십
+        // 키 : 30, 값 : 삼십
+        // 키 : 40, 값 : 사십
+        System.out.println(String.format("키 : %s, 값 : %s", key, tm.get(key)));
+      }
+      
+      // remove() 메소드를 이용한 요소의 제거
+      tm.remove(40);
+      
+      // iterator(), get() 메소드를 이용한 요소의 출력
+      Iterator<Integer> keys = tm.keySet().iterator();
+      while(keys.hasNext()) {
+        Integer key = keys.next();
+        // 키 : 10, 값 : 십
+        // 키 : 20, 값 : 이십
+        // 키 : 30, 값 : 삼십
+        System.out.println(String.format("키 : %s, 값 : %s", key, tm.get(key)));
+      }
+      
+      // replace() 메소드를 이용한 요소의 수정
+      tm.replace(20, "twenty");
+      
+      for (Integer key : tm.keySet()) {
+        // 키 : 10, 값 : 십
+        // 키 : 20, 값 : twenty
+        // 키 : 30, 값 : 삼십
+        System.out.println(String.format("키 : %s, 값 : %s", key, tm.get(key)));
+      }
+      
+      // size() 메소드를 이용한 요소의 총 개수
+      System.out.println("맵의 크기 : " + tm.size()); // 3
+    }
+  }
+  ```
+  
+## HashMap\<K, V> 메소드
+- 
   
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| Map](https://programmers.co.kr/learn/courses/9/lessons/260)
 - [코딩의 시작, TCP School \| JAVA \| Map 컬렉션 클래스](https://www.tcpschool.com/java/java_collectionFramework_map)
+- [코딩팩토리 \| [Java] 자바 TreeSet 사용법 & 예제 총정리](https://coding-factory.tistory.com/555)
