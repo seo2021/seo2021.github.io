@@ -18,7 +18,7 @@ tags:
 
 - Map 인터페이스를 구현한 모든 Map 컬렉션 클래스는 다음과 같은 특징을 가진다.
   1. 요소의 저장 순서를 유지하지 않는다. 👉 **순서 X**
-  2. 키는 중복을 허용하지 않지만, 값의 중복은 허용한다. 👉 **값 중복 O**
+  2. 키는 중복을 허용하지 않지만, 값의 중복은 허용한다. 👉 **키 중복 X, 값 중복 O**
 
 - 대표적인 Map 컬렉션 클래스에 속하는 클래스는 다음과 같다.
   1. **HashMap\<K, V>**
@@ -158,8 +158,62 @@ tags:
   }
   ```
   
-## HashMap\<K, V> 메소드
-- 
+## HashMap\<K, V> 주요 메소드
+
+  | 메소드 | 설명 |
+  |:------|:------|
+  | void clear() | 맵의 모든 매핑을 제거 |
+  | boolean containsKey(Object key) | 맵이 전달된 키를 포함하고 있는지 확인 |
+  | boolean containsValue(Object value) | 맵이 전달된 값에 해당하는 하나 이상의 키를 포함하고 있는지 확인 |
+  | V get(Object key) | 맵에서 전달된 키에 대응하는 값을 반환. 만약 해당 맵이 전달된 키를 포함한 매핑을 포함하고 있지 않으면, null을 반환 |
+  | boolean isEmpty() | 맵이 비어있는지 확인 |
+  | Set\<K> keySet() | 맵에 포함되어 있는 모든 키로 만들어진 Set 객체를 반환 |
+  | V put(K key, V value) | 맵에 전달된 키에 대응하는 값으로 특정 값을 매핑 |
+  | V remove(Object key) | 맵에 전달된 키에 대응하는 매핑을 제거 |
+  | boolean remove(Object key, Object value) | 맵에서 특정 값에 대응하는 특정 키의 매핑을 제거 |
+  | V replace(K key, V value) | 맵에서 전달된 키에 대응하는 값을 특정 값으로 대체 |
+  | boolean replace(K key, V oldValue, V newValue) | 맵에서 특정 값에 대응하는 전달된 키의 값을 새로운 값으로 대체 |
+  | int size() | 맵의 매핑 총 개수 반환 |
+  
+  - 💡 키와 값으로 구성되는 데이터를 **매핑(mapping)** 또는 **엔트리(entry)**라고 한다.
+
+## TreeMap\<K, V> 주요 메소드
+
+  | 메소드 | 설명 |
+  |:------|:------|
+  | Map.Entry\<K, V> ceilingEntry(K key) | 맵에서 전달된 키와 같거나, 전달된 키보다 큰 키 중에서 가장 작은 키와 그에 대응하는 엔트리를 반환. 만약 해당하는 키가 없으면 null 반환. |
+  | K ceilingKey(K key) | 해당 맵에서 전달된 키와 같거나, 전달된 키보다 큰 키 중에서 가장 작은 키를 반환. 만약 해당하는 키가 없으면 null을 반환. |
+  | void clear() | 해당 맵의 모든 매핑을 제거 |
+  | boolean containsKey(Object key) | 맵이 전달된 키를 포함하고 있는지 확인 |
+  | oolean containsValue(Object value) | 맵이 전달된 값에 해당하는 하나 이상의 키를 포함하고 있는지 확인 |
+  | NavigableMap\<K, V> descendingMap() | 맵에 포함된 모든 매핑을 역순으로 반환 |
+  | Set\<Map.Entry\<K, V>> entrySet | 맵에 포함된 모든 매핑을 Set 객체로 반환 |
+  | Map.Entry\<K, V> firstEntry() | 맵에서 현재 가장 작은(첫 번째) 키와 그에 대응하는 값의 엔트리를 반환 |
+  | K firstKey() | 맵에서 현재 가장 작은(첫 번째) 키를 반환 |
+  | Map.Entry\<K, V> floorEntry(K key) | 맵에서 전달된 키와 같거나, 전달된 키보다 작은 키 중에서 가장 큰 키를 반환. 만약 해당하는 키가 없으면 null을 반환 |
+  | K floorKey(K key) | 맵에서 전달된 키와 같거나, 전달된 키보다 작은 키 중에서 가장 큰 키를 반환. 해당하는 키가 없으면 null을 반환 |
+  | V get(Object key) | 맵에서 전달된 키에 대응하는 값을 반환. 만약 해당 맵이 전달된 키를 포함한 매핑을 포함하고 있지 않으면 null을 반환. |
+  | SortedMap\<K, V> headMap(K toKey) | 맵에서 전달된 키보다 작은 키로 구성된 부분만을 반환 |
+  | Map.Entry\<K, V> higherEntry(K key) | 맵에서 전달된 키보다 작은 키 중에서 가장 큰 키와 그에 대응하는 값의 엔트리를 반환. 만약 해당하는 값의 엔트리를 반환. 만약 해당하는 키가 없으면 null을 반환. |
+  | K higherKey(K key) | 맵에서 전달된 키보다 작은 키 중에서 가장 큰 키를 반환. 만약 해당하는 키가 없으면 null을 반환. |
+  | Set\<K> keySet() | 맵에 포함되어 있는 모든 키로 만들어진 Set 객체를 반환 |
+  | Map.Entry\<K, V> lastEntry() | 맵에서 현재 가장 큰(마지막) 키와 그에 대응하는 값의 엔트리를 반환 |
+  | K lastKey() | 맵에서 현재 가장 큰(마지막) 키를 반환 |
+  | Map.Entry\<K, V> lowerEntry(K key) | 맵에서 전달된 키보다 큰 키 중에서 가장 작은 키와 그에 대응하는 값의 엔트리를 반환. 만약 해당하는 키가 없으면 null을 반환. |
+  | K lowerKey(K key) | 맵에서 전달된 키보다 큰 키 중에서 가장 작은 키를 반환. 만약 해당하는 키가 없으면 null을 반환 |
+  | Map.Entry\<K, V> pollFirstEntry() | 맵에서 현재 가장 작은(첫 번째) 키와 그에 대응하는 값의 엔트리를 반환하고, 해당 엔트리를 맵에서 제거 |
+  | Map.Entry\<K, V> pollLastEntry() | 맵에서 현재 가장 큰(마지막) 키와 그에 대응하는 값의 엔트리를 반환하고, 해당 엔트리를 맵에서 제거 |
+  | V put(K key, V value) | 맵에 전달된 키에 대응하는 값으로 특정 값을 매핑 |
+  | V remove(Object key) | 맵에서 전달된 키에 대응하는 매핑을 제거 |
+  | boolean remove(K key, V value) | 맵에서 특정 값에 대응하는 특정 키의 매핑을 제거 |
+  | V replace(K key, V value) | 맵에서 전달된 키에 대응하는 값을 특정 값으로 대체 |
+  | boolean replace(K key, V oldValue, V newValue) | 맵에서 특정 값에 대응하는 전달된 키의 값을 새로운 값으로 대체 |
+  | int size() | 맵의 매핑 총 개수 반환 |
+  | SortedMap\<K, V> subMap(K fromKey, K toKey) | 맵에서 fromKey부터 toKey까지로 구성된 부분만을 반환. 이때 fromKey는 포함되나, toKey는 포함되지 않음. |
+  | SortedMap\<K, V> tailMap(K fromKey) | 맵에서 fromKey와 같거나, fromKey보다 큰 키로 구성된 부분만을 반환 |
+  
+  - 💡 **Map.Entry 인터페이스**는 Map 인터페이스의 내부 인터페이스로, 맵에 저장되는 엔트리 조작을 위한 메소드가 정의되어 있다.
+  - 💡 NavigableMap은 SortedMap을 확장한 인터페이스.
   
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| Map](https://programmers.co.kr/learn/courses/9/lessons/260)
