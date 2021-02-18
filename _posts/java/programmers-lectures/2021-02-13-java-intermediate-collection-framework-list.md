@@ -165,12 +165,19 @@ tags:
   | boolean equals(Object o) | 리스트와 전달된 객체가 같은지 확인 |
   | E get(int index) | 리스트의 특정 위치에 존재하는 요소 반환 |
   | boolean isEmpty() | 리스트가 비어있는지 확인 |
-  | Iterator<E> iterator() | 리스트의 반복자(iterator)를 반환 |
+  | Iterator\<E> iterator() | 리스트의 반복자(iterator)를 반환 |
   | boolean remove(Object o) | 리스트에서 전달된 객체를 제거(선택적 기능) |
   | boolean remove(int index) | 리스트에서 특정 위치에 존재하는 요소를 제거(선택적 기능) |
   | E set(int index, E e) | 리스트의 특정 위치에 존재하는 요소를 전달받은 객체로 대체(선택적 기능) |
   | int size() | 리스트 요소의 총 개수 반환 |
-  | Object[] toArray() | 리스트의 모든 요소를 Object 타입의 배열로 반환 |
+  | Object\[\] toArray() | 리스트의 모든 요소를 Object 타입의 배열로 반환 |
+
+## 관련 포스트 - 컬렉션 프레임워크
+- [컬렉션 프레임워크(Collection Framework)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-collection-framework/)
+- [컬렉션 프레임워크 : Set](https://seo2021.github.io/java/programmers-lectures/java-intermediate-collection-framework-set/)
+- [컬렉션 프레임워크 : Stack과 Queue](https://seo2021.github.io/java/java-collection-framework-stack-and-queue/)
+- [컬렉션 프레임워크 : Map](https://seo2021.github.io/java/programmers-lectures/java-intermediate-collection-framework-map/)
+- [컬렉션 프레임워크 : Iterator](https://seo2021.github.io/java/001-java-collection-framework-iterator/)
   
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| List](https://programmers.co.kr/learn/courses/9/lessons/259)
