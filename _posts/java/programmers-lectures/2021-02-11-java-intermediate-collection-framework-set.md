@@ -208,10 +208,10 @@ tags:
   | boolean contains(Object o) | 집합이 전달된 객체를 포함하고 있는지 확인 |
   | boolean equals(Object o) | 집합과 전달된 객체가 같은지 확인 |
   | boolean isEmpty() | 집합이 비어있는지 확인 |
-  | Iterator<E> iterator() | 집합의 반복자(iterator)를 반환 |
+  | Iterator\<E> iterator() | 집합의 반복자(iterator)를 반환 |
   | boolean remove(Object o) | 집합에서 전달된 객체를 제거(선택적 기능) |
   | int size() | 집합의 요소 총 개수를 반환 |
-  | Object[] toArray() | 집합의 모든 요소를 Object 타입의 배열로 반환 |
+  | Object\[\] toArray() | 집합의 모든 요소를 Object 타입의 배열로 반환 |
   
 ## 관련 포스트 - 컬렉션 프레임워크
 - [컬렉션 프레임워크(Collection Framework)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-collection-framework/)
