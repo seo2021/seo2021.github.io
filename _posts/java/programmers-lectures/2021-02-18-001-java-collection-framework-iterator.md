@@ -97,6 +97,13 @@ tags:
   | int previousIndex() | 다음 previous() 메소드를 호출하면 반환될 요소의 인덱스를 반환 |
   | void remove() | next()나 previous() 메소드에 의해 반환된 가장 마지막 요소를 리스트에서 제거(선택적 기능) |
   | void set(E e) | next()나 previous() 메소드에 의해 반환된 가장 마지막 요소를 전달된 객체로 대체(선택적 기능) |
+  
+## 관련 포스트 - 컬렉션 프레임워크
+- [컬렉션 프레임워크(Collection Framework)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-collection-framework/)
+- [컬렉션 프레임워크 : Set](https://seo2021.github.io/java/programmers-lectures/java-intermediate-collection-framework-set/)
+- [컬렉션 프레임워크 : List](https://seo2021.github.io/java/programmers-lectures/java-intermediate-collection-framework-list/)
+- [컬렉션 프레임워크 : Stack과 Queue](https://seo2021.github.io/java/java-collection-framework-stack-and-queue/)
+- [컬렉션 프레임워크 : Map](https://seo2021.github.io/java/programmers-lectures/java-intermediate-collection-framework-map/)
 
 ## 출처
 - [코딩의 시작, TCP School \| JAVA \| Iterator와 ListIterator](https://www.tcpschool.com/java/java_collectionFramework_iterator)
