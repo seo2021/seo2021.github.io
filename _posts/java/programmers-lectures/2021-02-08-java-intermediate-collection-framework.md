@@ -29,7 +29,7 @@ tags:
 
   ![컬렉션 프레임워크 상속 관계](/assets/images/java/collection_interface_diagram.png)
   
-  - 위의 그림에서 \<E>나 <K, V>라는 것은 **컬렉션 프레임워크를 구성하는 모든 클래스가 제네릭으로 표현되어 있음**을 알려준다.
+  - 위의 그림에서 \<E>나 \<K, V>라는 것은 **컬렉션 프레임워크를 구성하는 모든 클래스가 제네릭으로 표현되어 있음**을 알려준다.
   
 ## 주요 인터페이스의 간략한 특징
 
@@ -88,7 +88,7 @@ tags:
   | Iterator\<E> iterator() | 컬렉션의 반복자(iterator) 반환 |
   | boolean remove(Object o) | 컬렉션에서 전달된 객체 제거(선택적 기능) |
   | int size() | 컬렉션 요소의 총 개수 반환 |
-  | Object[] toArray() | 컬렉션의 모든 요소를 Object 타입의 배열로 반환 |
+  | Object\[\] toArray() | 컬렉션의 모든 요소를 Object 타입의 배열로 반환 |
   
   - Iterator는 꺼낼 요소가 있는지 살펴보는 hasNext() 메소드와 요소를 하나씩 꺼낼 때 사용하는 next() 메소드 등을 가지고 있다.
 
