@@ -216,6 +216,13 @@ tags:
   
   - 💡 **Map.Entry 인터페이스**는 Map 인터페이스의 내부 인터페이스로, 맵에 저장되는 엔트리 조작을 위한 메소드가 정의되어 있다.
   - 💡 NavigableMap은 SortedMap을 확장한 인터페이스.
+
+## 관련 포스트 - 컬렉션 프레임워크
+- [컬렉션 프레임워크(Collection Framework)](https://seo2021.github.io/java/programmers-lectures/java-intermediate-collection-framework/)
+- [컬렉션 프레임워크 : Set](https://seo2021.github.io/java/programmers-lectures/java-intermediate-collection-framework-set/)
+- [컬렉션 프레임워크 : List](https://seo2021.github.io/java/programmers-lectures/java-intermediate-collection-framework-list/)
+- [컬렉션 프레임워크 : Stack과 Queue](https://seo2021.github.io/java/java-collection-framework-stack-and-queue/)
+- [컬렉션 프레임워크 : Iterator](https://seo2021.github.io/java/001-java-collection-framework-iterator/)
   
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| Map](https://programmers.co.kr/learn/courses/9/lessons/260)
