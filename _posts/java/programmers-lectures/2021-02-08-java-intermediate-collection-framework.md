@@ -91,6 +91,13 @@ tags:
   | Object[] toArray() | 컬렉션의 모든 요소를 Object 타입의 배열로 반환 |
   
   - Iterator는 꺼낼 요소가 있는지 살펴보는 hasNext() 메소드와 요소를 하나씩 꺼낼 때 사용하는 next() 메소드 등을 가지고 있다.
+
+## 관련 포스트 - 컬렉션 프레임워크
+- [컬렉션 프레임워크 : Set](https://seo2021.github.io/java/programmers-lectures/java-intermediate-collection-framework-set/)
+- [컬렉션 프레임워크 : List](https://seo2021.github.io/java/programmers-lectures/java-intermediate-collection-framework-list/)
+- [컬렉션 프레임워크 : Stack과 Queue](https://seo2021.github.io/java/java-collection-framework-stack-and-queue/)
+- [컬렉션 프레임워크 : Map](https://seo2021.github.io/java/programmers-lectures/java-intermediate-collection-framework-map/)
+- [컬렉션 프레임워크 : Iterator](https://seo2021.github.io/java/001-java-collection-framework-iterator/)
   
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 컬렉션 프레임워크](https://programmers.co.kr/learn/courses/9/lessons/256)
