@@ -201,3 +201,5 @@ tags:
 
 ## 출처
 - [코딩의 시작, TCP School \| JAVA \| Comparable과 Comparator](https://www.tcpschool.com/java/java_collectionFramework_comparable)
+- [Heee's Development Blog \| [Java] Comparable와 Comparator의 차이와 사용법](https://gmlwjd9405.github.io/2018/09/06/java-comparable-and-comparator.html)
+- [대한민국 개발자 아빠 \| Comparable / Comparator 인터페이스 차이점](https://dev-daddy.tistory.com/23)
