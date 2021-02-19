@@ -15,10 +15,55 @@ tags:
 - 자바에서 같은 타입의 인스턴스를 서로 비교해야만 하는 클래스들은 모두 Comparable 인터페이스를 구현하고 있다.
   - 따라서, **Boolean을 제외한 래퍼 클래스**나 **String, Time, Date**와 같은 클래스의 인스턴스는 모두 정렬 가능.
 - **기본 정렬 순서**는 작은 값에서 큰 값으로 정렬되는 **오름차순**.
-- java.lang 패키지에 속한다.
+- `java.lang` 패키지에 속한다.
 
 - 사용 목적
   - 해당 **인터페이스를 구현한 객체 스스로에게 부여**하는 **한 가지 기본 정렬 규칙**을 설정하는 목적으로 사용한다.
+  - 배열의 정렬에는 보통 Arrays 클래스의 `sort()` 메소드를 사용한다. 아래와 같이 배열 하나만을 매개변수로 받는 `sort()` 메소드는 배열을 natural ordering 방식으로 정렬한다.
+
+    ```java
+    int[] numbers = {-3, -5, 1, 7, 4, -2};
+    String[] strings = {"a", "b", "c", "A", "B", "C"};
+
+    Arrays.sort(numbers); // {-5, -3, -2, 1, 4, 7}
+    Arrays.sort(strings); // {"A", "B", "C", "a", "b", "c"}
+    ```
+    
+  - 하지만, 아래와 같이 커스텀 객체를 `Arrays.sort()`로 정렬하려고 하면 문제가 발생한다.
+    
+    ```java
+    java.util.*;
+    
+    class Friend {
+      private String name;
+      private int age;
+      
+      public Friend(String name, int age) {
+        super();
+        this.name = name;
+        this.age = age;
+      }
+    }
+    
+    public class SortExam {
+      public static void main(String[] args) {
+        Friend kim = new Friend("Kim", 36);
+        Friend park = new Friend("Park", 20);
+        Friend lee = new Friend("Lee", 28);
+        Friend yong = new Friend("Yong", 18);
+        
+        Friend[] friends = {kim, park, lee, yong};
+        
+        // 오류 발생 -> java.lang.ClassCastException: Friend cannot be cast to java.lang.Comparable
+        Arrays.sort(friends);
+      }
+    }
+    ```
+    - `Friend` 객체에 대한 **정렬 기준이 없기 때문에 오류가 발생**한다.
+    - 바로 그 정렬 기준을 정하는 방법이 **Comparable 인터페이스를 구현**하는 것이며, `sort()` 메소드에서는 Comparable 인터페이스를 구현한 객체의 배열만 보낼 수 있다.
+    - Comparable 인터페이스를 구현하면 **compareTo() 메서드를 오버라이딩**해야 하는데, 이 메소드가 정렬 규칙을 정하는 메소드이다.
+    
+  
 
 
 - Comparable 인터페이스는 다음과 같은 메소드를 사용하여 객체를 정렬한다.
@@ -29,6 +74,7 @@ tags:
   
 - 구현 방법 
   - 정렬할 객체에 Comparable 인터페이스를 implements 후, compareTo() 메소드를 재정의하여 구현.
+  - compareTo() 메소드는 그것이 구현된 객체와 
   - compareTo() 메소드 작성법
     - 현재 객체 < 매개변수로 넘어온 객체 👉 음수 반환
     - 현재 객체 == 매개변수로 넘어온 객체 👉 0 반환
