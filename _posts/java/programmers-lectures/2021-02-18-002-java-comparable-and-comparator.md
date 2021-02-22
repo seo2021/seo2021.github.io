@@ -171,10 +171,12 @@ tags:
 - `Comparable` 인터페이스와 같이 **객체를 정렬**하는 데 사용되는 인터페이스.
   - `Comparable` 인터페이스를 구현한 클래스는 기본적으로 오름차순으로 정렬된다. 반면에 **`Comparator` 인터페이스는 내림차순이나 다른 기준으로 정렬**하고 싶을 때 사용할 수 있다.
   - 즉, 정렬 가능한 클래스(Comparable 인터페이스를 구현한 클래스)들의 **기본 정렬 기준과 다르게 정렬**하고 싶을 때 사용.
+    - `Comparable`로 구현한 정렬 기준 외에 특수한 기준을 줄 수 있다.  
   - 이때 `Comparator` 인터페이스를 구현한 클래스에서는 **`compare()` 메소드를 재정의**하여 사용하게 된다.
   - 해당 인터페이스를 구현한 클래스는 **정렬 규칙 그 자체**를 의미한다.
 
 - 주로 익명 클래스로 사용된다.
+  - 그때그때 필요한 특수한 정렬 기준을 만들어서 사용하기 때문이다.  
 - `java.util` 패키지에 속한다.
 
 - `Comparator` 인터페이스는 다음과 같은 메소드를 사용하여 객체를 정렬
@@ -300,3 +302,4 @@ tags:
 - [Heee's Development Blog \| [Java] Comparable와 Comparator의 차이와 사용법](https://gmlwjd9405.github.io/2018/09/06/java-comparable-and-comparator.html)
 - [대한민국 개발자 아빠 \| Comparable / Comparator 인터페이스 차이점](https://dev-daddy.tistory.com/23)
 - [StudyNote by sungjine \| Comparable와 Comparator비교](https://sung-studynote.tistory.com/41)
+- [기본기를 쌓는 정아마추어 코딩블로그 \| 자바 Comparable, Comparator 하면 '정렬'을 떠올려라, 자바 객체 정렬의 '기준'을 정하는 방법!](https://jeong-pro.tistory.com/173)
