@@ -180,5 +180,5 @@ tags:
 - [컬렉션 프레임워크 : Iterator](https://seo2021.github.io/java/001-java-collection-framework-iterator/)
   
 ## 출처
-- [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| List](https://programmers.co.kr/learn/courses/9/lessons/259)
+- [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| List](https://programmers.co.kr/learn/courses/9/lessons/259)
 - [코딩의 시작, TCP School \| JAVA \| List 컬렉션 클래스](https://www.tcpschool.com/java/java_collectionFramework_list)
