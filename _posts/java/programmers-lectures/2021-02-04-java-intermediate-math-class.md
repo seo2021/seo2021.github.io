@@ -114,7 +114,7 @@ tags:
 - [Enum 클래스](https://seo2021.github.io/java/001-java-intermediate-enum-class/)
   
 ## 출처
-- [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| Math](https://programmers.co.kr/learn/courses/9/lessons/261)
+- [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| Math](https://programmers.co.kr/learn/courses/9/lessons/261)
 - [코딩의 시작, TCP School \| JAVA \| Math 클래스](https://www.tcpschool.com/java/java_api_math)
 - [위키백과 \| 바닥 함수와 천장 함수](https://ko.wikipedia.org/wiki/바닥_함수와_천장_함수)
 - [코딩팩토리 \| [Java] 자바 소수점 n번째 자리까지 반올림하기](https://coding-factory.tistory.com/250)
