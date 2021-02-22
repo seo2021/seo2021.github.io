@@ -201,20 +201,58 @@ tags:
     - `PriorityQueue(int initialCapacity, Comparator<? super E> comparator)`
     - 지정된 `Comparator`의 정렬 방법에 따라 우선 순위를 할당.
 
-- ex) Friend 목록을 기본규칙인 age 순 정렬이 아닌, name 순서로 정렬
+- ex) Friend 목록을 기본 규칙인 age순 정렬이 아닌, name 오름차순으로 정렬
 
-  - 별도의 규칙을 가진 클래스를 생성
+  - 별도의 정렬 규칙을 가진 클래스를 생성
     ```java
     class SortFriendByNameInAsc implements Comparator<Friend> {
       @Override
       public int compare(Friend o1, Friend o2) {
-        return o2.name.compareTo(o1.name);
+        return o1.name.compareTo(o2.name);
       }
     }
     ```
-    
-  - 여기서 부터 작성 🦥🦥🦥🦥🦥🦥🦥🦥🦥 
+    - `Comparator`는 비교 객체 외부에서 구현되므로, `compare()` 메소드는 비교할 객체 두 개에 대힌 정보를 모두 인자로 받는다.
 
+  - `sort()` 메소드에 정렬 대상과 `Comparator`를 구현한 정렬 규칙 객체를 인자로 보낸다.
+    ```java
+    Friend kim = new Friend("Kim", 36);
+    Friend park = new Friend("Park", 20);
+    Friend lee = new Friend("Lee", 28);
+    Friend yong = new Friend("Yong", 18);
+    
+    List<Friend> friends = new ArrayList<>();
+    friends.add(kim);
+    friends.add(park);
+    friends.add(lee);
+    friends.add(yong);
+    
+    Collections.sort(friends, new SortFriendByNameInAsc()); // kim, lee, park, yong
+    ```
+    
+  - 이와 같이 `Comparator` 인터페이스는 그것을 구현하는 클래스 자체가 규칙이 된다.
+
+  - Comparator 익명 클래스 이용
+
+    ```java
+    Comparator<Friend> sortFriendByNameInAsc = new Comparator<Friend>() {
+      @Override
+      public int compare(Friend o1, Friend o2) {
+        return o1.name.compareTo(o2.name);
+      }
+    }
+    
+    public class ComparatorExam {
+      public static void main(String[] args) {
+      
+        ...
+        
+        Collections.sort(friends, sortFriendByNameInAsc);
+      }
+    }
+    ```
+    - 클래스 선언과 동시에 객체 생성
+      
 
 - ex) 요소를 내림차순으로 정렬하여 저장하는 `TreeSet` 인스턴스를 생성하기 위해 `Comparator` 인터페이스를 구현
 
@@ -252,6 +290,10 @@ tags:
     }
   }
   ```
+  
+## 요약
+> - Comparable 👉 해당 인터페이스를 구현한 **객체 스스로에게 부여**하는 **한 가지 기본 정렬 규칙**을 설정
+> - Comparator 👉 해당 인터페이스를 구현한 클래스는 **정렬 규칙 그 자체**를 의미하며, **기본 정렬 규칙과 다르게 정렬**하고 싶을 때 사용
 
 ## 출처
 - [코딩의 시작, TCP School \| JAVA \| Comparable과 Comparator](https://www.tcpschool.com/java/java_collectionFramework_comparable)
