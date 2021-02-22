@@ -105,5 +105,5 @@ tags:
 - [Enum 클래스](https://seo2021.github.io/java/001-java-intermediate-enum-class/)
   
 ## 출처
-- [프로그래머스 \| 프로그래밍 강의 \| 자바 입문 \| 스트링버퍼](https://programmers.co.kr/learn/courses/9/lessons/253)
+- [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| 스트링버퍼](https://programmers.co.kr/learn/courses/9/lessons/253)
 - [코딩의 시작, TCP School \| JAVA \| StringBuffer 클래스](https://www.tcpschool.com/java/java_api_stringBuffer)
