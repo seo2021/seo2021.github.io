@@ -206,6 +206,7 @@ tags:
 
 - ex) Friend 목록을 기본 규칙인 age순 정렬이 아닌, name 오름차순으로 정렬
   - 별도의 정렬 규칙을 가진 클래스를 생성
+  
     ```java
     class SortFriendByNameInAsc implements Comparator<Friend> {
       @Override
@@ -218,6 +219,7 @@ tags:
     
 
   - `sort()` 메소드에 **정렬 대상**과 **`Comparator`를 구현한 정렬 규칙 객체**를 인자로 보낸다.
+  
     ```java
     Friend kim = new Friend("Kim", 36);
     Friend park = new Friend("Park", 20);
@@ -236,6 +238,7 @@ tags:
     
 
   - Comparator 익명 클래스 이용
+  
     ```java
     Comparator<Friend> sortFriendByNameInAsc = new Comparator<Friend>() {
       @Override
@@ -257,6 +260,7 @@ tags:
 
 
 - ex) 요소를 내림차순으로 정렬하여 저장하는 `TreeSet` 인스턴스를 생성하기 위해 `Comparator` 인터페이스를 구현
+
   ```java
   import java.util.*;
   
