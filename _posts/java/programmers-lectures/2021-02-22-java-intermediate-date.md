@@ -30,12 +30,18 @@ tags:
   Date date = new Date();
   ```
   
+  
+  
+  
 - `toString()` 메소드를 이용하여 현재 시간을 문자열로 구할 수 있다.
 
   ```java
   // Wed Jan 06 18:36:56 KST 2016
   System.out.println(date.toString());
   ```
+  
+  
+  
   
 - `java.util.SimpleDateFormat` 클래스를 이용하여 원하는 형태로 출력할 수 있다.
   - **yyyy**는 년, **MM**은 월, **dd**는 일을 표현.
@@ -46,6 +52,9 @@ tags:
   SimpleDateFormat ft = new SimpleDateFormat("yyyy.MM.dd 'at' hh:mm:ss a zzz");
   System.out.println(ft.format(date));
   ```
+  
+  
+  
   
 - 현재 시간을 long 값으로 구하기
 
