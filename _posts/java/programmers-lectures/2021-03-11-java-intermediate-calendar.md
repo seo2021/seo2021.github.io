@@ -25,24 +25,27 @@ tags:
 ## java.util.Calendar 클래스
 - 자바에서 **날짜와 시간**에 관한 데이터를 손쉽게 처리할 수 있도록 제공하는 **추상 클래스**.
   - 추상 클래스로 선언된 이유는 나라마다 사용하는 달력 체계가 조금씩 다를 수 있기 때문이다.
-
 - 날짜와 시간을 처리하기 위한 다양한 필드와 메소드가 포함되어 있다.
+- **현재 날짜와 시간**에 대한 정보를 가진다.
+- `Date`의 단점을 보완하기 위해 등장
 - 모든 필드는 **클래스 변수(static variable)**이므로, **인스턴스를 생성하지 않고도 바로 사용**할 수 있다. 
  
-- `Calendar` 클래스의 **인스턴스를 생성**하려면, `Calendar` 클래스가 가지고 있는 클래스 메소드 `getInstance()`를 사용해야 한다.
+## Calendar 클래스의 인스턴스 생성
+- `Calendar` 클래스는 추상 클래스이므로, **직접 인스턴스를 생성할 수 없다**.
+- `Calendar` 클래스가 가지고 있는 클래스 메소드 `getInstance()`를 사용해 **`GregorianCalendar` 클래스의 인스턴스를 생성하여 사용**한다.
   - `getInstance()` 메소드를 호출하면 내부적으로 `java.util.GregorianCalendar` 인스턴스를 만들어 반환한다.
   
   ```java
   Calendar cal = Calendar.getInstance();
   ```
-  
+
   >- GregorianCalendar 클래스
   >    - 현재 전 세계적으로 많이 사용되는 달력으로, 1582년 교황 그레고리오 13세가 개혁한 그레고리오 달력.
   >    - 추상 클래스인 Calendar 클래스를 상속받아, 그레고리오 달력을 완전히 구현한 하위 클래스.
 
 ## add() 메소드
 - 전달된 `Calendar` 필드에서 **일정 시간 만큼을 더하거나 빼준다**.
-- 즉, 특정 시간을 기준으로 일정 시간 전후의 날짜와 시간을 알 수 있다.
+- 즉, 특정 시간을 기준으로 **일정 시간 전후의 날짜와 시간**을 알 수 있다.
 
 - ex) 현재 시각에 120초를 더하기
 
@@ -70,6 +73,24 @@ tags:
   System.out.println(time1.before(time2)); // false, time1이 time2보다 앞서지 않는다.
   System.out.println(time1.before(time3)); // true, time1이 time3보다 앞선다.
   ```
+  
+## get() 메소드
+- 전달된 `Calendar` 필드에 저장된 값을 반환.
+
+  ```java
+  Calendar time = Calendar.getInstance();
+  
+  System.out.println(time.getTime()); // Thu Feb 16 08:57:44 KST 2017 -> 현재 날짜와 시간
+  System.out.println(time.get(Calendar.DAY_OF_WEEK)); // 5 -> 목요일(1~7, 일~토)
+  System.out.println(time.get(Calendar.MONTH) + 1); // 2 -> 2월(0부터 시작)
+  System.out.println(time.get(Calendar.DAY_OF_MONTH)); // 16 -> 16일
+  System.out.println(time.get(Calendar.HOUR_OF_DAY)); // 8 -> 8시(24시간제)
+  System.out.println(time.get(Calendar.MINUTE)); // 57 -> 57분
+  System.out.println(time.get(Calendar.SECOND)); // 44 -> 44초
+  System.out.println(time.get(Calendar.YEAR)); // 2017 -> 2017년
+  ```
+  
+## roll() 메소드
 
   
 ## 출처
