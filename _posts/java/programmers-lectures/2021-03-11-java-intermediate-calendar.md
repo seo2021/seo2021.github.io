@@ -33,12 +33,13 @@ tags:
 ## Calendar 클래스의 인스턴스 생성
 - `Calendar` 클래스는 추상 클래스이므로, **직접 인스턴스를 생성할 수 없다**.
 - `Calendar` 클래스가 가지고 있는 클래스 메소드 `getInstance()`를 사용해 **`GregorianCalendar` 클래스의 인스턴스를 생성하여 사용**한다.
-  - `getInstance()` 메소드를 호출하면 내부적으로 `java.util.GregorianCalendar` 인스턴스를 만들어 반환한다.
-  
+
   ```java
   Calendar cal = Calendar.getInstance();
   ```
-
+  - `getInstance()` 메소드를 호출하면 내부적으로 `java.util.GregorianCalendar` 인스턴스를 만들어 반환한다.
+    - 시스템의 현재 날짜와 시간으로 인스턴스를 생성한다.
+  
   >- GregorianCalendar 클래스
   >    - 현재 전 세계적으로 많이 사용되는 달력으로, 1582년 교황 그레고리오 13세가 개혁한 그레고리오 달력.
   >    - 추상 클래스인 Calendar 클래스를 상속받아, 그레고리오 달력을 완전히 구현한 하위 클래스.
@@ -53,7 +54,7 @@ tags:
   Calendar time = Calendar.getInstance();
   System.out.println(time.getTime()); // Thu Feb 16 08:57:29 KST 2017
   
-  time.add(Calendar.SECOND, 120);
+  time.add(Calendar.SECOND, 120); // 120초 증가
   System.out.println(time.getTime()); // Thu Feb 16 08:59:29 KST 2017
   ```
   
@@ -63,11 +64,11 @@ tags:
 - **`after()`** 메소드는 **현재 `Calendar` 인스턴스**가 전달된 객체가 나타내는 시간보다 **나중인지**를 판단.
 
   ```java
-  Calendar time1 = Calendar.getInstance(); // 현재
+  Calendar time1 = Calendar.getInstance(); // 현재 날짜와 시간
   Calendar time2 = Calendar.getInstance();
   Calendar time3 = Calendar.getInstance();
   
-  time2.set(1982, 2, 19);
+  time2.set(1982, 2, 19); // 날짜 설정
   time3.set(2022, 2, 19);
   
   System.out.println(time1.before(time2)); // false, time1이 time2보다 앞서지 않는다.
@@ -91,8 +92,54 @@ tags:
   ```
   
 ## roll() 메소드
+- 전달된 `Calendar` 필드에서 **일정 시간 만큼을 더하거나 빼준다**.
+- 하지만, `add()` 메소드와 달리 **다른 Calendar 필드에는 영향을 주지 않는다**.
+- 즉, 계산 결과가 해당 필드의 최댓값이나 최솟값을 넘어가도 다른 필드에 영향을 주지 않는다.
+  - 예를 들어 `add()` 메소드로 날짜 필드(Calendar.DATE)의 값을 31만큼 증가시켰다면, 다음 달로 넘어가므로 월 필드(Calendar.MONTH)의 값도 1증가하지만, `roll()` 메소드는 월 필드의 값은 변하지 않고 일 필드의 값만 변한다.
+  - 단, 한 가지 **예외**가 있는데 **일 필드(Calendar.DATE)가 말일(end of month)일 때**, `roll()` 메소드를 이용해서 월 필드(Calendar.MONTH)를 변경하는 경우, 일 필드에게 영향을 미칠 수 있다.
 
+  ```java
+  Calendar time1 = Calendar.getInstance();
+  Calendar time2 = Calendar.getInstance();
+  System.out.println(time1.getTime()); // Thu Feb 16 08:58:23 KST 2017
+  
+  time1.add(Calendar.SECOND, 60); // 60초(1분) 증가
+  System.out.println(time1.getTime()); // Thu Feb 16 08:59:23 KST 2017
+  
+  time2.roll(Calendar.SECOND, 60); // 60초(1분) 증가
+  System.out.println(time2.getTime()); // Thu Feb 16 08:58:23 KST 2017 -> 분 필드에 영향 X
+  ```
+  - `add()` 메소드를 사용하여 `Calendar.SECOND` 필드를 60초 증가시키면, 결과적으로 `Calendar.MINUTE` 필드가 1 증가한다.
+  - 하지만, `roll()` 메소드를 사용하여 `Calendar.SECOND` 필드를 60초 증가시키면, **`Calendar.MINUTE` 필드에는 아무런 영향을 주지 않는다**.
+    - 즉, Calendar.SECOND 필드만이 60초 증가하여 결과적으로 같은 값이 출력된다. 
+
+## set() 메소드
+- 전달된 `Calendar` 필드를 특정 값으로 설정.
+
+- ex) `set()` 메소드에 다양한 형태의 인수를 전달하여 시간을 설정
+
+  ```java
+  // 현재 날짜와 시간
+  Calendar time = Calendar.getInstance();
+  System.out.println(time.getTime()); // Thu Feb 16 08:58:01 KST 2017
+  
+  // 연도 설정
+  time.set(Calendar.YEAR, 2020);
+  System.out.println(time.getTime()); // Sun Feb 16 08:58:01 KST 2020
+  
+  // 년월일 설정
+  time.set(1982, 1, 19); // 1은 2월
+  System.out.println(time.getTime()); // Fri Feb 19 08:58:01 KST 1982
+  
+  // 년월일, 시분초 설정
+  ime.set(1982, 1, 19, 12, 34, 56);
+  System.out.println(time.getTime()); // Fri Feb 19 12:34:56 KST 1982
+  ```
+
+## clear() 메소드
+- 현재 `Calendar` 인스턴스의 모든 필드의 값을 undefined로 설정한다.
   
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| Calendar](https://programmers.co.kr/learn/courses/9/lessons/264)
 - [코딩의 시작, TCP School \| JAVA \| Calendar 클래스](https://www.tcpschool.com/java/java_api_calendar)
+- [아라비안나이트 \| Java Calendar 사용법 (기본예제 포함) - 4 -](https://arabiannight.tistory.com/123)
