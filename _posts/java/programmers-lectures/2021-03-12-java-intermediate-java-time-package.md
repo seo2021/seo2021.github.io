@@ -33,6 +33,32 @@ tags:
   - `Instant` 클래스는 특정 시점의 날짜와 시간을 **나노초(nanosecond) 단위**로 표현하는 **타임스탬프(time-stamp)**를 다루는 데 사용.
 - `Period` 클래스는 **두 날짜 사이의 차이**를 표현하는 데 사용되며, `Duration` 클래스는 **두 시각 사이의 차이**를 표현하는 데 사용된다.
 
+## LocalDate 클래스와 LocalTime 클래스
+- `LocalDate` 클래스는 **날짜**를 표현하는 데 사용되며, `LocalTime` 클래스는 **시간**을 표현하는 데 사용.
+- `java.time` 패키지에 포함된 대부분의 클래스들은 이 두 클래스를 확장한 것이 많으므로, 이 두 클래스를 잘 이해하는 것이 중요하다.
+
+## 날짜와 시간 객체의 생성
+- `LocalDate`와 `LocalTime` 클래스는 **객체를 생성**하기 위해서 `now()`와 `of()` 클래스 메소드를 제공.
+- `now()` 메소드는 **현재의 날짜와 시간**을 이용하여 **새로운 객체를 생성하여 반환**.
+- `of()` 메소드는 **전달된 인수**를 가지고 **특정 날짜와 시간**을 표현하는 **새로운 객체를 생성하여 반환**.
+
+  ```java
+  // 현재 날짜와 시간
+  LocalDate today = LocalDate.now();
+  LocalTime present = LocalTime.now();
+  System.out.println(today + " " + present); // 2017-02-16 09:21:50.634
+  
+  // static LocalDate of(int year, int month, int dayOfMonth)
+  LocalDate birthDay = LocalDate.of(1982, 02, 19);
+  // static LocalTime of(int hour, int minute, int second, int nanoOfSecond)
+  LocalTime birthTime = LocalTime.of(02, 02, 00, 100000000);
+  System.out.println(birthDay + " " + birthTime); // 1982-02-19 02:02:00.100
+  ```
+  - `of()` 메소드는 위의 예제에서 사용된 메소드 시그니처 이외에도 **다양한 형태가 오버로딩**되어 제공된다.
+
+## 날짜와 시간 객체에 접근하기
+- 
+
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| java.time 패키지](https://programmers.co.kr/learn/courses/9/lessons/265)
 - [코딩의 시작, TCP School \| JAVA \| java.time 패키지](https://www.tcpschool.com/java/java_time_javaTime)
