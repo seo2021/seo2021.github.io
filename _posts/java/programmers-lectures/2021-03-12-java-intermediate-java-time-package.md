@@ -50,6 +50,7 @@ tags:
   
   // static LocalDate of(int year, int month, int dayOfMonth)
   LocalDate birthDay = LocalDate.of(1982, 02, 19);
+  
   // static LocalTime of(int hour, int minute, int second, int nanoOfSecond)
   LocalTime birthTime = LocalTime.of(02, 02, 00, 100000000);
   System.out.println(birthDay + " " + birthTime); // 1982-02-19 02:02:00.100
@@ -57,7 +58,67 @@ tags:
   - `of()` 메소드는 위의 예제에서 사용된 메소드 시그니처 이외에도 **다양한 형태가 오버로딩**되어 제공된다.
 
 ## 날짜와 시간 객체에 접근하기
-- 
+- `LocalDate'와 LocalTime` 클래스는 특정 필드의 값을 가져오기 위해 다양한 **getter 메소드를 제공**한다.
+
+- `LocalDate` 클래스에서 제공하는 대표적인 getter 메소드는 다음과 같다.
+
+  | 메소드 | 설명 |
+  |:------|:------|
+  | int **get**(TemporalField field)<br/>long **getLong**(TemporalField field) | 날짜 객체의 명시된 **필드의 값**을 int형이나 long형으로 **반환** |
+  | int **getYear**() | 날짜 객체의 **연도(YEAR) 필드 값 반환** |
+  | Month **getMonth**() | 날짜 객체의 **월(MONTH_OF_YEAR) 필드 값**을 **Month 열거체**를 이용하여 **반환** |
+  | int **getMonthValue**() | 날짜 객체의 **월(MONTH_OF_YEAR) 필드 값 반환**(1~12) |
+  | int **getDayOfMonth**() | 날짜 객체의 **일(DAY_OF_MONTH) 필드 값 반환**(1~31) |
+  | int **getDayofYear**() | 날짜 객체의 **일(DAY_OF_YEAR) 필드 값 반환**(1~365, 윤년이면 366) |
+  | DayOfWeek **getDayOfWeek**() | 날짜 객체의 **요일(DAY_OF_WEEK) 필드 값**을 **DayOfWeek 열거체**를 이용하여 **반환** |
+  
+  
+- **기존**의 `Calendar` 클래스에서는 1월을 0으로 표현하여 **월의 범위가 0~11**이었으며, **요일은 일요일부터 1**로 표현.
+- 하지만, `java.time` 패키지에서는 1월을 1로 표현하여 **월의 범위가 1~12**가 되었으며, **요일은 월요일부터 1**로 표현하도록 변경.
+- 💡 `Calendar` 클래스와 `java.time` 패키지의 클래스를 **같이 사용**할 때에는 특히 위와 같은 차이점에 **주의**해야 한다.
+
+- ex) `LocalDate` 클래스를 이용해 날짜와 시간 객체에 접근
+
+  ```java
+  LocalDate today = LocalDate.now();
+  
+  // 올해는 2017년입니다.
+  System.out.println("올해는 " + today.getYear() + "년입니다."); 
+  // 이번달은 2월입니다.
+  System.out.println("이번달은 " + today.getMonthValue() + "월입니다.");
+  // 오늘은 THURSDAY입니다.
+  System.out.println("오늘은 " + today.getDayOfWeek() + "입니다."); 
+  // 오늘은 1년 중 47일째 날입니다.
+  System.out.println("오늘은 1년 중 " + today.get(ChronoField.DAY_OF_YEAR) + "일째 날입니다.");
+  ```
+  
+- `LocalTime` 클래스에서 제공하는 대표적인 getter 메소드는 다음과 같다.
+
+  | 메소드 | 설명 |
+  |:------|:------|
+  | int **get**(TemporalField field)<br/>long **getLong**(TemporalField field) | 시간 객체의 명시된 **필드의 값**을 int형이나 long형으로 **반환** |
+  | int getHour() | 시간 객체의 **시(HOUR_OF_DAY) 필드의 값**을 **반환** |
+  | int getMinute() | 시간 객체의 **분(MINUTE_OF_HOUR) 필드의 값**을 **반환** |
+  | int getSecond() | 시간 객체의 **초(SECOND_OF_MINUTE) 필드의 값**을 반환** ** |
+  | int getNano() | 시간 객체의 **나노초(NANO_OF_SECOND) 필드의 값**을 **반환** |
+  
+  
+- ex)  `LocalTime` 클래스를 이용해 날짜와 시간 객체에 접근
+  
+  ```java
+  LocalTime present = LocalTime.now();
+  // 현재 시간은 9시 22분입니다.
+  System.out.println("현재 시각은 " + present.getHour() + "시 " + present.getMinute() + "분입니다."); 
+  ```
+  
+## TemporalField 인터페이스
+
+
+
+
+
+
+
 
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| java.time 패키지](https://programmers.co.kr/learn/courses/9/lessons/265)
