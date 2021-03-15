@@ -179,14 +179,97 @@ tags:
   ```
   
 ## 날짜와 시간 객체의 필드값 변경
--
+- `LocalDate`와 `LocalTime` 클래스는 날짜와 시간 객체에 접근하여 특정 필드의 값을 변경하기 위해서 **with() 메소드**를 사용.
+- `with()` 메소드를 사용하면 **값이 변경될 필드**를 사용자가 **직접 명시**할 수 있다.
+- 또한, 특정 필드의 값을 변경하기 위해 **미리 정의되어 제공되는 다양한 with() 메소드**를 사용할 수도 있다.
 
+- `LocalDate` 클래스에서 제공하는 `with()` 메소드는 다음과 같다.
 
+  | 메소드 | 설명 |
+  |:------|:------|
+  | LocalDate **with**(TemporalField field, long newValue) | 날짜 객체에서 **특정 필드**를 전달된 **새로운 값으로 설정**한 **새로운 날짜 객체를 반환** |
+  | LocalDate **withYear**(int year) | 날짜 객체에서 **연도(YEAR) 필드**를 전달된 **새로운 값으로 설정**한 **새로운 날짜 객체를 반환** |
+  | LocalDate **withMonth**(int month) | 날짜 객체에서 **월(MONTH_OF_YEAR) 필드**를 전달된 **새로운 값으로 설정**한 **새로운 날짜 객체를 반환** |
+  | LocalDate **withDayOfMonth**(int dayOfMonth) | 날짜 객체에서 **일(DAY_OF_MONTH) 필드**를 전달된 **새로운 값으로 설정**한 **새로운 날짜 객체를 반환** |
+  | LocalDate **withDayOfYear**(int dayOfYear) | 날짜 객체에서 **DAY_OF_YEAR 필드**를 전달된 **새로운 값으로 설정**한 새**로운 날짜 객체를 반환** |
+  
+    
+- ex) `LocalDate` 클래스의 `with()` 메소드 사용
 
+  ```java
+  import java.time.*;
 
+  public class TimeEx05 {
+    public static void main(String[] args) {
+      LocalDate today = LocalDate.now();
+      // 올해는 2017년입니다.
+      System.out.println("올해는 " + today.getYear() + "년입니다.");
+      
+      LocalDate otherDay = today.withYear(1982);
+      // 올해는 1982년입니다.
+      System.out.println("올해는 " + otherDay.getYear() + "년입니다.");
+    }
+  }
+  ```
+    
+- `LocalTime` 클래스에서 제공하는 `with()` 메소드는 다음과 같다.
 
+  | 메소드 | 설명 |
+  |:------|:------|
+  | LocalTime **with**(TemporalField field, long newValue) | 시간 객체에서 **특정 필드**를 전달된 **새로운 값으로 설정**한 **새로운 시간 객체를 반환** |
+  | LocalTime **withHour**(int hour) | 시간 객체에서 **시(HOUR_OF_DAY) 필드**를 전달된 **새로운 값으로 설정**한 **새로운 시간 객체를 반환** |
+  | LocalTime **withMinute**(int minute) | 시간 객체에서 **분(MINUTE_OF_HOUR) 필드**를 전달된 **새로운 값으로 설정**한 **새로운 시간 객체를 반환** |
+  | LocalTime **withSecond**(int second) | 시간 객체에서 **초(SECOND_OF_MINUTE) 필드**를 전달된 **새로운 값으로 설정**한 **새로운 시간 객체를 반환** |
+  | LocalTime **withNano**(int nanoOfSecond) | 시간 객체에서 **나노초(NANO_OF_SECOND) 필드**를 전달된 **새로운 값으로 설정**한 **새로운 시간 객체를 반환** |
+  
+  
+- ex) `LocalTime` 클래스의 `with()` 메소드 사용
 
+  ```java
+  import java.time.*;
 
+  public class TimeEx06 {
+    public static void main(String[] args) {
+      LocalTime present = LocalTime.now();
+      // 현재 시간은 9시입니다.
+      System.out.println("현재 시각은 " + present.getHour() + "시입니다.");
+      
+      LocalTime otherTime = present.withHour(8);
+      // 현재 시간은 8시입니다.
+      System.out.println("현재 시각은 " + otherTime.getHour() + "시입니다.");
+    }
+  }
+  ```
+  
+- `with()` 메소드 이외에도 특정 필드의 값을 더하거나 뺄 수 있는 `plus()`, `minus()` 메소드도 제공된다.
+
+## 날짜와 시간 객체의 비교
+- `LocalDate`와 `LocalTime` 클래스에도 객체를 비교할 수 있는 **compareTo() 메소드**가 오버라이딩되어 있다.
+  - `compareTo()` > 0 : 현재 객체가 더 미래
+  - `compareTo()` < 0 : 현재 객체가 더 과거
+  - `compareTo()` == 0 : 현재 객체와 인자와 같은 시간
+  
+- 하지만, 더욱 편리하게 날짜와 시간 객체를 서로 비교할 수 있도록 다음과 같은 메소드를 제공한다.
+  1. `isEqual()` 메소드 : `equals()` 메소드와는 달리 오직 **날짜만을 비교**(LocalDate 클래스에서만 제공).
+  2. `isBefore()` 메소드 : **두 개의 날짜와 시간 객체**를 비교하여, **현재 객체**가 명시된 객체보다 **앞선 시간인지를 비교**.
+  3. `isAfter()` 메소드 : **두 개의 날짜와 시간 객체**를 비교하여, **현재 객체**가 명시된 객체보다 **늦은 시간인지를 비교**.
+
+  ```java
+  import java.time.*;
+
+  public class TimeEx07 {
+    public static void main(String[] args) {
+      LocalDate today = LocalDate.now();
+      LocalDate otherDay = LocalDate.of(1982, 02, 19);
+  
+      System.out.println(today.compareTo(otherDay)); // 35
+      System.out.println(today.isBefore(otherDay)); // false
+      System.out.println(today.isEqual(otherDay)); // false
+    }
+  }
+  ```
+  
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| java.time 패키지](https://programmers.co.kr/learn/courses/9/lessons/265)
 - [코딩의 시작, TCP School \| JAVA \| java.time 패키지](https://www.tcpschool.com/java/java_time_javaTime)
+- [chacha \| Java - 시간(Time), 날짜(Date) 비교하는 방법](https://codechacha.com/ko/java-compare-date-and-time/)
