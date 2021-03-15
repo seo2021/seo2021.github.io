@@ -43,17 +43,23 @@ tags:
 - `of()` 메소드는 **전달된 인수**를 가지고 **특정 날짜와 시간**을 표현하는 **새로운 객체를 생성하여 반환**.
 
   ```java
-  // 현재 날짜와 시간
-  LocalDate today = LocalDate.now();
-  LocalTime present = LocalTime.now();
-  System.out.println(today + " " + present); // 2017-02-16 09:21:50.634
+  import java.time.*;
   
-  // static LocalDate of(int year, int month, int dayOfMonth)
-  LocalDate birthDay = LocalDate.of(1982, 02, 19);
-  
-  // static LocalTime of(int hour, int minute, int second, int nanoOfSecond)
-  LocalTime birthTime = LocalTime.of(02, 02, 00, 100000000);
-  System.out.println(birthDay + " " + birthTime); // 1982-02-19 02:02:00.100
+  public class TimeEx01 {
+    public static void main(String[] args) {
+      // 현재 날짜와 시간
+      LocalDate today = LocalDate.now();
+      LocalTime present = LocalTime.now();
+      System.out.println(today + " " + present); // 2017-02-16 09:21:50.634
+
+      // static LocalDate of(int year, int month, int dayOfMonth)
+      LocalDate birthDay = LocalDate.of(1982, 02, 19);
+
+      // static LocalTime of(int hour, int minute, int second, int nanoOfSecond)
+      LocalTime birthTime = LocalTime.of(02, 02, 00, 100000000);
+      System.out.println(birthDay + " " + birthTime); // 1982-02-19 02:02:00.100
+    }
+  }
   ```
   - `of()` 메소드는 위의 예제에서 사용된 메소드 시그니처 이외에도 **다양한 형태가 오버로딩**되어 제공된다.
 
@@ -80,16 +86,23 @@ tags:
 - ex) `LocalDate` 클래스를 이용해 날짜와 시간 객체에 접근
 
   ```java
-  LocalDate today = LocalDate.now();
+  import java.time.*;
+  import java.time.temporal.*;
   
-  // 올해는 2017년입니다.
-  System.out.println("올해는 " + today.getYear() + "년입니다."); 
-  // 이번달은 2월입니다.
-  System.out.println("이번달은 " + today.getMonthValue() + "월입니다.");
-  // 오늘은 THURSDAY입니다.
-  System.out.println("오늘은 " + today.getDayOfWeek() + "입니다."); 
-  // 오늘은 1년 중 47일째 날입니다.
-  System.out.println("오늘은 1년 중 " + today.get(ChronoField.DAY_OF_YEAR) + "일째 날입니다.");
+  public class TimeEx02 {
+    public static void main(String[] args) {
+      LocalDate today = LocalDate.now();
+
+      // 올해는 2017년입니다.
+      System.out.println("올해는 " + today.getYear() + "년입니다."); 
+      // 이번달은 2월입니다.
+      System.out.println("이번달은 " + today.getMonthValue() + "월입니다.");
+      // 오늘은 THURSDAY입니다.
+      System.out.println("오늘은 " + today.getDayOfWeek() + "입니다."); 
+      // 오늘은 1년 중 47일째 날입니다.
+      System.out.println("오늘은 1년 중 " + today.get(ChronoField.DAY_OF_YEAR) + "일째 날입니다.");
+    }
+  }
   ```
   
 - `LocalTime` 클래스에서 제공하는 대표적인 getter 메소드는 다음과 같다.
@@ -106,13 +119,67 @@ tags:
 - ex)  `LocalTime` 클래스를 이용해 날짜와 시간 객체에 접근
   
   ```java
-  LocalTime present = LocalTime.now();
-  // 현재 시간은 9시 22분입니다.
-  System.out.println("현재 시각은 " + present.getHour() + "시 " + present.getMinute() + "분입니다."); 
+  import java.time.*;
+  
+  public class TimeEx03 {
+    public static void main(String[] args) {
+      LocalTime present = LocalTime.now();
+      // 현재 시간은 9시 22분입니다.
+      System.out.println("현재 시각은 " + present.getHour() + "시 " + present.getMinute() + "분입니다."); 
+    }
+  }
   ```
   
 ## TemporalField 인터페이스
+- 월(month-of-year)과 시(hour-of-day)와 같이 **날짜와 시간과 관련된 필드를 정의**해놓은 인터페이스.
+- 해당 인터페이스를 구현하여 **날짜와 시간을 나타낼 때 사용하는 열거체**가 바로 `ChronoField`이다.
+- `java.time` 패키지를 구성하는 클래스의 메소드에서는 이 열거체를 사용하여 날짜와 시간을 처리하고 있다.
 
+- `ChronoField` 열거체에 정의된 **대표적인 열거체 상수**는 다음과 같다.
+
+  | 열거체 상수 | 설명 |
+  |:----------|:------|
+  | ERA | 시대 |
+  | YEAR | 연도 |
+  | MONTH_OF_YEAR | 월 |
+  | DAY_OF_MONTH | 일 |
+  | DAY_OF_WEEK | 요일 (월요일:1, 화요일:2, ..., 일요일:7) |
+  | AMPM_OF_DAY | 오전/오후 |
+  | HOUR_OF_DAY | 시(0~23) |
+  | CLOCK_HOUR_OF_DAY | 시(1~24) |
+  | HOUR_OF_AMPM | 시(0~11) |
+  | CLOCK_HOUR_OF_AMPM | 시(1~12) |
+  | MINUTE_OF_HOUR | 분 |
+  | SECOND_OF_MINUTE | 초 |
+  | DAY_OF_YEAR | 해당 연도의 몇 번째 날 (1~365, 윤년이면 366) |
+  | EPOCH_DAY | EPOCH(1970년 1월 1일)을 기준으로 몇 번째 날 |
+  
+  
+- ex) `ChronoField` 열거체 상수 사용
+
+  ```java
+  import java.time.*;
+  import java.time.temporal.ChronoField;
+  
+  public class TimeEx04 {
+	  public static void main(String[] args){
+      LocalTime present = LocalTime.now();
+      String ampm;
+
+      if(present.get(ChronoField.AMPM_OF_DAY) == 0 {
+        ampm = "오전";
+      }
+      else {
+        ampm = "오후";
+      }
+      // 지금은 오전 9시입니다.
+      System.out.println("지금은 " + ampm + " " + present.get(ChronoField.HOUR_OF_AMPM) + "시입니다.");
+    }
+  }
+  ```
+  
+## 날짜와 시간 객체의 필드값 변경
+-
 
 
 
