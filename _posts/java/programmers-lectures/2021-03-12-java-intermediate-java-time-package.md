@@ -11,7 +11,10 @@ tags:
 ---
 
 ## java.time 패키지
-- Java SE 8부터 제공되는 `java.time` 패키지에는 자바에서 **날짜와 시간을 다루는 데 사용되는 필수 클래스들이 포함**되어 있다.
+- 기존부터 Java에서 제공하는 Date API, Time API는 부족한 기능 지원을 포함한 여러가지 문제점을 가지고 있었다.
+- JDK 코어에서 이런 문제점들을 해결하고, 직관적인 API들을 제공하기 위해 **Java SE 8부터 새로운 날짜와 시간 API인 java.time 패키지를 제공**.
+- `java.time` 패키지에는 자바에서 **날짜와 시간을 다루는 데 사용되는 필수 클래스들이 포함**되어 있다.
+- 또한, 오브젝트를 생성하기 위해 다양한 **factory 메소드**를 사용한다(어떤 클래스의 인스턴스를 생성할지에 대한 결정을 factory 클래스에 위임).
 
 - 또한, 다음과 같은 기능을 하는 하위 패키지를 포함하고 있다.
   1. `java.time.chrono`: ISO-8601에 정의된 **표준 달력 이외의 달력 시스템**을 사용할 때 필요한 클래스들
@@ -41,6 +44,7 @@ tags:
 - `LocalDate`와 `LocalTime` 클래스는 **객체를 생성**하기 위해서 `now()`와 `of()` 클래스 메소드를 제공.
 - `now()` 메소드는 **현재의 날짜와 시간**을 이용하여 **새로운 객체를 생성하여 반환**.
 - `of()` 메소드는 **전달된 인수**를 가지고 **특정 날짜와 시간**을 표현하는 **새로운 객체를 생성하여 반환**.
+- `parse()` 메소드는 **인수로 전달된 문자열**에 대한 **LocalTime 객체를 생성**한다.
 
   ```java
   import java.time.*;
@@ -57,6 +61,7 @@ tags:
 
       // static LocalTime of(int hour, int minute, int second, int nanoOfSecond)
       LocalTime birthTime = LocalTime.of(02, 02, 00, 100000000);
+      // birthTime = LocalTime.parse("02:02:00:00.100"); 
       System.out.println(birthDay + " " + birthTime); // 1982-02-19 02:02:00.100
     }
   }
@@ -273,3 +278,4 @@ tags:
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| java.time 패키지](https://programmers.co.kr/learn/courses/9/lessons/265)
 - [코딩의 시작, TCP School \| JAVA \| java.time 패키지](https://www.tcpschool.com/java/java_time_javaTime)
 - [chacha \| Java - 시간(Time), 날짜(Date) 비교하는 방법](https://codechacha.com/ko/java-compare-date-and-time/)
+- [sonnie \| Factory Method란?](https://modunaeggu.medium.com/factory-method%EB%9E%80-9bf9b1024711)
