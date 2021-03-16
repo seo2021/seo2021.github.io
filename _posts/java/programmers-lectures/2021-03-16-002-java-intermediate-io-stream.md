@@ -29,9 +29,18 @@ tags:
 - `InputStream` 클래스에는 `read()` 메소드가, `OutputStream` 클래스에는 `write()` 메소드가 각각 **추상 메소드**로 **포함**되어 있다.
   - 이 두 메소드를 상황에 맞게 적절히 구현해야만 입출력 스트림을 생성하여 사용할 수 있다.
 
-
-
+  | 클래스 | 메소드 | 설명 |
+  |:------:|:------|:------|
+  | InputStream | abstract int **read()** | 입력 스트림으로부터 **다음 바이트를 읽어들임** |
+  |             | int **read**(byte\[\] b)** | 입력 스트림으로부터 **특정 바이트를 읽어들인 후, 배열 b에 저장** |
+  |             | int **read(byte\[\] b, int off, int len)** | 입력 스트림으로부터 **len 바이트**를 읽어들인 후, **배열 b\[off\]**부터 저장 |
+  | OutputStream | abstract void **write(int b)** | 출력 스트림에 **특정 바이트를 저장** |
+  |              | void **write(byte\[\] b)** | **배열 b의 특정 바이트**를 배열 b의 길이만큼 출력 스트림에 저장 |
+  |              | void **write(byte\[\] b, int off, int len)** | **배열 b\[off\]**부터 **len 바이트**를 출력 스트림에 저장 |
   
+  - 💡 `read()` 메소드는 해당 입력 스트림에서 더 이상 **읽어들일 바이트가 없으면, -1을 반환**해야 한다.
+    - 그런데 반환 타입을 byte 타입으로 하면, 0부터 255까지의 바이트 정보는 표현할 수 있지만 -1은 표현할 수 없게 된다.
+    - 따라서, `inputStream`의 `read()` 메소드는 **반환 타입을 int 형**으로 선언하고 있다.   
+
 ## 출처
-- [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| ]()
 - [코딩의 시작, TCP School \| JAVA \| 스트림](https://www.tcpschool.com/java/java_io_stream)
