@@ -143,6 +143,10 @@ tags:
 
 ## clear() 메소드
 - 현재 `Calendar` 인스턴스의 모든 필드의 값을 undefined로 설정한다.
+
+## 관련 포스트 - 날짜와 시간
+- [날짜와 시간 : Date](https://seo2021.github.io/java/programmers-lectures/java-intermediate-date/)
+- [날짜와 시간 : java.time 패키지](https://seo2021.github.io/java/programmers-lectures/java-intermediate-java-time-package/)
   
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| Calendar](https://programmers.co.kr/learn/courses/9/lessons/264)
