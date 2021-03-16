@@ -18,8 +18,8 @@ tags:
   ![java i/o 클래스](/assets/images/java/io_class.png)
 
 
-- **파일**로부터 **입력**받고 **쓰기** 위한 클래스: FileInputStream, FileOutputStream, FileReader, FileWriter
-- **배열**로부터 **입력**받고 **쓰기** 위한 클래스: ByteArrayInputStream, ByteArrayOutputStream, CharReader, CharWriter
+- **파일**로부터 **입력**받고 **쓰기** 위한 클래스: `FileInputStream`, `FileOutputStream`, `FileReader`, `FileWriter`
+- **배열**로부터 **입력**받고 **쓰기** 위한 클래스: `ByteArrayInputStream`, `ByteArrayOutputStream`, `CharReader`, `CharWriter`
   - 해당 클래스들은 **어디로부터 입력받고, 어디에 쓸지 대상을 지정할 수 있는 I/O 클래스**이다. 이런 클래스를 **장식 대상 클래스**라고 한다.
 
 ## 데코레이터 패턴(Decorator Pattern)
