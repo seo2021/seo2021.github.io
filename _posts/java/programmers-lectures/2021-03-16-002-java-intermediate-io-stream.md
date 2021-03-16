@@ -1,13 +1,11 @@
 ---
-title: "[프로그래머스 자바 중급] 입력과 출력 : 스트림(Stream)"
+title: "[자바] 입력과 출력 : 스트림(Stream)"
 layout: single
 related: true
 categories:
   - JAVA
-  - PROGRAMMERS-LECTURES
 tags:
   - stream
-  - 자바중급
 ---
 
 ## 스트림(Stream)
