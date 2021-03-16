@@ -274,6 +274,10 @@ tags:
   }
   ```
   
+## 관련 포스트 - 날짜와 시간
+- [날짜와 시간 : Date](https://seo2021.github.io/java/programmers-lectures/java-intermediate-date/)
+- [날짜와 시간 : Calendar](https://seo2021.github.io/java/programmers-lectures/java-intermediate-calendar/)
+  
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| java.time 패키지](https://programmers.co.kr/learn/courses/9/lessons/265)
 - [코딩의 시작, TCP School \| JAVA \| java.time 패키지](https://www.tcpschool.com/java/java_time_javaTime)
