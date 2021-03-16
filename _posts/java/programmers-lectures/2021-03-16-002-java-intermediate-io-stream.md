@@ -5,6 +5,7 @@ related: true
 categories:
   - JAVA
 tags:
+  - io
   - stream
 ---
 
