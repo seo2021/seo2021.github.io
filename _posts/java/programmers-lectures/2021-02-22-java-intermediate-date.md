@@ -63,5 +63,9 @@ tags:
   System.out.println(today);
   ```
   
+## 관련 포스트 - 날짜와 시간
+- [날짜와 시간 : Calendar](https://seo2021.github.io/java/programmers-lectures/java-intermediate-calendar/)
+- [날짜와 시간 : java.time 패키지](https://seo2021.github.io/java/programmers-lectures/java-intermediate-java-time-package/)
+  
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| Date](https://programmers.co.kr/learn/courses/9/lessons/263)
