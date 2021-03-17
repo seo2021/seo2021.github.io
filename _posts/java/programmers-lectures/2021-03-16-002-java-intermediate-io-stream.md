@@ -30,12 +30,12 @@ tags:
 
   | 클래스 | 메소드 | 설명 |
   |:------:|:------|:------|
-  | InputStream | abstract int **read()** | 입력 스트림으로부터 **다음 바이트를 읽어들임** |
-  |             | int **read**(byte\[\] b)** | 입력 스트림으로부터 **특정 바이트를 읽어들인 후, 배열 b에 저장** |
-  |             | int **read(byte\[\] b, int off, int len)** | 입력 스트림으로부터 **len 바이트**를 읽어들인 후, **배열 b\[off\]**부터 저장 |
-  | OutputStream | abstract void **write(int b)** | 출력 스트림에 **특정 바이트를 저장** |
-  |              | void **write(byte\[\] b)** | **배열 b의 특정 바이트**를 배열 b의 길이만큼 출력 스트림에 저장 |
-  |              | void **write(byte\[\] b, int off, int len)** | **배열 b\[off\]**부터 **len 바이트**를 출력 스트림에 저장 |
+  | InputStream | abstract int **read()** | 입력 스트림으로부터 **다음 바이트를 읽어들임**. 1 바이트씩 읽어 들이며, 읽은 바이트를 int 형으로 반환 |
+  |             | int **read(byte\[\] b)** | 입력 스트림으로부터 **특정 바이트만큼을 읽어들인 후, 배열 b에 저장**. 읽은 바이트 수를 int 형으로 반환 |
+  |             | int **read(byte\[\] b, int off, int len)** | 입력 스트림으로부터 **len만큼의 바이트**를 읽어들인 후, **배열 b\[off\]**부터 저장. 읽은 바이트 수를 int 형으로 반환 |
+  | OutputStream | abstract void **write(int b)** | 출력 스트림에 **1 바이트를 저장**. 매개 변수로 주어진 int 값에서 끝에 있는 1 바이트만 저장 |
+  |              | void **write(byte\[\] b)** | **배열 b의 모든 바이트**를 출력 스트림에 저장 |
+  |              | void **write(byte\[\] b, int off, int len)** | **배열 b\[off\]**부터 **len 바이트만큼**을 출력 스트림에 저장 |
   
   - 💡 `read()` 메소드는 해당 입력 스트림에서 더 이상 **읽어들일 바이트가 없으면, -1을 반환**해야 한다.
     - 그런데 **1 Byte**의 데이터를 받으려면 **0부터 255까지**의 바이트 정보를 표현할 수 있어야 하는데, **자바는 unsigned 형이 없으므로** 자바의 Byte로는 **-128부터 127까지**의 바이트 정보만 표현할 수 있다.
@@ -45,3 +45,5 @@ tags:
 ## 출처
 - [코딩의 시작, TCP School \| JAVA \| 스트림](https://www.tcpschool.com/java/java_io_stream)
 - [기록은 기억의 연장선 \| [java] 입출력](https://joont92.github.io/java/입출력/)
+- [알통몬의 인생 \| [ JAVA ] - 입력 스트림과 출력 스트림(1)...](https://blog.naver.com/PostView.nhn?blogId=rain483&logNo=220625042360&proxyReferer=https:%2F%2Fwww.google.com%2F)
+- [알통몬의 인생 \| [ JAVA ] - 입력 스트림과 출력 스트림(3)...](https://blog.naver.com/rain483/220625901561)
