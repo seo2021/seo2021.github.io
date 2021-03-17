@@ -30,10 +30,8 @@ tags:
 
 - `read()` 메소드는 
   - **1 byte**씩 읽어 들인다. 
-  - 읽어 들일 바이트가 있다면 **양수를 반환**(읽은 1 바이트의  int 형으로 반환)하며, 더 이상 읽어들일 바이트가 없을 때 **-1을 반환**한다.
-  - 반환 타입은 **int(4 바이트)**이며, 4 바이트 중 **마지막 바이트**에 **읽어 들인 1 바이트를 저장**한다.
-
-<br/>
+  - 읽어 들일 바이트가 있다면 **양수를 반환**(읽은 1 바이트의 값을 int 형으로 반환)하며, 더 이상 읽어들일 바이트가 없을 때 **-1을 반환**한다.
+  - 반환 타입은 **int(4 바이트)**이며, 4 바이트 중 **마지막 바이트에 읽어 들인 1 바이트를 저장**한다.
 
   ```java
   package javaIO.exam;
@@ -81,11 +79,11 @@ tags:
           e.printStackTrace();
         }
       }
-	  }//--main()
+      
+    }//--main()
   }//--class
   ```
-
-- 실행 결과 `ByteExam1`으로부터 다.를 1 바이트씩 읽어 들여, 1 바이트씩 써진 파일 `byte.txt`가 프로젝트 아래에 생성되었다.
+  - 실행 결과 `ByteExam1`으로부터 문자를 1 바이트씩 읽어 들여, 1 바이트씩 써진 파일 `byte.txt`가 프로젝트 아래에 생성되었다.
 
   ![byte.txt가 생성된 모습](/assets/images/java/byteexam1_result.png)
   
@@ -97,8 +95,6 @@ tags:
 - `read(byte[] b)` 메소드는
   - 입력 스트림으로부터 **배열 크기 바이트만큼을 읽어들인 후, 배열 b에 저장**.
   - **읽은 바이트 수를 int 형으로 반환** 
-
-<br/>
 
   ```java
   package javaIO.exam;
@@ -121,16 +117,16 @@ tags:
 	fos = new FileOutputStream("byte2.txt");
 
 	int readCount = -1; // 파일로부터 읽어 들인 바이트 수를 담기 위한 변수
-	byte[] buffer = new byte[512]; // 512 바이트만큼 읽어 들이기 위한 배열
+	byte[] buffer = new byte[512]; // 정해진 크기만큼 읽어 들이기 위한 배열
 
-	// 스트림으로부터 최대 512 바이트를 읽어 들인 후, 바이트 배열 buffer에 저장
+	// 스트림으로부터 최대 512 바이트의 값을 읽어 들인 후, 바이트 배열 buffer에 저장
 	// 파일에 읽어올 값이 남아있다면 반복
 	while((readCount = fis.read(buffer)) != -1) {
-		// 읽은 바이트 수를 반환 -> 512 512 338
-		System.out.print(readCount + " ");
+	  // 읽은 바이트 수를 반환 -> 512 512 338
+	  // System.out.print(readCount + " ");
 
-		// buffer[0]부터 readCount 바이트만큼을 출력 스트림에 저장
-		fos.write(buffer, 0, readCount);
+	  // buffer[0]부터 readCount 바이트만큼을 출력 스트림에 저장
+	  fos.write(buffer, 0, readCount);
 	}
 	
       } catch (Exception e) {
