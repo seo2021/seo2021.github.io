@@ -25,14 +25,62 @@ tags:
   
 ## 바이트(Byte) 단위 입출력 예제
 - **파일**로부터 **1 바이트씩 읽어 들여** 파일에 **1 바이트씩 저장**하는 프로그램 작성.
-  - 정수 4 바이트 중 **마지막에 읽어 들인 1 바이트를 저장**. 
   - 파일로부터 읽어 오기 위한 객체 : `FileInputStream`
   - 파일에 쓰기 위한 객체 : `FileOutputStream`
 
-- `read()` 메소드는 **읽어 들일 바이트가 있다면 양수를 반환**하며, **더 이상 읽어들일 바이트가 없을 때 -1을 반환**한다.
+- `read()` 메소드는 
+  - **1 byte**씩 읽어 들인다. 
+  - 읽어 들일 바이트가 있다면 **양수를 반환**하며, 더 이상 읽어들일 바이트가 없을 때 **-1을 반환**한다.
+  - 반환 타입은 **int(4 바이트)**이며, 4 바이트 중 **마지막 바이트**에 **읽어 들인 1 바이트를 저장**한다. 
+  
 
   ```java
-  
+  package javaIO.exam;
+
+  import java.io.FileInputStream;
+  import java.io.FileOutputStream;
+
+  public class ByteExam1 {
+
+    public static void main(String[] args) {
+          FileInputStream fis = null; // 파일로부터 읽어오기 위한 객체
+          FileOutputStream fos = null; // 파일에 쓰기 위한 객체
+
+          try {
+            // FileInputStream 객체 생성. 읽어 들이기 위한 파일의 경로 설정
+        fis = new FileInputStream("src/javaIO/exam/ByteExam1.java");
+        // FileOutputStream 객체 생성. 프로젝트 아래에 txt 파일을 생성하고 쓰기.
+        fos = new FileOutputStream("byte.txt");
+
+        // 파일로부터 1 바이트씩 읽어 들인 값을 담기 위한 변수
+        int readData = -1;
+
+        // 파일에 읽어올 값이 남아있다면
+        while((readData = fis.read()) != -1) {
+          // 1 바이트씩 쓰기
+          fos.write(readData);
+        }
+        // System.out.println(fis.read()); // -1
+
+      } catch (Exception e) {
+        // 에러의 발생근원지를 찾아서 단계별로 에러를 출력
+        e.printStackTrace();
+
+      } finally {
+        // io의 객체는 인스턴스화하면 마지막에 닫아주기
+        try {
+          fos.close();
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
+        try {
+          fis.close();
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
+      }
+    }//--main()    
+  }//--class
   ```
   
 
