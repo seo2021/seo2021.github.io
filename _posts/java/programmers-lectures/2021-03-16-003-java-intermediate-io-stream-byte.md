@@ -23,7 +23,7 @@ tags:
   | PipedInputStream | PipedOutputStream | 프로세스 |
   | AudioInputStream | AudioOutputStream | 오디오 장치 |
   
-## 바이트(Byte) 단위 입출력 예제
+## 바이트(Byte) 단위 입출력 예제 1
 - **파일**로부터 **1 바이트씩 읽어 들여** 파일에 **1 바이트씩 저장**하는 프로그램 작성.
   - 파일로부터 읽어 오기 위한 객체 : `FileInputStream`
   - 파일에 쓰기 위한 객체 : `FileOutputStream`
@@ -84,6 +84,18 @@ tags:
 - 실행 결과 `ByteExam1`으로부터 코드를 1 바이트씩 읽어 들여, 1 바이트씩 써진 파일 `byte.txt`가 프로젝트 아래에 생성되었다.
 
   ![byte.txt가 생성된 모습](/assets/images/java/byteexam1_result.png)
+  
+## 바이트(Byte) 단위 입출력 예제 2
+- **파일**로부터 **512 바이트씩 읽어 들여** 파일에 **512 바이트씩 저장**하는 프로그램 작성.
+- 512 바이트만큼 읽어 들이기 위해 **byte 배열**을 사용.
+  - `byte[] buffer = new byte[512];`
+
+<br/>
+
+  ```java
+  
+  ```
+
   
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| Byte 단위 입출력](https://programmers.co.kr/learn/courses/9/lessons/267)
