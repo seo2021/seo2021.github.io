@@ -33,9 +33,6 @@ tags:
   - 읽어 들일 바이트가 있다면 **양수를 반환**하며, 더 이상 읽어들일 바이트가 없을 때 **-1을 반환**한다.
   - 반환 타입은 **int(4 바이트)**이며, 4 바이트 중 **마지막 바이트**에 **읽어 들인 1 바이트를 저장**한다.
 
-<br/>
-
-
   ```java
   package javaIO.exam;
 
@@ -85,11 +82,9 @@ tags:
   }//--class
   ```
 
-- 실행 결과 `ByteExam1`으로부터 코드를 1 바이트씩 읽어 들여 1 바이트씩 쓰여진 파일 `byte.txt`가 프로젝트 아래에 생성되었다.
+- 실행 결과 `ByteExam1`으로부터 코드를 1 바이트씩 읽어 들여, 1 바이트씩 쓰여진 파일 `byte.txt`가 프로젝트 아래에 생성되었다.
 
-  ![byte.txt가 생성된 모습]()
-  
-
+  ![byte.txt가 생성된 모습](/assets/images/java/byteexam1_result.png)
   
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| Byte 단위 입출력](https://programmers.co.kr/learn/courses/9/lessons/267)
