@@ -40,13 +40,12 @@ tags:
   import java.io.FileOutputStream;
 
   public class ByteExam1 {
-
     public static void main(String[] args) {
-          FileInputStream fis = null; // 파일로부터 읽어오기 위한 객체
-          FileOutputStream fos = null; // 파일에 쓰기 위한 객체
-
-          try {
-            // FileInputStream 객체 생성. 읽어 들이기 위한 파일의 경로 설정
+      FileInputStream fis = null; // 파일로부터 읽어오기 위한 객체
+      FileOutputStream fos = null; // 파일에 쓰기 위한 객체
+      
+      try {
+        // FileInputStream 객체 생성. 읽어 들이기 위한 파일의 경로 설정
         fis = new FileInputStream("src/javaIO/exam/ByteExam1.java");
         // FileOutputStream 객체 생성. 프로젝트 아래에 txt 파일을 생성하고 쓰기.
         fos = new FileOutputStream("byte.txt");
@@ -60,7 +59,7 @@ tags:
           fos.write(readData);
         }
         // System.out.println(fis.read()); // -1
-
+				
       } catch (Exception e) {
         // 에러의 발생근원지를 찾아서 단계별로 에러를 출력
         e.printStackTrace();
@@ -78,7 +77,7 @@ tags:
           e.printStackTrace();
         }
       }
-    }//--main()    
+	  }//--main()
   }//--class
   ```
 
