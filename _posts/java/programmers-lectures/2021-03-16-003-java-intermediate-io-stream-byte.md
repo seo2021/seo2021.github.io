@@ -82,7 +82,7 @@ tags:
   }//--class
   ```
 
-- 실행 결과 `ByteExam1`으로부터 코드를 1 바이트씩 읽어 들여, 1 바이트씩 쓰여진 파일 `byte.txt`가 프로젝트 아래에 생성되었다.
+- 실행 결과 `ByteExam1`으로부터 코드를 1 바이트씩 읽어 들여, 1 바이트씩 써진 파일 `byte.txt`가 프로젝트 아래에 생성되었다.
 
   ![byte.txt가 생성된 모습](/assets/images/java/byteexam1_result.png)
   
