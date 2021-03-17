@@ -44,3 +44,4 @@ tags:
 
 ## 출처
 - [코딩의 시작, TCP School \| JAVA \| 스트림](https://www.tcpschool.com/java/java_io_stream)
+- [기록은 기억의 연장선 \| [java] 입출력](https://joont92.github.io/java/입출력/)
