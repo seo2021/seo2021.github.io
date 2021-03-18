@@ -34,6 +34,39 @@ tags:
     >    - 네트워크나 영구저장소에서 **스트림을 다시 객체로 변환**하는 것.
     >  ![자바에서의 직렬화 & 역직렬화](/assets/images/java/serialize_deserialize_java.png)
 
+## 다양한 타입의 출력
+- 다양한 타입으로 저장할 수 있는 `DataOutputStream`
+  - `writeInt()` : int 값으로 저장
+  - `writeBoolean()` : boolean 값으로 저장
+  - `writeDouble()` : double 값으로 저장
+
+  ```java
+  import java.io.FileOutputStream;
+  import java.io.DataOutputStream;
+
+  public class ByteExam3 {
+
+    public static void main(String[] args) {
+      // try-with-resources
+      try(DataOutputStream out = new DataOutputStream(new FileOutputStream("data.txt"));) {
+        // 자동으로 자원 종료
+        out.writeInt(100);
+        out.writeBoolean(true);
+        out.writeDouble(50.5);
+
+      } catch (Exception e) {
+
+        e.printStackTrace();
+      }
+
+    }//--main()
+
+  }//--class
+  ```
+  - 💡 `try-with-resources`를 이용한 자원 종료
+    - **자바 I/O 객체**는 인스턴스를 만들고 모두 사용하면 **close() 메소드**를 호출하여 자원을 종료해야 한다.
+    - `try-with-resources`를 사용하면 `close()` 메소드를 사용자가 호출하지 않더라도, `try(...)`에 선언된 객체들에 대해서 **try 블럭이 종료될 때 자동으로 자원을 종료**해준다.
+
 
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| ]()
