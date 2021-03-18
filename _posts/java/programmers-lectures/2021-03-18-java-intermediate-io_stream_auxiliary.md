@@ -34,7 +34,7 @@ tags:
     >    - 네트워크나 영구저장소에서 **스트림을 다시 객체로 변환**하는 것.
     >  ![자바에서의 직렬화 & 역직렬화](/assets/images/java/serialize_deserialize_java.png)
 
-## 기본 자료형 데이터의 출력
+## 다양한 타입의 데이터 출력
 - 다양한 자바 기본 자료형 데이터를 저장할 수 있는 `DataOutputStream`
   - `writeInt()` : int 값으로 저장
   - `writeBoolean()` : boolean 값으로 저장
