@@ -71,7 +71,7 @@ tags:
       -  하지만, **보조 스트림**인 `DataOutputStream'을 사용하여 **자바 기본 자료형의 데이터를 출력**할 수 있다.
   - 아래와 같이 `DataOutputStream`은 **기본 자료형 데이터를 바이트 스트림으로 변환**하여 **출력**을 수행한다. 따라서 출력한 데이터를 다시 읽어올 때는 `DataInputStream`으로 읽어 와야 한다.
 
-    ![DataOutputStream과 DataInputStream]()
+    ![DataOutputStream과 DataInputStream](/assets/images/java/datainputstream_dataoutputstream.jpg)
 
   - 💡 `try-with-resources`를 이용한 자원 종료
     - **자바 I/O 객체**는 인스턴스를 만들고 모두 사용하면 **close() 메소드**를 호출하여 **사용한 자원을 종료**해야 한다.
@@ -86,7 +86,7 @@ tags:
       ```
 
 ## 출처
-- [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| ]()
+- [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| 다양한 타입의 출력](https://programmers.co.kr/learn/courses/9/lessons/317#)
 - [코딩의 시작, TCP School \| JAVA \| 스트림](https://www.tcpschool.com/java/java_io_stream)
 - [LUNA Y0UNG – Medium \| Basics: 직렬화(Serialization)란? (feat. Java)](https://medium.com/@lunay0ung/basics-%EC%A7%81%EB%A0%AC%ED%99%94-serialization-%EB%9E%80-feat-java-2f3eb11e9a8)
 - [Integerous DevLog \| 자바의 정석 - 직렬화(Serialization)](https://ryan-han.com/post/java/java-serialization/)
