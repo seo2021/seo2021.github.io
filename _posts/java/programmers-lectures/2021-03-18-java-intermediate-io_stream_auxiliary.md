@@ -91,3 +91,4 @@ tags:
 - [LUNA Y0UNG – Medium \| Basics: 직렬화(Serialization)란? (feat. Java)](https://medium.com/@lunay0ung/basics-%EC%A7%81%EB%A0%AC%ED%99%94-serialization-%EB%9E%80-feat-java-2f3eb11e9a8)
 - [Integerous DevLog \| 자바의 정석 - 직렬화(Serialization)](https://ryan-han.com/post/java/java-serialization/)
 - [개발이 하고 싶어요 \| [JAVA] ByteStream : DataInputStream / DataOutputStream](https://hyeonstorage.tistory.com/239)
+- [techguruspeaks.com \| Low-level and High-level Byte Streams](https://www.techguruspeaks.com/low-level-and-high-level-byte-streams/)
