@@ -71,7 +71,7 @@ tags:
       -  하지만, **보조 스트림**인 `DataOutputStream'을 사용하여 **자바 기본 자료형의 데이터를 출력**할 수 있다.
   - 아래와 같이 `DataOutputStream`은 **기본 자료형 데이터를 바이트 스트림으로 변환**하여 **출력**을 수행한다. 따라서 출력한 데이터를 다시 읽어올 때는 `DataInputStream`으로 읽어 와야 한다.
 
-    ![DataOutputStream과 DataInputStream](/assets/images/java/datainputstream_dataoutputstream.jpg)
+    ![DataOutputStream과 DataInputStream](/assets/images/java/datainputstream_dataoutputstream.png)
 
   - 💡 `try-with-resources`를 이용한 자원 종료
     - **자바 I/O 객체**는 인스턴스를 만들고 모두 사용하면 **close() 메소드**를 호출하여 **사용한 자원을 종료**해야 한다.
