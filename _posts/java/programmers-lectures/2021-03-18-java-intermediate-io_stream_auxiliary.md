@@ -67,7 +67,7 @@ tags:
   }//--class
   ```
   - `DataOutputStream`은 **보조 스트림**이므로 기반 스트림이 필요하며, `FileOutputStream`을 **기반 스트림**으로 사용했다.
-    -  `FileOutputStream`은 **바이트 **단위의 데이터만 출력할 수 있다.
+    -  `FileOutputStream`은 **바이트** 단위의 데이터만 출력할 수 있다.
       -  하지만, **보조 스트림**인 `DataOutputStream'을 사용하여 **자바 기본 자료형의 데이터를 출력**할 수 있다.
   - 아래와 같이 `DataOutputStream`은 **기본 자료형 데이터를 바이트 스트림으로 변환**하여 **출력**을 수행한다. 따라서 출력한 데이터를 다시 읽어올 때는 `DataInputStream`으로 읽어 와야 한다.
 
