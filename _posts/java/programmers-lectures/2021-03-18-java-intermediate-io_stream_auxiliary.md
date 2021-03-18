@@ -50,8 +50,8 @@ tags:
 
     public static void main(String[] args) {
       // try-with-resources
-      try(DataOutputStream out = new DataOutputStream(new FileOutputStream("data.txt"));) {
-        // 자동으로 자원 종료
+      try (DataOutputStream out = new DataOutputStream(new FileOutputStream("data.txt"));) { // io 객체 선언
+        // io 객체 사용 후, 자동으로 자원 종료
         out.writeInt(100);
         out.writeBoolean(true);
         out.writeDouble(50.5);
@@ -66,9 +66,16 @@ tags:
   }//--class
   ```
   - 💡 `try-with-resources`를 이용한 자원 종료
-    - **자바 I/O 객체**는 인스턴스를 만들고 모두 사용하면 **close() 메소드**를 호출하여 자원을 종료해야 한다.
-    - `try-with-resources`를 사용하면 `close()` 메소드를 사용자가 호출하지 않더라도, `try(...)`에 선언된 객체들에 대해서 **try 블럭이 종료될 때 자동으로 자원을 종료**해준다.
+    - **자바 I/O 객체**는 인스턴스를 만들고 모두 사용하면 **close() 메소드**를 호출하여 **사용한 자원을 종료**해야 한다.
+    - `try-with-resources`를 사용하면 `close()` 메소드를 사용자가 호출하지 않더라도, `try(...)`에 선언된 객체들에 대해서 **try 블럭이 종료될 때 자동으로 사용한 자원을 종료**해준다.
 
+      ```java
+      try ( // io 객체 선언) {
+        // io 객체 사용
+      } catch (Exception ex) {
+        ex.printStackTrace();
+      }
+      ```
 
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| ]()
