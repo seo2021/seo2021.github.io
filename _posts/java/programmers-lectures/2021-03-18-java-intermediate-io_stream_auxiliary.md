@@ -40,6 +40,8 @@ tags:
   - `writeBoolean()` : boolean 값으로 저장
   - `writeDouble()` : double 값으로 저장
 
+  <br/>  
+
   ```java
   import java.io.FileOutputStream;
   import java.io.DataOutputStream;
