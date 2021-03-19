@@ -38,9 +38,7 @@ tags:
 - 다양한 자바 기본 자료형 데이터를 저장할 수 있는 `DataOutputStream`
   - `writeInt()` : int 값으로 저장
   - `writeBoolean()` : boolean 값으로 저장
-  - `writeDouble()` : double 값으로 저장
-
-  <br/>  
+  - `writeDouble()` : double 값으로 저장 
 
   ```java
   import java.io.FileOutputStream;
@@ -82,6 +80,11 @@ tags:
       }
       ```
       
+- 실행 결과
+
+  ![image](https://user-images.githubusercontent.com/76505625/111743681-6939c900-88cd-11eb-8bb6-d9c9a205da79.png)
+
+      
 ## 다양한 타입의 데이터 입력
 - 다양한 자바 기본 자료형 데이터를 읽어낼 수 있는 `DataInputStream`
   - `readInt()` : 스트림으로부터 읽은 int 값을 반환
@@ -91,11 +94,47 @@ tags:
 - ex) data.txt로부터 값을 읽어 들여 콘솔에 출력
 
   ```java
-  
+  import java.io.DataInputStream;
+  import java.io.FileInputStream;
+
+  public class ByteExam4 {
+
+    public static void main(String[] args) {
+      // try-with-resources
+      // io 객체 선언
+      try ( DataInputStream in = new DataInputStream(new FileInputStream("data.txt")); ) {
+        // io 객체 사용 후, 자동으로 자원 종료
+        int i = in.readInt(); // int 형(4 바이트) 데이터 읽기
+        boolean b = in.readBoolean(); // boolean 형(1 바이트) 데이터 읽기
+        double d = in.readDouble(); // double 형(8 바이트) 데이터 읽기
+
+        System.out.println(i);
+        System.out.println(b);
+        System.out.println(d);
+
+      } catch(Exception ex) {
+        ex.printStackTrace();
+      }
+
+    }//--main()
+
+  }//--class
   ```
-  - 각 자료형의 크기가 다르므로, 출력한 데이터를 다시 읽어 올 때는 파일에 출력한 순서대로 읽어 들여야 한다.
+  - **파일**을 읽어 들이기 위해 **기반 스트림**으로 `FileInputStream`을 사용하고, 파일에서 읽어 들인 **바이트 스트림**을 **자바 기본 자료형**으로 읽어 들이기 위해 **보조 스트림**으로 `DataInputStream`을 사용했다.
+  - 💡 각 자료형의 크기가 다르므로, 출력한 데이터를 다시 읽어 올 때는 파일에 출력한 순서대로 읽어 들여야 한다.
     - int, boolean, double 순서로 저장했기 때문에, 읽어 들일 때도 같은 순서로 읽어 들였다. 
- 
+
+- 실행 결과
+
+  ```java
+  100
+  true
+  50.5
+  ```
+  
+<br/>
+
+- 이처럼 `DataInputStream`과 `DataOutputStream`을 사용하면 특정 타입으로 데이터를 저장하고 불러올 수 있다.
 
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| 다양한 타입의 출력](https://programmers.co.kr/learn/courses/9/lessons/317#)
