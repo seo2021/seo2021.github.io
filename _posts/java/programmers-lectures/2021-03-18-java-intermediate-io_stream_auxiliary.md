@@ -20,7 +20,7 @@ tags:
   |:----------:|:----------:|:-----|
   | FilterInputStream | FilterOutputStream | **필터**를 이용한 입출력 |
   | BufferedInputStream | BufferedOutputStream | **버퍼**를 이용한 입출력 |
-  | DataInputStream | DataOutputStream | 자바의 **기본 자료형인 데이터를 입출력**할 수 있도록 한다 |
+  | DataInputStream | DataOutputStream | 자바의 **기본 자료형 데이터를 입출력**할 수 있도록 한다 |
   | ObjectInputStream | ObjectOutputStream | 스트림으로부터 객체를 입력(**역직렬화**)하거나, 객체를 스트림에 출력(**직렬화**) |
   | SequenceInputStream | X | **두 개의 입력 스트림**을 논리적으로 **연결** |
   | PushbackInputStream | X | 다른 **입력 스트림**에 **버퍼를 이용**하여 push back이나 unread와 같은 **기능을 추가** |
@@ -30,7 +30,7 @@ tags:
     >    - **객체를 데이터 스트림으로** 바꾸는 것. 
     >    - 즉, **객체**에 저장된 데이터를 **스트림에 쓰기(write)** 위해 **연속적인(serial) 데이터로 변환**하는 것.
     >    - 객체를 상태 그대로 저장하거나 메모리, 데이터베이스 혹은 파일로 옮기기 위해 사용.
-    >- 역직렬화(Deserialization)3
+    >- 역직렬화(Deserialization)
     >    - 네트워크나 영구저장소에서 **스트림을 다시 객체로 변환**하는 것.
     >  ![자바에서의 직렬화 & 역직렬화](/assets/images/java/serialize_deserialize_java.png)
 
@@ -58,18 +58,15 @@ tags:
         out.writeDouble(50.5); // double 형(8 바이트) 데이터를 쓰기
 
       } catch (Exception e) {
-
         e.printStackTrace();
       }
-
     }//--main()
-
   }//--class
   ```
   - `DataOutputStream`은 **보조 스트림**이므로 기반 스트림이 필요하며, `FileOutputStream`을 **기반 스트림**으로 사용했다.
     -  `FileOutputStream`은 **바이트** 단위의 데이터만 출력할 수 있다.
-      -  하지만, **보조 스트림**인 `DataOutputStream'을 사용하여 **자바 기본 자료형의 데이터를 출력**할 수 있다.
-  - 아래와 같이 `DataOutputStream`은 **기본 자료형 데이터를 바이트 스트림으로 변환**하여 **출력**을 수행한다. 따라서 출력한 데이터를 다시 읽어올 때는 `DataInputStream`으로 읽어 와야 한다.
+      -  하지만, **보조 스트림**인 `DataOutputStream`을 사용하여 **자바 기본 자료형의 데이터를 출력**할 수 있다.
+  - 아래와 같이 `DataOutputStream`은 **기본 자료형 데이터를 바이트 스트림으로 변환**하여 **출력**을 수행한다. 따라서 출력한 데이터(바이트 스트림 형태)를 다시 읽어올 때는 `DataInputStream`으로 읽어 와야 한다.
 
     ![DataOutputStream과 DataInputStream](/assets/images/java/datainputstream_dataoutputstream.png)
 
