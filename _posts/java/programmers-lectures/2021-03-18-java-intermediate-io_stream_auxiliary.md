@@ -81,6 +81,21 @@ tags:
         ex.printStackTrace();
       }
       ```
+      
+## 다양한 타입의 데이터 입력
+- 다양한 자바 기본 자료형 데이터를 읽어낼 수 있는 `DataInputStream`
+  - `readInt()` : 스트림으로부터 읽은 int 값을 반환
+  - `readBoolean()` : 스트림으로부터 읽은 boolean 값 반환
+  - `readDouble()` : 스트림으로부터 읽은 double 값 반환
+
+- ex) data.txt로부터 값을 읽어 들여 콘솔에 출력
+
+  ```java
+  
+  ```
+  - 각 자료형의 크기가 다르므로, 출력한 데이터를 다시 읽어 올 때는 파일에 출력한 순서대로 읽어 들여야 한다.
+    - int, boolean, double 순서로 저장했기 때문에, 읽어 들일 때도 같은 순서로 읽어 들였다. 
+ 
 
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| 다양한 타입의 출력](https://programmers.co.kr/learn/courses/9/lessons/317#)
