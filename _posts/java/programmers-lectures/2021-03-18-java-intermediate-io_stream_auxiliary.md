@@ -23,8 +23,8 @@ tags:
   | DataInputStream | DataOutputStream | 자바의 **기본 자료형 데이터를 입출력**할 수 있도록 한다 |
   | ObjectInputStream | ObjectOutputStream | 스트림으로부터 객체를 입력(**역직렬화**)하거나, 객체를 스트림에 출력(**직렬화**) |
   | SequenceInputStream | X | **두 개의 입력 스트림**을 논리적으로 **연결** |
-  | PushbackInputStream | X | 다른 **입력 스트림**에 **버퍼를 이용**하여 push back이나 unread와 같은 **기능을 추가** |
-  | X | PrintStream | 다른 **출력 스트림**에 **버퍼를 이용**하여 다양한 데이터를 출력하기 위한 **기능을 추가** |
+  | PushbackInputStream | X | 다른 **입력 스트림**에 **버퍼를 이용**하여 **push back**이나 **unread**와 같은 **기능을 추가** |
+  | X | PrintStream | 다른 **출력 스트림**에 **버퍼를 이용**하여 **다양한 데이터를 출력**하기 위한 **기능을 추가** |
   
     >- 직렬화(Serialization)
     >    - **객체를 데이터 스트림으로** 바꾸는 것. 
