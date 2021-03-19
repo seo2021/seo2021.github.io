@@ -31,6 +31,7 @@ tags:
   - 따라서, **문자 기반의 보조 스트림**도 다음과 같이 제공된다.
 
   | 입력 스트림 | 출력 스트림 | 설명 |
+  |:----------:|:----------:|:-----------:|
   | FilterReader | FilterWriter | **필터**를 이용한 입출력 |
   | BufferedReader | BufferedWriter | **버퍼**를 이용한 입출력 |
   | PushbackReader | X | 다른 **입력 스트림**에 **버퍼**를 이용하여 push back이나 unread와 같은 **기능을 추가** |
