@@ -82,9 +82,10 @@ tags:
       
 - 실행 결과
 
-  ![image](https://user-images.githubusercontent.com/76505625/111743681-6939c900-88cd-11eb-8bb6-d9c9a205da79.png)
+  ![ByteExam3 실행결과 : 13 바이트의 data.txt 파일 생성](/assets/images/java/byteexam3_result.png)
+  
+  - 13 바이트의 데이터가 써진 data.txt 파일이 생성되었다.
 
-      
 ## 다양한 타입의 데이터 입력
 - 다양한 자바 기본 자료형 데이터를 읽어낼 수 있는 `DataInputStream`
   - `readInt()` : 스트림으로부터 읽은 int 값을 반환
