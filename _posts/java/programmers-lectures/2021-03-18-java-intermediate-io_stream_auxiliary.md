@@ -135,7 +135,7 @@ tags:
   
 <br/>
 
-- 이처럼 `DataInputStream`과 `DataOutputStream`을 사용하면 특정 타입으로 데이터를 저장하고 불러올 수 있다.
+- 이처럼 `DataInputStream`과 `DataOutputStream`을 사용하면 **특정 타입**으로 데이터를 저장하고 불러올 수 있다.
 
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| 다양한 타입의 출력](https://programmers.co.kr/learn/courses/9/lessons/317#)
