@@ -85,13 +85,56 @@ tags:
   - `FileReader` : **파일에서 읽기** 위한 클래스.
   - `BufferedReader` : **한 줄씩 입력**받기 위한 클래스.
   - `FileWriter` : **파일에 쓰기** 위한 클래스.
-  - `PrintWriter` : **편리하게 출력**하기 위한 클래스.
+  - `PrintWriter` : **다양한 출력 메소드**를 가지고 있는 클래스. 데코레이터 패턴을 사용하지 않더라도, `File` 클래스 객체나, `OutputStream` 객체 등을 바로 인수로 입력받을 수 있는 장점이 있다.
 
   ```java
-  
+  import java.io.BufferedReader;
+  import java.io.FileReader;
+  import java.io.FileWriter;
+  import java.io.IOException;
+  import java.io.PrintWriter;
+
+  public class CharIOExam02 {
+
+    public static void main(String[] args) {
+
+      BufferedReader br = null; // 한 줄씩 읽어 들이기 위한 클래스
+      PrintWriter pw = null; // 편리하게 출력하기 위한 클래스
+
+      try {
+        // 지정한 경로의 파일에서 문자를 읽어 들이기 위한 객체 생성
+        br = new BufferedReader(new FileReader("src/javaIO/exam02/CharIOExam02.java"));
+        // 지정한 경로의 파일에 쓰기 위한 객체 생성
+        pw = new PrintWriter(new FileWriter("test.txt"));
+
+        String line = null; // 파일에서 읽어 온 한 줄을 저장하기 위한 변수
+
+        // 파일에서 읽어 온 내용이 있다면
+        while((line = br.readLine()) != null) {
+          // 읽어 온 내용을 파일에 쓰기
+          pw.println(line);
+        }
+
+      } catch (Exception e) {
+        e.printStackTrace();
+
+      } finally {
+        // 사용한 자원 종료
+        pw.close();
+        try {
+          br.close();
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+      }
+
+    }//--main()
+  }//--class
   ```
+  - 💡 `PrintWriter`는 **파일을 인수로 받아들이는 생성자**도 제공하고 있기 때문에, `FileWriter`를 굳이 사용할 필요는 없으며, 예제에서는 데코레이터 패턴을 보여주기 위해 위와 같이 작성했다.
 
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| Char 단위 입출력(Console)](https://programmers.co.kr/learn/courses/9/lessons/319)
 - [코딩의 시작, TCP School \| JAVA \| 스트림](https://www.tcpschool.com/java/java_io_stream)
 - [Stranger's LAB - 티스토리 \| JAVA [자바] - 입력 뜯어보기...](https://st-lab.tistory.com/41)
+- [개발자 다르의 블로그 - 티스토리 \| [Java IO_02] PrintWriter 클래스 사용법 예제분석](https://st-lab.tistory.com/41)
