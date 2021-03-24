@@ -42,7 +42,7 @@ tags:
   - `System.in` : 키보드를 의미(`InputStream`).
   - `BufferedReader` : 한 줄을 입력받기 위한 클래스.
     - `BufferedReader` 클래스가 가지고 있는 `readLine()` 메소드가 한 줄씩 읽게 해준다.
-    - `readLine()` 메소드는 더는 읽어 들일 내용이 없을 때, null을 반환한다.
+    - `readLine()` 메소드는 더는 읽어 들일 내용이 없을 때, `null`을 반환한다.
 
   - 💡 **`BufferedReader` 클래스에는 `InputStream`을 입력받는 생성자가 없다**(`Reader` 객체만 읽어 들일 수 있다).
     - `System.in`은 `InputStream` 타입이므로, `BufferedReader` 생성자에 바로 들어갈 수 없다.
@@ -82,10 +82,10 @@ tags:
   
 ## 문자(Char) 단위 입출력 예제 2 - 파일
 - **문자 단위 입출력 스트림**을 이용해서 **파일에서 한 줄씩 입력받아서 파일에 출력**.
-  - `FileReader` : 파일에서 읽기 위한 클래스.
-  - `BufferedReader` : 한 줄씩 입력받기 위한 클래스.
-  - `FileWriter` : 파일에 쓰게 하기 위한 클래스.
-  - `PrintWriter` : 편리하게 출력하기 위한 클래스.
+  - `FileReader` : **파일에서 읽기** 위한 클래스.
+  - `BufferedReader` : **한 줄씩 입력**받기 위한 클래스.
+  - `FileWriter` : **파일에 쓰기** 위한 클래스.
+  - `PrintWriter` : **편리하게 출력**하기 위한 클래스.
 
   ```java
   
