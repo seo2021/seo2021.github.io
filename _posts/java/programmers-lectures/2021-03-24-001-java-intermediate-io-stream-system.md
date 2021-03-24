@@ -1,14 +1,12 @@
 ---
-title: "[프로그래머스 자바 중급] 입력과 출력 : 표준 입출력"
+title: "[자바] 입력과 출력 : 표준 입출력"
 layout: single
 related: true
 categories:
   - JAVA
-  - PROGRAMMERS-LECTURES
 tags:
   - io
   - stream
-  - 자바중급
 ---
 
 ## 표준 입출력
