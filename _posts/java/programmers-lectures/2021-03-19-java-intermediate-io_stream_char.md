@@ -77,8 +77,6 @@ tags:
     }//--main()
   }//--class
   ```
-  
-  
 
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| Char 단위 입출력(Console)](https://programmers.co.kr/learn/courses/9/lessons/319)
