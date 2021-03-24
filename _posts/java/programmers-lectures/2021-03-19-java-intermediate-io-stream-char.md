@@ -37,10 +37,12 @@ tags:
     | PushbackReader | X | 다른 **입력 스트림**에 **버퍼**를 이용하여 push back이나 unread와 같은 **기능을 추가** |
     | X | PrintWriter | 다른 **출력 스트림**에 **버퍼**를 이용하여 **다양한 데이터를 출력**하기 위한 **기능을 추가** |
   
-## 문자(Char) 단위 입출력 예제
+## 문자(Char) 단위 입출력 예제 1 - 콘솔
 - **문자 단위 입출력 스트림**을 이용해서 **키보드로부터 문자열을 한 줄 입력받아 콘솔에 출력**.
-  - `System.in` : 키보드를 의미(`InputStream`)
-  - `BufferedReader` : 한 줄씩 입력받기 위한 클래스
+  - `System.in` : 키보드를 의미(`InputStream`).
+  - `BufferedReader` : 한 줄을 입력받기 위한 클래스.
+    - `BufferedReader` 클래스가 가지고 있는 `readLine()` 메소드가 한 줄씩 읽게 해준다.
+    - `readLine()` 메소드는 더는 읽어 들일 내용이 없을 때, null을 반환한다.
 
   - 💡 **`BufferedReader` 클래스에는 `InputStream`을 입력받는 생성자가 없다**(`Reader` 객체만 읽어 들일 수 있다).
     - `System.in`은 `InputStream` 타입이므로, `BufferedReader` 생성자에 바로 들어갈 수 없다.
@@ -76,6 +78,17 @@ tags:
       
     }//--main()
   }//--class
+  ```
+  
+## 문자(Char) 단위 입출력 예제 2 - 파일
+- **문자 단위 입출력 스트림**을 이용해서 **파일에서 한 줄씩 입력받아서 파일에 출력**.
+  - `FileReader` : 파일에서 읽기 위한 클래스.
+  - `BufferedReader` : 한 줄씩 입력받기 위한 클래스.
+  - `FileWriter` : 파일에 쓰게 하기 위한 클래스.
+  - `PrintWriter` : 편리하게 출력하기 위한 클래스.
+
+  ```java
+  
   ```
 
 ## 출처
