@@ -10,6 +10,8 @@ tags:
   - 자바중급
 ---
 
+## 
+
 ## RandomAccessFile 클래스
 - 앞서 살펴본 다양한 **입출력 스트림**을 이용하면 **파일에 순차적으로 입출력 작업**을 수행할 수 있다.
 
@@ -28,27 +30,34 @@ tags:
   
   ```java
   public static void main(String[] args) {
-		try {
-			// "rw" 모드로 "data.txt" 파일을 개방
-			RandomAccessFile file = new RandomAccessFile("data.txt", "rw");
-			
-			System.out.println(file.getFilePointer()); // 0: 파일 포인터의 현재 위치를 반환
-			file.writeInt(10); // 정수 10을 저장(4 Byte)
-			System.out.println(file.getFilePointer()); // 4
-			
-			file.seek(20); // 파일 포인터의 위치를 20으로 이동
-			System.out.println(file.getFilePointer()); // 20
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+    try {
+      // "rw" 모드로 "data.txt" 파일을 개방
+      RandomAccessFile file = new RandomAccessFile("data.txt", "rw");
 
-	}//--main()
+      System.out.println(file.getFilePointer()); // 0: 파일 포인터의 현재 위치를 반환
+      file.writeInt(10); // 정수 10을 저장(4 Byte)
+      System.out.println(file.getFilePointer()); // 4
+
+      file.seek(20); // 파일 포인터의 위치를 20으로 이동
+      System.out.println(file.getFilePointer()); // 20
+
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+  }//--main()
   ```
 
 ## File 클래스
 - **입출력 스트림**을 사용하면 **파일을 통한 입출력 작업**을 수행할 수 있다.
-- 하지ak
+- 하지만, 파일의 제거나 디렉터리에 관한 작업 등은 입출력 스트림을 통해서는 수행할 수 없다.
+
+- 자바는 입출력 작업 외의 **파일과 디렉터리에 관한 작업**을 **`File` 클래스**를 통해 처리하도록 하고 있으며, 이를 위해 `File` 클래스에 정의되어 있는 **메소드**는 다음과 같다.
+
+  | 메소드 | 설명 |
+  |:------|:-----|
+  | 
+
 
 
   
