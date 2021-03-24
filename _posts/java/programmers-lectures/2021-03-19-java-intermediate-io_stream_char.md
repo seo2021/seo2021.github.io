@@ -78,6 +78,14 @@ tags:
   }//--class
   ```
 
+- 실행 결과
+  - 한 줄 입력받아 출력.
+
+  ```java
+  hello!
+  hello!
+  ```
+
 ## 출처
 - [프로그래머스 \| 프로그래밍 강의 \| 자바 중급 \| Char 단위 입출력(Console)](https://programmers.co.kr/learn/courses/9/lessons/319)
 - [코딩의 시작, TCP School \| JAVA \| 스트림](https://www.tcpschool.com/java/java_io_stream)
