@@ -58,7 +58,7 @@ tags:
   public class CharIOExam01 {
 
     public static void main(String[] args) {
-      // 키보드로 입력 받은 InputStream 타입의 데이터를 Reader 타입으로 변환하여 객체 생성
+      // 키보드로 입력받은 InputStream 타입의 데이터를 Reader 타입으로 변환하여 객체 생성
       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
       // 키보드로 입력받은 문자열을 저장하기 위해 line 변수를 선언
