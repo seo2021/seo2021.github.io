@@ -53,7 +53,7 @@ tags:
   
 - **Annotation을 이용하여 실행**
   - `MyHello` 클래스를 사용하는 `MyHelloExam` 클래스 작성.
-  -  타겟 메소드가 `@Count100` Annotation이 설정되어 있을 경우 특정한 방식으로 실행되도록 한다.
+  - 타겟 메소드가 `@Count100` Annotation이 설정되어 있을 경우 특정한 방식으로 실행되도록 한다.
     - `MyHello`의 `hello()` 메소드가 `@Count100` Annotation이 설정되어 있을 경우, `hello()` 메소드를 100번 호출하도록 작성.
 
   ```java
