@@ -40,7 +40,7 @@ tags:
   
 - **Annotation을 클래스에서 사용**
   - `hello()` 메소드를 가지는 `MyHello` 클래스 작성.
-  - `hello()` 메소드 위에 `@Count100` Annotation을 붙인다.
+  - `hello()` 메소드(타겟 메소드) 위에 `@Count100` Annotation을 붙인다.
   
   ```java
   public class MyHello {
@@ -53,7 +53,8 @@ tags:
   
 - **Annotation을 이용하여 실행**
   - `MyHello` 클래스를 사용하는 `MyHelloExam` 클래스 작성.
-  - `MyHello`의 `hello()` 메소드가 `@Count100` Annotation이 설정되어 있을 경우, `hello()` 메소드를 100번 호출하도록 작성.
+  -  타겟 메소드가 `@Count100` Annotation이 설정되어 있을 경우 특정한 방식으로 실행되도록 한다.
+    - `MyHello`의 `hello()` 메소드가 `@Count100` Annotation이 설정되어 있을 경우, `hello()` 메소드를 100번 호출하도록 작성.
 
   ```java
   import java.lang.reflect.Method;
