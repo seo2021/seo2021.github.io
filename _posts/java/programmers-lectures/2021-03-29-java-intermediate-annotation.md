@@ -13,7 +13,7 @@ tags:
 ## Annotation이란?
 - 자바 소스 코드에 추가하여 사용할 수 있는 **메타데이터**의 일종.
 - **클래스**나 **메소드** 위에 붙으며, **@(at)** 기호로 시작한다.
-- **JDK 1.5 **버전 이상에서 사용 가능하다.
+- **JDK 1.5** 버전 이상에서 사용 가능하다.
 
 - **클래스 파일에 임베디드**되어 **컴파일러에 의해 생성**된 후 **자바 가상머신에 포함되어 작동**한다.
   - 클래스가 컴파일되거나 실행될 때 Annotation 유무나 Annotation에 설정된 값을 통하여 클래스가 다르게 실행되도록 할 수 있다.
@@ -35,9 +35,7 @@ tags:
   import java.lang.annotation.RetentionPolicy;
 
   @Retention(RetentionPolicy.RUNTIME)
-  public @interface Count100 {
-
-  }
+  public @interface Count100 { }
   ```
   
 - **Annotation을 클래스에서 사용**
@@ -46,7 +44,6 @@ tags:
   
   ```java
   public class MyHello {
-
     @Count100
     public void hello() {
       System.out.println("hello");
