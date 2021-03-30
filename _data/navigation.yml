@@ -32,8 +32,6 @@ sidebar-navigation:
         url: /categories/java/programmers-lectures/
       - title: "Child Page A1"
         url: /
-      - title: "Child Page A2"
-        url: /
   - title: "DSA"
     url: /categories/dsa/
     children:
@@ -51,8 +49,8 @@ sidebar-navigation:
   - title: "SQL&DB"
     url: /categories/sql-db/
     children:
-      - title: "Child Page D1"
-        url: /
+      - title: "KNOU-DATABASE-SYSTEMS"
+        url: /categories/sql-db/knou-database-systems/
       - title: "Child Page D2"
         url: /
   - title: "CODING INTERVIEW"
