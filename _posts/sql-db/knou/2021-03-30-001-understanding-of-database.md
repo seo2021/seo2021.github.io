@@ -31,17 +31,15 @@ tags:
     - **물리적 데이터 종속**과 **논리적 데이터 종속**으로 구분할 수 있다.
     - DBMS는 데이터를 프로그램과 완전히 독립시킴으로써, 종속으로 인한 문제를 근본적으로 배제시킨다.
     
-    ![데이터 종속](/assets/images/sql-db/001-data-dependency.png)
-    
+        ![데이터 종속](/assets/images/sql-db/001-data-dependency.png)
   2. 데이터 중복(Data Redundancy)의 문제
     - 하나의 사항에 대한 데이터가 **여러 파일에 중복적으로 저장**될 수 있다.
     - 동일한 사항에 대한 중복 데이터는 **일관성, 보안성, 경제성** 측면에서 문제를 발생시킨다.
       - 일관성(consistency): 하나의 사실을 나타내는 여러 개의 데이터가 논리적으로 같은 값을 유지하는 것.
       - 보안성(security): 논리적으로 동등한 내용의 데이터에 대해 똑같은 수준의 보안을 유지하는 것.
       - 경제성(economy): 최소한의 저장공간과 낮은 시스템 갱신 비용.
-
-    ![데이터 중복](/assets/images/sql-db/001-data-redundancy.png)
-
+      
+        ![데이터 중복](/assets/images/sql-db/001-data-redundancy.png)
   3. 데이터 무결성(Data Integrity) 훼손의 문제
 
  
