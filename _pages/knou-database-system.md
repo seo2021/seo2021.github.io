@@ -1,7 +1,7 @@
 ---
 title: "KNOU Database System"
 layout: category
-permalink: /categories/sql-db/knou/
+permalink: /categories/sql-db/knou-database-system/
 author_profile: true
 taxonomy: KNOU-DATABASE-SYSTEM
 sidebar:
