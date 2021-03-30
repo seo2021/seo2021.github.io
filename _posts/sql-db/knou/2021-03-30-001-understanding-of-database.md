@@ -40,7 +40,7 @@ tags:
       - 보안성(security): 논리적으로 동등한 내용의 데이터에 대해 똑같은 수준의 보안을 유지하는 것.
       - 경제성(economy): 최소한의 저장공간과 낮은 시스템 갱신 비용.
 
-        <p align="center"><img src="/assets/images/sql-db/001-data-redundancy.png)"></p>
+        <p align="center"><img src="/assets/images/sql-db/001-data-redundancy.png"></p>
         
   3. 데이터 무결성(Data Integrity) 훼손의 문제
   
