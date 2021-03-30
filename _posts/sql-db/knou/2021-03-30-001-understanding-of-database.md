@@ -12,7 +12,7 @@ tags:
 ## 데이터베이스 시스템의 개요
 - 데이터베이스는 간단히 말해 **대량의 데이터를 저장 및 관리**하고 **필요한 데이터를 신속히 검색**할 수 있도록 보조하는 장치라고 할 수 있다.
 
-    <p align="center"><img src="/assets/images/sql-db/001-definition-of-database.png"></p>
+  <p align="center"><img src="/assets/images/sql-db/001-definition-of-database.png"></p>
   
 - **데이터베이스 관리 시스템(DBMS: Database Management System)**은 한 조직의 연관된 데이터 집합을 다수의 사용자가 공용으로 사용하기 위해 통합 저장하는 소프트웨어 패키지이다.
 - DBMS와 함께 사용자에게 서비스 형태로 제공되는 애플리케이션이 포함된 일체의 시스템을 **데이터베이스 시스템(Database System)**이라고 한다.
@@ -20,8 +20,8 @@ tags:
 ## 파일 처리 시스템 : 전통적 데이터 관리 방식
 - 파일 처리 시스템은 운영체제에 의해 지원되며, **파일을 사용하여 특정 업무에 해당하는 데이터를 관리**하는 방식이다.
   - 업무별 애플리케이션이 개별 데이터를 데이터 파일에 저장 및 관리. 
-
-    ![파일 처리 시스템](/assets/images/sql-db/001-file-processing-system.png)
+  
+    <p align="center"><img src="/assets/images/sql-db/001-file-processing-system.png"></p>
 
 - DBMS가 사용되기 이전, 대다수의 시스템은 **파일 처리 시스템(File Processing System)** 방식을 기반으로 운용되었다.
 - 하지만, 파일 처리 시스템은 데이터 관리에 여러 **문제점**을 가지고 있다.
@@ -31,7 +31,7 @@ tags:
     - **물리적 데이터 종속**과 **논리적 데이터 종속**으로 구분할 수 있다.
     - DBMS는 데이터를 프로그램과 완전히 독립시킴으로써, 종속으로 인한 문제를 근본적으로 배제시킨다.
     
-         ![데이터 종속](/assets/images/sql-db/001-data-dependency.png)
+      <p align="center"><img src="/assets/images/sql-db/001-data-dependency.png"></p>
         
   2. 데이터 중복(Data Redundancy)의 문제
     - 하나의 사항에 대한 데이터가 **여러 파일에 중복적으로 저장**될 수 있다.
@@ -39,10 +39,11 @@ tags:
       - 일관성(consistency): 하나의 사실을 나타내는 여러 개의 데이터가 논리적으로 같은 값을 유지하는 것.
       - 보안성(security): 논리적으로 동등한 내용의 데이터에 대해 똑같은 수준의 보안을 유지하는 것.
       - 경제성(economy): 최소한의 저장공간과 낮은 시스템 갱신 비용.
-      
-        ![데이터 중복](/assets/images/sql-db/001-data-redundancy.png)
+
+        <p align="center"><img src="/assets/images/sql-db/001-data-redundancy.png)"></p>
         
   3. 데이터 무결성(Data Integrity) 훼손의 문제
+  
 
  
 ## 출처
