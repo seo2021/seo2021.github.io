@@ -12,7 +12,7 @@ tags:
 ## 데이터베이스 시스템의 개요
 - 데이터베이스는 간단히 말해 **대량의 데이터를 저장 및 관리**하고 **필요한 데이터를 신속히 검색**할 수 있도록 보조하는 장치라고 할 수 있다.
 
-  ![데이터베이스의 정의](/assets/images/sql-db/001-definition-of-database.png)
+    <p align="center"><img src="/assets/images/sql-db/001-definition-of-database.png"></p>
   
 - **데이터베이스 관리 시스템(DBMS: Database Management System)**은 한 조직의 연관된 데이터 집합을 다수의 사용자가 공용으로 사용하기 위해 통합 저장하는 소프트웨어 패키지이다.
 - DBMS와 함께 사용자에게 서비스 형태로 제공되는 애플리케이션이 포함된 일체의 시스템을 **데이터베이스 시스템(Database System)**이라고 한다.
@@ -31,7 +31,7 @@ tags:
     - **물리적 데이터 종속**과 **논리적 데이터 종속**으로 구분할 수 있다.
     - DBMS는 데이터를 프로그램과 완전히 독립시킴으로써, 종속으로 인한 문제를 근본적으로 배제시킨다.
     
-        ![데이터 종속](/assets/images/sql-db/001-data-dependency.png)
+         ![데이터 종속](/assets/images/sql-db/001-data-dependency.png)
         
   2. 데이터 중복(Data Redundancy)의 문제
     - 하나의 사항에 대한 데이터가 **여러 파일에 중복적으로 저장**될 수 있다.
