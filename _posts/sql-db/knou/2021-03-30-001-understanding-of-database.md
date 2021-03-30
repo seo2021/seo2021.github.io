@@ -3,7 +3,7 @@ title: "[2021-1 데이터베이스시스템] 1강 데이터베이스의 이해"
 layout: single
 related: true
 categories:
-  - SQL&DB
+  - SQL-DB
   - KNOU-DATABASE-SYSTEMS
 tags:
   - 방송대
@@ -28,7 +28,7 @@ tags:
   1. 데이터 종속의 문제
     - 저장된 데이터가 **특정 하드웨어**에서 또는 **특정 사용자 및 소프트웨어**에서만 사용될 수 있도록 제한되는 문제.
     - **물리적 데이터 종속**과 **논리적 데이터 종속**으로 구분할 수 있다.
-    * DBMS
+    - DBMS
   2. 
 
  
