@@ -79,6 +79,32 @@ tags:
 
     <p align="center"><img src="/assets/images/sql-db/001-dbms-3-level-architecture.png"></p>
 
+    - 내부 단계(internal level)
+      - 가장 낮은 추상화 단계.
+      - **원시 수준(raw level)**의 데이터 구조, 저장된 레코드의 **물리적** 순서 등 **구체적의 사항**을 정의.
+    - 개념 단계(conceptual level)
+      - 데이터베이스의 **전체 구조를 추상화**하는 단계.
+      - 물리적인 상세사항 등은 배제되며, 데이터베이스에 **무엇이 저장되어 있는지**와 **데이터 간의 관계**만 기술.
+    - 외부 단계(external level)
+      - 추상화의 최상위 단계.
+      - 사용자가 관심을 갖는 **데이터베이스 일부만 기술**하고, 다른 부분은 은폐.
+
+  - 단계 간 사상
+    - 외부-개념 사상(external-conceptual mapping)
+      - 개념 스키마에 변화가 생기더라도 외부 스키마에 아무런 영향도 미치지 않는다.
+      - **논리적 데이터 독립성**이 확보된다. 
+    - 개념-내부 사상(conceptual-internal mapping)
+      - 물리적 변화가 발생해도 개념 스키마에 아무런 영향도 미치지 않는다.
+      - **물리적 데이터 독립성**이 확보된다. 
+
+## 데이터베이스 언어
+- DBMS는 사용자가 데이터베이스를 쉽게 사용하고 다룰 수 있도록 **언어 형태의 인터페이스**를 제공.
+
+- 데이터 정의 언어(DDL: Data Definition Language)
+  - 스키마를 정의.
+- 데이터 조작 언어(DML: Data Manipulation Language)
+  - 데이터 갱신과 질의를 표현.
+
 
  
 ## 출처
