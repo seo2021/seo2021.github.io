@@ -122,7 +122,7 @@ tags:
 
   - DBMS 서버와 클라이언트 컴퓨터 간의 기능에 따라 **2계층**과 **3계층** 두 가지 유형이 사용된다.
 
-    <p align="center"><img src="/assets/images/sql-db/001-client-server-database-system"></p>
+    <p align="center"><img src="/assets/images/sql-db/001-client-server-database-system.png"></p>
 
     - 2계층 클라이언트-서버 구조(2-tier architecture)
       - 소프트웨어 구성요소들이 **클라이언트와 서버에 분산**
