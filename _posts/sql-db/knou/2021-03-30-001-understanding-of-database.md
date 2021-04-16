@@ -102,11 +102,37 @@ tags:
 
 - 데이터 정의 언어(DDL: Data Definition Language)
   - 스키마를 정의.
+  - **데이터베이스 객체를 생성, 수정, 삭제**하기 위한 언어.
 - 데이터 조작 언어(DML: Data Manipulation Language)
   - 데이터 갱신과 질의를 표현.
+  - 구조화된 데이터에 사용자가 **접근 및 조작**(검색, 삽입, 삭제, 수정)할 수 있도록 지원하는 언어.
 
+## 데이터베이스 시스템 아키텍처
+- 중앙집중 방식
+  - **단일 서버**가 **다수의 클라이언트** 장치를 대신하여 작동.
+  - 중앙 컴퓨터의 과부하로 전체적인 성능 저하.
 
- 
+    <p align="center"><img src="/assets/images/sql-db/001-centralized-database-system.png"></p>
+    
+- 클라이언트-서버 방식(분산 시스템 방식)
+  - 클라이언트 장치의 성능 향상으로 **자체적인 처리 능력** 보유.
+
+  - 프로그램 **부하 분산** 및 시스템의 성능 향상.
+  - 프로그램 **유지보수 비용 절감** 및 **이식성 증가**.
+
+  - DBMS 서버와 클라이언트 컴퓨터 간의 기능에 따라 **2계층**과 **3계층** 두 가지 유형이 사용된다.
+
+    <p align="center"><img src="/assets/images/sql-db/001-client-server-database-system"></p>
+
+    - 2계층 클라이언트-서버 구조(2-tier architecture)
+      - 소프트웨어 구성요소들이 **클라이언트와 서버에 분산**
+      - 기존 중앙집중식에서 **클라이언트** 쪽으로 사용자 인터페이스와 프로그램이 이동.
+      - 질의 처리와 트랜잭션 기능은 **서버** 측에 남아 있다.  
+    - 3계층 클라이언트-서버 구조(3-tier architecture)
+      - 클라이언트와 데이터베이스 서버 사이에 중간 단계인 **애플리케이션 서버**를 추가.
+        - 애플리케이션 서버는 데이터베이스 서버에 접근하는 데 사용되는 **비즈니스 규칙(프로시저 또는 제약조건)들을 저장**하는 중간 역할 수행.
+        - 클라이언트 요청 처리 및 데이터베이스 서버에서 처리된 데이터를 클라이언트에게 전달.
+
 ## 출처
 - [정재화 \| 데이터베이스 시스템 \| 한국방송통신대학교출판문화원(2020) \| p.2-33](https://press.knou.ac.kr/goods/textBookView.do?condCmdtCode=9788920035500&condLscValue=001&condYr=&condSmst=)
 - [정재화 \| 데이터베이스시스템 \| 1강. 데이터베이스의 이해 \| 한국방송통신대학교 \| 2021-1 강의](https://ucampus.knou.ac.kr/ekp/user/course/initUCRCourse.sdo?pageIndex=1&recordCountPerPage=4&sbjtId=KNOU1411001&cntsId=KNOU1411&atlcNo=6889724&tespNo=&lectPldcTocNo=&examApexNo=&burSbjtCd=&tabNo=01&curSbjtId=&curLectPldcTocNo=&systemDiv=H&searchCntsCateNo=34&searchShgr=&searchSeme=&epTicket=LOG)
