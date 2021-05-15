@@ -12,6 +12,8 @@ main:
     url: /categories/web/
   - title: "SQL&DB"
     url: /categories/sql-db/
+  - title: "LINUX"
+    url: /categories/linux/
   - title: "CODING-INTERVIEW"
     url: /categories/coding-interview/
   # - title: "About"
@@ -53,11 +55,14 @@ sidebar-navigation:
         url: /categories/sql-db/knou-database-systems/
       - title: "Child Page D2"
         url: /
+  - title: "LINUX"
+    url: /categories/linux/
+    children:
+      - title: "Child Page E1"
+        url: /
   - title: "CODING INTERVIEW"
     url: /categories/coding-interview/
     children:
-      - title: "Child Page D1"
-        url: /
-      - title: "Child Page D2"
+      - title: "Child Page F1"
         url: /
  
