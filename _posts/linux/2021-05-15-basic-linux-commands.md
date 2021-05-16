@@ -4,8 +4,6 @@ layout: single
 related: true
 categories:
   - LINUX
- tags"
-  -
 ---
 
 ## 자주 쓰는 기본 명령어
