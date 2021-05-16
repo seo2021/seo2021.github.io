@@ -1,9 +1,11 @@
 ---
-title: "[리눅스] 기본 명령어
+title: "[리눅스] 기본 명령어"
 layout: single
 related: true
 categories:
   - LINUX
+ tags"
+  -
 ---
 
 ## 자주 쓰는 기본 명령어
