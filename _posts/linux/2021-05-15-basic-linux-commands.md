@@ -1,5 +1,5 @@
 ---
-title: "[리눅스] 기본 명령어" -- 작성 중
+title: "[리눅스] 기본 명령어 -- 작성 중"
 layout: single
 related: true
 categories:
