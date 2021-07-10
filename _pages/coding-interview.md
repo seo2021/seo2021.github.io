@@ -1,9 +1,9 @@
 ---
-title: "Coding Interview"
+title: "CS"
 layout: category
-permalink: /categories/coding-interview/
+permalink: /categories/cs/
 author_profile: true
-taxonomy: CODING-INTERVIEW
+taxonomy: CS
 sidebar:
   title: "상세 카테고리"
   nav: sidebar-navigation
