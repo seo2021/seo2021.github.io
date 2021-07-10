@@ -1,5 +1,5 @@
 ---
-title: "[운영체제] 1. 운영체제 개요(Introduction to Operating Systems)"
+title: "[KOCW | 운영체제] 1강 운영체제 개요(Introduction to Operating Systems)"
 subtitle: "KOCW | 이화여대 반효경 교수님의 운영체제(2014-1) 강의 정리"
 layout: single
 related: true
