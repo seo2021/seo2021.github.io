@@ -1,6 +1,5 @@
 ---
 title: "[KOCW 운영체제] 1강 운영체제 개요(Introduction to Operating Systems)"
-subtitle: "KOCW | 이화여대 반효경 교수님의 운영체제(2014-1) 강의 정리"
 layout: single
 related: true
 categories:
@@ -10,6 +9,8 @@ tags:
   - KOCW
 ---
  
+> KOCW | 이화여대 반효경 교수님의 운영체제(2014-1) 강의 정리입니다.
+
 ## 운영체제(Operating Systen, OS)란 무엇인가?
 - 컴퓨터와 하드웨어 바로 위에 설치되어 사용자 및 다른 모든 소프트웨어와 하드웨어를 연결하는 소프트웨어 계층.
 
