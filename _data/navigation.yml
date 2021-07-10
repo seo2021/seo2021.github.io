@@ -14,8 +14,8 @@ main:
     url: /categories/sql-db/
   - title: "LINUX"
     url: /categories/linux/
-  - title: "CODING-INTERVIEW"
-    url: /categories/coding-interview/
+  - title: "CS"
+    url: /categories/cs/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
@@ -60,8 +60,8 @@ sidebar-navigation:
     children:
       - title: "Child Page E1"
         url: /
-  - title: "CODING INTERVIEW"
-    url: /categories/coding-interview/
+  - title: "CS"
+    url: /categories/cs/
     children:
       - title: "Child Page F1"
         url: /
