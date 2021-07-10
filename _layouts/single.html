@@ -32,6 +32,10 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
+        {% if page.subtitle %}
+          <h2 class="post-subtitle">{{ page.subtitle }}</h2>
+        {% endif %}
+        
         {% if page.toc %}
           <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
             <nav class="toc">
