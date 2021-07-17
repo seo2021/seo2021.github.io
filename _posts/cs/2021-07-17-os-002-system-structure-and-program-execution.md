@@ -101,12 +101,12 @@ tags:
 - I/O는 실제 Device와 Local Buffer 사이에서 일어난다.
 - Device Controller는 I/O가 끝났을 경우 Interrupt로 CPU에 그 사실을 알린다.
 
-  > Device Driver(장치 구동기)
-  >   - OS 코드 중 각 장치별 처리 루틴 👉 Software
-  >   - 각 하드웨어에 접근하기 위한 매개체(?)
+    > Device Driver(장치 구동기)
+    >   - OS 코드 중 각 장치별 처리 루틴 👉 Software
+    >   - 각 하드웨어에 접근하기 위한 매개체(?)
 
-  > Device Controller(장치 제어기)
-  >   - 각 장치를 통제하는 일종의 작은 CPU 👉 Hardware
+    > Device Controller(장치 제어기)
+    >   - 각 장치를 통제하는 일종의 작은 CPU 👉 Hardware
 
 
 ## DMA(Direct Memory Access) Controller
@@ -158,6 +158,102 @@ tags:
   - 일반적으로 write 수행 시.
 
 - 두 경우 모두 I/O의 완료는 인터럽트로 알려준다.
+
+
+## 서로 다른 입출력 명령어
+
+![서로 다른 입출력 명령 방식](https://user-images.githubusercontent.com/76505625/126025490-4cccc268-f0f3-4f10-bd89-d5899a70f153.png)
+
+1. I/O를 수행하는 **Special Instruction**에 의해 수행(좌측 그림)
+  - 메모리를 수행하는 명령어가 따로 있고, I/O를 수행하려면 Special Instruction에 의해 수행하는 방식.
+2. **Memory Mapped** I/O에 의해 수행(우측 그림)
+  - I/O Device에도 메모리 주소의 연장 주소를 붙이고, 주소에 의해 접근하는 방식.
+
+
+## 저장장치 계층 구조
+
+![저장장치 계층 구조](https://user-images.githubusercontent.com/76505625/126025588-feb7f214-7d80-4742-82d0-e99ba2f7227d.png)
+
+- 위로 갈수록 속도가 빠른 매체를 사용하고, 단위 공간당 가격이 비싸기 때문에 용량이 적다.
+
+- Primary
+  - 휘발성 매체로 구성.
+  - CPU에서 직접 접근할 수 있는 메모리 매체.
+    - CPU가 직접 접근하기 위해서는 바이트 단위로 접근 가능한 매체여야 한다.  
+- Secondary
+  - 비휘발성 매체로 구성.
+  - 하드디스크는 섹터 단위로 접근이 가능하기 때문에 CPU에서 직접 접근하기 못한다. 
+
+
+    > Caching
+    >   - 다른 매체로부터 정보를 읽어들여서 쓰는 것.
+    >   - 재사용을 목적으로 한다.
+
+
+## 프로그램의 실행(메모리 load)
+- 프로그램은 실행파일 형태로 파일 시스템(비휘발성)에 저장되어 있고, 실행시키면 메모리에 올라가서 프로세스가 된다.
+
+![프로그램의 실행](https://user-images.githubusercontent.com/76505625/126025930-57c9a9f2-6780-4632-ba2d-bec43266a1b4.png)
+
+
+- 정확하게는 물리적 메모리에 올라가기 전에 가상 메모리라는 한 단계를 더 거치게 된다.
+
+![가상 메모리](https://user-images.githubusercontent.com/76505625/126025947-33b70e5d-124c-430f-a4bf-c11767f293d9.png)
+
+- 각 프로그램의 독자적인 메모리 공간을 가상 메모리라고 한다.
+- 프로그램을 실행시키면, 해당 프로그램만의 메모리 주소 공간이 형성된다. 이를 물리적 메모리에 올려서 실행한다.
+  - 사용자 프로그램의 필요한 부분만 올리고, 그렇지 않은 부분은 디스크의 Swap Area에 올려둔다.
+  - Swap Area는 메모리의 연장 공간으로 사용한다.
+- 물리적 메모리에서 커널은 메모리에 항상 올라가 있지만, 사용자 프로그램은 종료 시 사라진다.
+
+    > Kernel Address Space
+    >   - Code: CPU에서 실행할 기계어 코드
+    >   - Data: 변수 등 프로그램이 사용하는 자료구조
+    >   - Stack: 함수를 호출하거나 실행할 때 사용
+
+- Address Transition
+  - 가상 메모리의 주소는 물리적 메모리의 주소로 변환. 
+
+
+## 운영체제 커널 주소 공간의 내용
+
+![운영체제 커널 주소 공간](https://user-images.githubusercontent.com/76505625/126026512-8b535ccc-f08d-4d12-8794-43a3a5d2aaeb.png)
+
+- Data
+  - 운영체제에서 사용하는 자료구조가 정의되어 있다.
+  - CPU, 메모리, 디스크와 같은 하드웨어를 관리하기 위한 자료구조를 만들어서 정의하고 있다.
+  - 프로세스를 관리하기 위한 자료구조(PCB, Process Control Block)를 만들어서 정의하고 있다.
+
+- Stack
+  - 어떤 사용자 프로그램들이 운영체제 커널의 코드를 실행 중인가를 저장.
+
+
+## 사용자 프로그램이 사용하는 함수
+- 함수(function)
+
+  ![프로그램에서 사용하는 함수](https://user-images.githubusercontent.com/76505625/126026811-b7d1a075-960a-40ed-8b0b-3f63a7c8105f.png)
+
+  - 사용자 정의 함수
+    - 자신의 프로그램에서 정의한 함수. 
+  - 라이브러리 함수   
+    - 자신의 프로그램에서 정의하지 않고 갖다 쓴 함수.
+    - 자신의 프로그램의 실행 파일에 포함되어 있다.
+
+  - 사용자 정의 함수와 라이브러리 함수는 프로그램끼리 점프를 하여 함수에 접근할 수 있다.
+
+
+  ![커널 함수](https://user-images.githubusercontent.com/76505625/126026828-056134e3-f15a-478a-89fe-666a2bad9beb.png)
+
+  - 커널 함수
+    - 운영체제 안에서 정의된 함수.
+    - 커널 함수의 호출 = 시스템 콜. 
+      - 시스템 콜을 통해서만 접근 가능하다. 
+
+
+## 프로그램의 실행
+
+![프로그램의 실행](https://user-images.githubusercontent.com/76505625/126026945-459c1df4-8631-4b86-970b-9c1ab43aa9e6.png)
+ 
  
 ## 출처
 - [KOCW \| 운영체제(2014-1) \| 이화여대 \| 반효경](http://www.kocw.net/home/search/kemView.do?kemId=1046323)
