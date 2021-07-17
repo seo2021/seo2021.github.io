@@ -110,15 +110,13 @@ tags:
 
 
 ## DMA(Direct Memory Access) Controller
-
-![DMA](https://user-images.githubusercontent.com/76505625/126025237-21710afa-9aae-4473-958e-c7d10e22fd0e.png)
-
 - CPU와 같이 메모리에 직접 접근할 수 있는 Controller.
   - CPU의 중재없이 Device Controller가 Device의 Buffer Storage의 내용을 메모리에 Block 단위로 직접 전송.
 - I/O Device로부터 CPU에 들어오는 인터럽트를 대신 처리해준다.
   - 바이트 단위가 아니라 Block 단위로 인터럽트를 발생시킨다. 
 
 - 💡 CPU와 CMA Controller가 동시에 접근 시 이를 제어할 수 있도록 Memory Controller가 있다.
+
 
 ## 입출력(I/O)의 수행
 - 운영체제를 통해서만 I/O 장치에 접근할 수 있다. 
