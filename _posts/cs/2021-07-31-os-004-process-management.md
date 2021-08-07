@@ -105,6 +105,8 @@ tags:
   
     > - echo는 뒤에 나오는 인자를 화면에 그대로 출력해준다.
 
+##
+
 
 ## 출처
 - [KOCW \| 운영체제(2014-1) \| 이화여대 \| 반효경](http://www.kocw.net/home/search/kemView.do?kemId=1046323)
