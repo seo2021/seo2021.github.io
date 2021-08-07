@@ -124,10 +124,10 @@ tags:
 
 ## exit() 시스템 콜
 - 프로세스의 종료
-  - 자발적 종료
+  - **자발적 종료**
     - 마지막 Statement 수행 후, 명시적으로 `exit()` 시스템 콜을 통해 종료.
       - 프로그램에 명시적으로 적어주지 않아도 `main` 함수가 리턴되는 위치에 컴파일러가 넣어준다.
-  - 비자발적 종료
+  - **비자발적 종료**
     - 부모 프로세스가 자식 프로세스를 강제 종료하는 경우.
       - 자식 프로세스가 한계치는 넘어서는 자원 요청 시.
       - 자식에게 할당된 태스크가 더 이상 필요하지 않을 시.
@@ -135,12 +135,34 @@ tags:
     - 💡 부모가 종료하는 경우 부모 프로세스가 종료되기 전에 자식들이 먼저 종료된다. 
 
 ## 프로세스 간 협력
-- 독립적 프로세스(Independent process)
-  - 프로세스는 각자의 주소 공간을 가지고 수행되므로 원칙적으로 하나의 프로세스는 다른 프로세스의 수행에 영향을 미치지 못한다.
-  - 
-    
+- **독립적 프로세스(Independent Process)**
+  - 프로세스는 각자의 주소 공간을 가지고 수행되므로, 원칙적으로 하나의 프로세스는 다른 프로세스의 수행에 영향을 미치지 못한다.
+- **협력 프로세스(Cooperating Process)**
+  - 프로세스 협력 메커니즘을 통해 하나의 프로세스가 다른 프로세스의 수행에 영향을 미칠 수 있다.
 
+- **프로세스 간 협력 메커니즘(IPC: Interprocess Communication)**
 
+  ![IPC, 프로세스 간 협력 메커니즘](https://user-images.githubusercontent.com/76505625/128586998-f73e3dff-6622-4ea4-996c-489920e8249b.png)
+
+  - <u>메시지를 전달하는 방법</u>
+    - **Message Passing**
+      - **커널을 통해** 전달
+      - Message System
+        - 프로세스 사이에 공유 변수(Shared Variable)을 일체 사용하지 않고 통신하는 시스템
+        
+      1. Direct Communication
+        - 통신하려는 프로세스의 **이름을 명시적으로 표시**  
+          ![Direct Communication](https://user-images.githubusercontent.com/76505625/128586753-37a8b85a-456f-4577-a014-c97adb564ae4.png)
+        
+      2. Indirect Communication
+        - **Mailbox(또는 Port)를 통해** 메시지를 간접 전달(메시지를 주고 받을 프로세스를 명시하지 않는다).  
+          ![Indirect Communication](https://user-images.githubusercontent.com/76505625/128586821-d1d167fa-3586-43dd-9607-62f57f018a42.png)
+ 
+  - <u>주소 공간을 공유하는 방법</u>
+    - **Shared Memory**
+      - 서로 다른 프로세스 간에도 일부 주소 공간을 공유하는 Shared Memory 메커니즘이 있다.
+    - **cf) Thread 간 협력**
+      - Thread는 사실상 하나의 프로세스이므로 프로세스 간 협력으로 보기는 어렵지만, 동일한 Process를 구성하는 Thread들 간에는 주소 공간을 공유하므로 협력이 가능하다.
 
 ## 출처
 - [KOCW \| 운영체제(2014-1) \| 이화여대 \| 반효경](http://www.kocw.net/home/search/kemView.do?kemId=1046323)
