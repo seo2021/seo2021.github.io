@@ -11,7 +11,7 @@ tags:
  
 > KOCW 이화여대 반효경 교수님의 운영체제(2014-1) 강의 정리입니다.
 
-## 
+## 48:24
 
 ## 출처
 - [KOCW \| 운영체제(2014-1) \| 이화여대 \| 반효경](http://www.kocw.net/home/search/kemView.do?kemId=1046323)
