@@ -55,12 +55,30 @@ tags:
   4. Terminate
     - 프로세스가 종료된 경우.
 
-    - 1, 4에서의 스케줄링은 **nonpreemptive(=강제로 빼앗지 않고 자진 반납)**
-    - All Other Schedulling Is **Preemptive(=강제로 빼앗음)**
+    - 1, 4에서의 스케줄링은 **nonpreemptive(=비선점형, 강제로 빼앗지 않고 자진 반납)**
+    - All Other Schedulling Is **Preemptive(=선점형, 강제로 빼앗음)**
 
+## Scheduling Criteria(Performance Index = Performance Measure = 성능 척도)
+- 어떤 스케줄링 알고리즘이 좋은지 평가하기 위한 방법.
 
+1. 시스템 입장에서의 성능 척도
+  - CPU 하나 가지고 일을 최대한 많이 시키면 좋다.
 
+  - <u>CPU Utilization(이용률)</u>
+    - Keep The CPU As Busy As Possible.
+  - <u>Throughput(처리량)</u>
+    - # Of Processes That Complete Their Execution Per Time Unit.
 
+2. 프로세스 입장에서의 성능 척도
+  - CPU를 빨리 얻으면 좋다.
+
+  - <u>Turnaround Time(소요시간, 반환시간)</u>
+    - Amount Of Time To Execute A Particular Process.
+  - <u>Waiting Time(대기시간)</u>
+    - Amount Of Time A Process Has Been Waiting In The Ready Queue.
+  - <u>Response Time(응답시간)</u>
+    - Amount Of Time It Takes From When A Request Was Submitted Until The First Response Is Produced, Not Output.\
+      - (For Time-Sharing Environment) 
 
 
 ## 출처
