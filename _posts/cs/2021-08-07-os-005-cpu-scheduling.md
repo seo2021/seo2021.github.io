@@ -61,7 +61,7 @@ tags:
 ## Scheduling Criteria(Performance Index = Performance Measure = 성능 척도)
 - 어떤 스케줄링 알고리즘이 좋은지 평가하기 위한 방법.
 
-1. 시스템 입장에서의 성능 척도
+- 시스템 입장에서의 성능 척도
   - CPU 하나 가지고 일을 최대한 많이 시키면 좋다.
 
   - <u>CPU Utilization(이용률)</u>
@@ -72,7 +72,7 @@ tags:
     - **The Number Of Processes** That **Complete** Their Execution Per Time Unit.
 
 
-2. 프로세스 입장에서의 성능 척도
+- 프로세스 입장에서의 성능 척도
   - CPU를 빨리 얻고 빨리 처리되면 좋다.
 
   - <u>Turnaround Time(소요시간, 반환시간)</u>
@@ -89,7 +89,6 @@ tags:
 ## Scheduling Algorithms (5강 19:54)
 1. <u>FCFS(First-Come First-Served)</u>
 - Example
-
   | Process | Burst Time |
   |:-------:|:----------:|
   | P<sub>1 | 24 |
