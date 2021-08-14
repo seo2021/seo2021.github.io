@@ -67,7 +67,7 @@ tags:
   - <u>CPU Utilization(이용률)</u>
     - Keep The CPU As Busy As Possible.
   - <u>Throughput(처리량)</u>
-    - # Of Processes That Complete Their Execution Per Time Unit.
+    - '#' Of Processes That Complete Their Execution Per Time Unit.
 
 2. 프로세스 입장에서의 성능 척도
   - CPU를 빨리 얻으면 좋다.
