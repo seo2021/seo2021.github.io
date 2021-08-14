@@ -23,7 +23,7 @@ tags:
   ![CPU-burst Time의 분포](https://user-images.githubusercontent.com/76505625/129429941-7f4e7f44-25de-43cb-920b-ac48e58c131d.png)
   
   - CPU-burst Time이 짧을수록 중간에 I/O가 끼어드는 빈도가 많았고(**I/O Bound Job**), CPU-burst Time이 길수록 I/O가 끼어드는 빈도가 낮았다(**CPU Bound Job**).
-  - <u>여러 종류의 Job(Process)이 섞여 있기 때문에 **CPU 스케줄링**이 필요하다</u>.
+  - <u>여러 종류의 Job(Process)이 섞여 있기 때문에</u> **CPU 스케줄링**<u>이 필요하다</u>.
     - **I/O Bound Job**은 사람과 계속 Interation하는 Job이기 때문에 **적절한 Response 제공이 필요**하다. 
     - CPU와 I/O 장치 등 시스템 자원을 골고루 **효율적으로 사용**(공평성보다는 **사람이 너무 오래 기다리지 않도록** 하는 것이 필요하다).
 
@@ -45,7 +45,7 @@ tags:
   - CPU의 제어권을 CPU Scheduler에 의해 **선택된 프로세스에게 넘긴다**.
   - 이 과정을 **Context Switch(문맥 교환)**라고 한다.
 
-    > - CPU Scheduler, Dispatcher는 운영체제 안에서 특정 기능을 하는 코드이다.
+    > CPU Scheduler, Dispatcher는 운영체제 안에서 특정 기능을 하는 코드이다.
 
 - CPU 스케줄링이 필요한 경우는 프로세스에게 다음과 같은 상태 변화가 있는 경우이다.
   1. Running ➡ Blocked (ex. I/O 요청하는 시스템 콜)
