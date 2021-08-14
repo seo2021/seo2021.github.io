@@ -18,22 +18,22 @@ tags:
 - 프로그램은 **CPU Burst**와 **I/O Burst**를 반복하며 실행되며, 프로그램의 종류의 따라 빈도나 길이가 다르다.
 - CPU만 연속적으로 쓰면서 명령어를 실행하는 단계를 **CPU Burst**라고 하고, I/O를 실행하는 단계를 **I/O Burst**라고 한다.
 
-- **CPU-burst Time의 분포**
+- **CPU-Burst Time의 분포**
 
-  ![CPU-burst Time의 분포](https://user-images.githubusercontent.com/76505625/129429941-7f4e7f44-25de-43cb-920b-ac48e58c131d.png)
+  ![CPU-Burst Time의 분포](https://user-images.githubusercontent.com/76505625/129429941-7f4e7f44-25de-43cb-920b-ac48e58c131d.png)
   
-  - CPU-burst Time이 짧을수록 중간에 I/O가 끼어드는 빈도가 많았고(**I/O Bound Job**), CPU-burst Time이 길수록 I/O가 끼어드는 빈도가 낮았다(**CPU Bound Job**).
+  - CPU-Burst Time이 짧을수록 중간에 I/O가 끼어드는 빈도가 많았고(**I/O Bound Job**), CPU-Burst Time이 길수록 I/O가 끼어드는 빈도가 낮았다(**CPU Bound Job**).
   - <u>여러 종류의 Job(Process)이 섞여 있기 때문에 <strong>CPU 스케줄링</strong>이 필요하다</u>.
     - **I/O Bound Job**은 사람과 계속 Interation하는 Job이기 때문에 **적절한 Response 제공이 필요**하다. 
     - CPU와 I/O 장치 등 시스템 자원을 골고루 **효율적으로 사용**(공평성보다는 **사람이 너무 오래 기다리지 않도록** 하는 것이 필요하다).
 
 ## 프로세스의 특성 분류
 - 프로세스는 그 특성에 따라 다음 두 가지로 나뉜다.
-  - <u>I/O-bound Process</u>
+  - <u>I/O-Bound Process</u>
     - CPU를 잡고 계산하는 시간보다 I/O에 많은 시간이 필요한 Job.
     - Many Short CPU Bursts.
       - CPU Burst가 빈번하고 짧다. 
-  - <u>CPU-bound Process</u>
+  - <u>CPU-Bound Process</u>
     - 계산 위주의 Job.
     - Few Very Long CPU Bursts.
       - CPU Burst가 길고, 빈번하지 않다.
@@ -86,7 +86,32 @@ tags:
     - Amount Of Time It Takes From When A Request Was Submitted **Until The First Response Is Produced**, Not Output.
       - (For Time-Sharing Environment)
 
+## Scheduling Algorithms (5강 19:54)
+1. <u>FCFS(First-Come First-Served)</u>
+- Example
+
+  | Process | Burst Time |
+  |:-------:|:----------:|
+  | P<sub>1 | 24 |
+  | P<sub>2 | 3 |
+  | P<sub>3 | 3 |
   
+  - 프로세스의 도착 순서 P<sub>1, P<sub>2, P<sub>3 
+  - 스케줄 순서를 간트 차트로 나타내면 다음과 같다.
+  
+    ![FCFS](https://user-images.githubusercontent.com/76505625/129437606-15026e99-2d2a-4124-8df3-fc94031def5e.png)
+  
+  - Waiting Time For P<sub>1 = 0; P<sub>2 = 24; P<sub>3 = 27
+  - Average Waiting Time: (0 + 24 + 27)/3 = 17
+
+
+
+2. <u>SJF(Shortest-Job-First)</u>
+3. <u>SRTF(Shortest-Remaining-Time-First)</u>
+4. <u>Priority Scheduling</u>
+5. <u>RR(Round Robin)</u>
+6. <u>Multilevel Queue</u>
+7. <u>Multilevel Feedback Queue</u>
 
 
 ## 출처
