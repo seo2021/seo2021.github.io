@@ -87,22 +87,22 @@ tags:
       - (For Time-Sharing Environment)
 
 ## Scheduling Algorithms (5강 19:54)
-1. <u>FCFS(First-Come First-Served)</u>
-- Example
-
-    | Process | Burst Time |
-    |:-------:|:----------:|
-    | P<sub>1 | 24 |
-    | P<sub>2 | 3 |
-    | P<sub>3 | 3 |
+- <u>FCFS(First-Come First-Served)</u>
+  - Example
   
-  - 프로세스의 도착 순서 P<sub>1</sub>, P<sub>2</sub>, P<sub>3</sub> 
-  - 스케줄 순서를 간트 차트로 나타내면 다음과 같다.
+      | Process | Burst Time |
+      |:-------:|:----------:|
+      | P<sub>1 | 24 |
+      | P<sub>2 | 3 |
+      | P<sub>3 | 3 |
   
-    ![FCFS](https://user-images.githubusercontent.com/76505625/129437606-15026e99-2d2a-4124-8df3-fc94031def5e.png)
+    - 프로세스의 도착 순서 P<sub>1</sub>, P<sub>2</sub>, P<sub>3</sub> 
+    - 스케줄 순서를 간트 차트로 나타내면 다음과 같다.
   
-  - Waiting Time For P<sub>1</sub> = 0; P<sub>2</sub> = 24; P<sub>3</sub> = 27
-  - Average Waiting Time: (0 + 24 + 27)/3 = 17
+      ![FCFS](https://user-images.githubusercontent.com/76505625/129437606-15026e99-2d2a-4124-8df3-fc94031def5e.png)
+  
+    - Waiting Time For P<sub>1</sub> = 0; P<sub>2</sub> = 24; P<sub>3</sub> = 27
+    - Average Waiting Time: (0 + 24 + 27)/3 = 17
 
 
 
