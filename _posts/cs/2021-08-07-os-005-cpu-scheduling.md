@@ -70,11 +70,13 @@ tags:
   - <u>Throughput(처리량)</u>
     - 주어진 시간동안 처리한 작업의 양.
     - **The Number Of Processes** That **Complete** Their Execution Per Time Unit.
+
+
 2. 프로세스 입장에서의 성능 척도
   - CPU를 빨리 얻고 빨리 처리되면 좋다.
 
   - <u>Turnaround Time(소요시간, 반환시간)</u>
-    - CPU를 다 쓰고 나가기 까지 걸린 시간. 
+    - CPU를 쓰러 와서 I/O를 하러 나가기까지 걸린 시간. 
     - Amount Of Time To **Execute A Particular Process**.
   - <u>Waiting Time(대기시간)</u>
     - CPU 사용을 위해 기다린 **모든** 시간. 
