@@ -89,11 +89,12 @@ tags:
 ## Scheduling Algorithms (5강 19:54)
 1. <u>FCFS(First-Come First-Served)</u>
 - Example
-  | Process | Burst Time |
-  |:-------:|:----------:|
-  | P<sub>1 | 24 |
-  | P<sub>2 | 3 |
-  | P<sub>3 | 3 |
+
+    | Process | Burst Time |
+    |:-------:|:----------:|
+    | P<sub>1 | 24 |
+    | P<sub>2 | 3 |
+    | P<sub>3 | 3 |
   
   - 프로세스의 도착 순서 P<sub>1</sub>, P<sub>2</sub>, P<sub>3</sub> 
   - 스케줄 순서를 간트 차트로 나타내면 다음과 같다.
