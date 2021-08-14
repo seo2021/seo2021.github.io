@@ -48,11 +48,11 @@ tags:
     > CPU Scheduler, Dispatcher는 운영체제 안에서 특정 기능을 하는 코드이다.
 
 - CPU 스케줄링이 필요한 경우는 프로세스에게 다음과 같은 상태 변화가 있는 경우이다.
-  1. Running ➡ Blocked (ex. I/O 요청하는 시스템 콜)
-  2. Running ➡ Ready (ex. 할당시간만료로 Timer Interrupt) 
-  3. Blocked ➡ Ready (ex. I/O 완료 후 인터럽트)
+  **1. Running ➡ Blocked** (ex. I/O 요청하는 시스템 콜)
+  **2. Running ➡ Ready** (ex. 할당시간만료로 Timer Interrupt) 
+  **3. Blocked ➡ Ready** (ex. I/O 완료 후 인터럽트)
     - I/O가 끝난 후 바로 CPU를 주지 않지만, 해당 프로세스의 우선순위가 높을 경우 CPU를 바로 넘겨줘야 하는 경우도 있다.
-  4. Terminate
+  **4. Terminate**
     - 프로세스가 종료된 경우.
 
     - 1, 4에서의 스케줄링은 **nonpreemptive(=비선점형, 강제로 빼앗지 않고 자진 반납)**
@@ -65,20 +65,27 @@ tags:
   - CPU 하나 가지고 일을 최대한 많이 시키면 좋다.
 
   - <u>CPU Utilization(이용률)</u>
-    - Keep The CPU As Busy As Possible.
+    - 전체 시간에서 CPU가 일한 시간의 비율.
+    - Keep The CPU **As Busy As Possible**.
   - <u>Throughput(처리량)</u>
-    - '#' Of Processes That Complete Their Execution Per Time Unit.
+    - 주어진 시간동안 처리한 작업의 양.
+    - **The Number Of Processes** That **Complete** Their Execution Per Time Unit.
 
 2. 프로세스 입장에서의 성능 척도
-  - CPU를 빨리 얻으면 좋다.
+  - CPU를 빨리 얻고 빨리 처리되면 좋다.
 
   - <u>Turnaround Time(소요시간, 반환시간)</u>
-    - Amount Of Time To Execute A Particular Process.
+    - CPU를 다 쓰고 나가기 까지 걸린 시간. 
+    - Amount Of Time To **Execute A Particular Process**.
   - <u>Waiting Time(대기시간)</u>
-    - Amount Of Time A Process Has Been Waiting In The Ready Queue.
+    - CPU 사용을 위해 기다린 **모든** 시간. 
+    - Amount Of Time A Process Has Been **Waiting In The Ready Queue**.
   - <u>Response Time(응답시간)</u>
-    - Amount Of Time It Takes From When A Request Was Submitted Until The First Response Is Produced, Not Output.\
-      - (For Time-Sharing Environment) 
+    - Ready Queue에서 **최초로** CPU를 얻기까지 걸린 시간.
+    - Amount Of Time It Takes From When A Request Was Submitted **Until The First Response Is Produced**, Not Output.
+      - (For Time-Sharing Environment)
+
+  
 
 
 ## 출처
