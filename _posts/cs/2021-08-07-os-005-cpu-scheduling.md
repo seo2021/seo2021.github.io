@@ -70,7 +70,6 @@ tags:
   - <u>Throughput(처리량)</u>
     - 주어진 시간동안 처리한 작업의 양.
     - **The Number Of Processes** That **Complete** Their Execution Per Time Unit.
-
 2. 프로세스 입장에서의 성능 척도
   - CPU를 빨리 얻고 빨리 처리되면 좋다.
 
