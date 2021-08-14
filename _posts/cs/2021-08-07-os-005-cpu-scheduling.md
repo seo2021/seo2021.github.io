@@ -55,8 +55,8 @@ tags:
   4. Terminate
     - 프로세스가 종료된 경우.
 
-    - 1, 4에서의 스케줄링은 nonpreemptive(=강제로 빼앗지 않고 자진 반납)
-    - All Other Schedulling Is Preemptive(=강제로 빼앗음)
+    - 1, 4에서의 스케줄링은 **nonpreemptive(=강제로 빼앗지 않고 자진 반납)**
+    - All Other Schedulling Is **Preemptive(=강제로 빼앗음)**
 
 
 
