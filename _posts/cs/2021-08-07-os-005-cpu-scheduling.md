@@ -96,12 +96,12 @@ tags:
   | P<sub>2 | 3 |
   | P<sub>3 | 3 |
   
-  - 프로세스의 도착 순서 P<sub>1, P<sub>2, P<sub>3 
+  - 프로세스의 도착 순서 P<sub>1</sub>, P<sub>2</sub>, P<sub>3</sub> 
   - 스케줄 순서를 간트 차트로 나타내면 다음과 같다.
   
     ![FCFS](https://user-images.githubusercontent.com/76505625/129437606-15026e99-2d2a-4124-8df3-fc94031def5e.png)
   
-  - Waiting Time For P<sub>1 = 0; P<sub>2 = 24; P<sub>3 = 27
+  - Waiting Time For P<sub>1</sub> = 0; P<sub>2</sub> = 24; P<sub>3</sub> = 27
   - Average Waiting Time: (0 + 24 + 27)/3 = 17
 
 
