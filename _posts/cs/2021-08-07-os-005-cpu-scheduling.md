@@ -165,9 +165,7 @@ tags:
         3. 𝛼, 0 <= 𝛼 <= 1
         4. Define: 𝜏<sub>n+1</sub> = 𝛼t<sub>n</sub> + (1 - 𝛼)𝜏<sub>n</sub>
           - 식을 풀면 다음과 같다.
-            𝜏<sub>n+1</sub> = 𝛼t<sub>n</sub> + (1 - 𝛼)t<sub>n-1</sub> + ... 
-            +(1 - 𝛼)<sup>j</sup>𝛼t<sub>n-j</sub> + ...
-            +(1 - 𝛼)<sup>n+1</sup>𝜏<sub>0</sub>
+            𝜏<sub>n+1</sub> = 𝛼t<sub>n</sub> + (1 - 𝛼)t<sub>n-1</sub> + ... + (1 - 𝛼)<sup>j</sup>𝛼t<sub>n-j</sub> + ... + (1 - 𝛼)<sup>n+1</sup>𝜏<sub>0</sub>
   
             - 가장 최근의 과거는 가중치를 높게 반영하고, 오래 전의 것은 가중치를 낮게 반영한 결과가 얻어진다.
 
