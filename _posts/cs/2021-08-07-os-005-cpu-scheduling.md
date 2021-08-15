@@ -88,21 +88,36 @@ tags:
 
 ## Scheduling Algorithms (5강 19:54)
 - <u>FCFS(First-Come First-Served)</u>
-  - Example
-  
+  - 먼저 온 순서대로 처리.
+  - 비선점형.
+  - 비효율적 👉 먼저 온 프로세스의 작업 시간이 오래걸리면, 뒤의 프로세스는 그 시간만큼 기다려야 함.
+
+  - Example 1
+    - 프로세스의 도착 순서 P<sub>1</sub>, P<sub>2</sub>, P<sub>3</sub>
+
       | Process | Burst Time |
       |:-------:|:----------:|
       | P<sub>1 | 24 |
       | P<sub>2 | 3 |
       | P<sub>3 | 3 |
   
-    - 프로세스의 도착 순서 P<sub>1</sub>, P<sub>2</sub>, P<sub>3</sub> 
     - 스케줄 순서를 간트 차트로 나타내면 다음과 같다.
   
-      ![FCFS](https://user-images.githubusercontent.com/76505625/129437606-15026e99-2d2a-4124-8df3-fc94031def5e.png)
+      ![FCFS Example 1](https://user-images.githubusercontent.com/76505625/129437606-15026e99-2d2a-4124-8df3-fc94031def5e.png)
   
     - Waiting Time For P<sub>1</sub> = 0; P<sub>2</sub> = 24; P<sub>3</sub> = 27
     - Average Waiting Time: (0 + 24 + 27)/3 = 17
+  
+  - Example 2
+    - 프로세스의 도착 순서 P<sub>2</sub>, P<sub>3</sub>, P<sub>1</sub>
+  
+      ![FCFS Example 2](https://user-images.githubusercontent.com/76505625/129468221-e56cbe1d-db76-4b97-ad5f-e88c5fedfd83.png)
+  
+    - Waiting Time For P<sub>1</sub> = 6; P<sub>2</sub> = 0; P<sub>3</sub> = 3
+    - Average Waiting Time: (6 + 0 + 3)/3 = 3
+    - Example 1보다 낫다.
+    - **Convoy Effect**: Short Process Behind Long Process 
+
 
 
 
