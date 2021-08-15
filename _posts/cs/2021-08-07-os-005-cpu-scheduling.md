@@ -130,7 +130,7 @@ tags:
       - 이 방법을 **Shortest-Remaining-Time-First(SRTF)**라고도 부른다.
   
   - SJF Is Optimal
-    - 주어진 프로세스들에 대해 **Minimum Average Waiting Time**을 보장. (5강 19:54)
+    - 주어진 프로세스들에 대해 **Minimum Average Waiting Time**을 보장. (5강 29:26)
   
 
 
