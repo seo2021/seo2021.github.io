@@ -93,7 +93,7 @@ tags:
   - 비효율적. 👉 먼저 온 프로세스의 작업 시간이 오래걸리면, 뒤의 프로세스는 그 시간만큼 기다려야 한다.
 
   - **Example 1**
-    - 프로세스의 도착 순서 P<sub>1</sub>, P<sub>2</sub>, P<sub>3</sub>
+    - 프로세스의 도착 순서 P<sub>1</sub>, P<sub>2</sub>, P<sub>3</sub> (모두  0초에 도착)
 
       | Process | Burst Time |
       |:-------:|:----------:|
@@ -129,13 +129,58 @@ tags:
       - 현재 수행 중인 프로세스의 남은 Burst Time보다 더 짧은 CPU Burst Time을 가지는 새로운 프로세스가 도착하면 CPU를 빼앗긴다.
       - 이 방법을 **Shortest-Remaining-Time-First(SRTF)**라고도 부른다.
   
-  - SJF Is Optimal
-    - 주어진 프로세스들에 대해 **Minimum Average Waiting Time**을 보장. (5강 29:26)
+  - SJF Is Optimal (Preemptive)
+    - 주어진 프로세스들에 대해 **Minimum Average Waiting Time**을 보장.
+  
+  - **Example of Non-Preemptive SJF**
+  
+    | Process | Arrival Time | Burst Time |
+    |:-------:|:------------:|:----------:|
+    | P<sub>1 | 0.0 | 7 |
+    | P<sub>2 | 2.0 | 4 |
+    | P<sub>3 | 4.0 | 1 |
+    | P<sub>4 | 5.0 | 4 |
+  
+    ![Example of Non-Preemptive SJF](https://user-images.githubusercontent.com/76505625/129479486-1d3dda55-8c36-4faf-8beb-25d9ef7a3450.png)
+      
+      - 0초에 P<sub>1만 도착했으므로 P<sub>1이 CPU를 얻게 되고, 7초에 반납을 한다.
+      - 7초 시점에서 큐를 살펴보면 P<sub>2 ~ P<sub>4까지 모두 도착해 있다.
+      - 이중에서 CPU를 짧게 쓰는 순서대로 CPU를 얻게 된다.
+  
+    - Average Waiting Time = (0 + 6 + 3 + 7)/4 = 4
+  
+  - **Example of Preemptive SJF**
+    
+    ![Example of Preemptive SJF](https://user-images.githubusercontent.com/76505625/129479736-c08ecc5a-54e0-4b43-8909-d8fe86afa1f2.png)
+  
+    - Average Waiting Time = (9 + 1 + 0 + 2)/4 = 3
+  
+  - SJF의 문제점
+    - **Starvation(기아 현상)**: Low Priority Processes May Never Execute.
+    - CPU Burst Time을 미리 알 수 없다.
+      - 프로그램은 Input을 받아서 실행되기도 하고, 분기가 일어나기도 하는 등의 상황 때문에 CPU Burst Time을 미리 알 수 없다.
+      - 과거의 CPU Burst Time을 이용해서 추정만 가능하다. 👉 Exponential Averaging
+        1. t<sub>n</sub> = n번째 CPU Burst의 실제 CPU 사용 시간
+        2. 𝜏<sub>n+1</sub> = 다음 CPU Burst의 예측 시간
+        3. 𝛼, 0 <= 𝛼 <= 1
+        4. Define: 𝜏<sub>n+1</sub> = 𝛼t<sub>n</sub> + (1 - 𝛼)𝜏<sub>n</sub>
+          - 식을 풀면 다음과 같다.
+  
+            ```
+            𝜏<sub>n+1</sub> = 𝛼t<sub>n</sub> + (1 - 𝛼)t<sub>n-1</sub> + ... 
+            + (1 - 𝛼)<sup>j</sup>𝛼t<sub>n-j</sub> + ...
+            + (1 - 𝛼)<sup>n+1</sup>𝜏<sub>0</sub>
+            ```
+            - 가장 최근의 과거는 가중치를 높게 반영하고, 오래 전의 것은 가중치를 낮게 반영한 결과가 얻어진다.
+
+- <u>Priority Scheduling</u> 48:00
+  
+
+  
+
   
 
 
-2. <u>SJF(Shortest-Job-First)</u>
-3. <u>SRTF(Shortest-Remaining-Time-First)</u>
 4. <u>Priority Scheduling</u>
 5. <u>RR(Round Robin)</u>
 6. <u>Multilevel Queue</u>
