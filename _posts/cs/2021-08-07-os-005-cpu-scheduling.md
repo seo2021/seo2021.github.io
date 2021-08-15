@@ -143,8 +143,8 @@ tags:
   
     ![Example of Non-Preemptive SJF](https://user-images.githubusercontent.com/76505625/129479486-1d3dda55-8c36-4faf-8beb-25d9ef7a3450.png)
       
-      - 0초에 P<sub>1만 도착했으므로 P<sub>1이 CPU를 얻게 되고, 7초에 반납을 한다.
-      - 7초 시점에서 큐를 살펴보면 P<sub>2 ~ P<sub>4까지 모두 도착해 있다.
+      - 0초에 P<sub>1</sub> 만 도착했으므로 P<sub>1</sub> 이 CPU를 얻게 되고, 7초에 반납을 한다.
+      - 7초 시점에서 큐를 살펴보면 P<sub>2</sub>  ~ P<sub>4</sub> 까지 모두 도착해 있다.
       - 이중에서 CPU를 짧게 쓰는 순서대로 CPU를 얻게 된다.
   
     - Average Waiting Time = (0 + 6 + 3 + 7)/4 = 4
