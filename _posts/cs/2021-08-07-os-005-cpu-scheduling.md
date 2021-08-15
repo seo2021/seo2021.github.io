@@ -86,13 +86,13 @@ tags:
     - Amount Of Time It Takes From When A Request Was Submitted **Until The First Response Is Produced**, Not Output.
       - (For Time-Sharing Environment)
 
-## Scheduling Algorithms (5강 19:54)
+## Scheduling Algorithms 
 - <u>FCFS(First-Come First-Served)</u>
-  - 먼저 온 순서대로 처리.
+  - **먼저 온 순서대로 처리**.
   - 비선점형.
-  - 비효율적 👉 먼저 온 프로세스의 작업 시간이 오래걸리면, 뒤의 프로세스는 그 시간만큼 기다려야 함.
+  - 비효율적. 👉 먼저 온 프로세스의 작업 시간이 오래걸리면, 뒤의 프로세스는 그 시간만큼 기다려야 한다.
 
-  - Example 1
+  - **Example 1**
     - 프로세스의 도착 순서 P<sub>1</sub>, P<sub>2</sub>, P<sub>3</sub>
 
       | Process | Burst Time |
@@ -108,7 +108,7 @@ tags:
     - Waiting Time For P<sub>1</sub> = 0; P<sub>2</sub> = 24; P<sub>3</sub> = 27
     - Average Waiting Time: (0 + 24 + 27)/3 = 17
   
-  - Example 2
+  - **Example 2**
     - 프로세스의 도착 순서 P<sub>2</sub>, P<sub>3</sub>, P<sub>1</sub>
   
       ![FCFS Example 2](https://user-images.githubusercontent.com/76505625/129468221-e56cbe1d-db76-4b97-ad5f-e88c5fedfd83.png)
@@ -118,7 +118,20 @@ tags:
     - Example 1보다 낫다.
     - **Convoy Effect**: Short Process Behind Long Process 
 
-
+- <u>SJF(Shortest-Job-First)</u>
+  - 각 프로세스의 다음번 CPU Burst Time을 가지고 스케줄링에 활용.
+  - **CPU Burst Time이 가장 짧은** 프로세스를 제일 먼저 스케줄.
+  
+  - Two Schemes
+    - **Nonpreemptive**
+      - 일단 CPU를 잡으면, 이번 CPU Burst가 완료될 때까지 CPU를 선점(preemption) 당하지 않는다.
+    - **Preemptive**
+      - 현재 수행 중인 프로세스의 남은 Burst Time보다 더 짧은 CPU Burst Time을 가지는 새로운 프로세스가 도착하면 CPU를 빼앗긴다.
+      - 이 방법을 **Shortest-Remaining-Time-First(SRTF)**라고도 부른다.
+  
+  - SJF Is Optimal
+    - 주어진 프로세스들에 대해 **Minimum Average Waiting Time**을 보장. (5강 19:54)
+  
 
 
 2. <u>SJF(Shortest-Job-First)</u>
