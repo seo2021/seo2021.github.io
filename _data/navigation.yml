@@ -36,9 +36,9 @@ sidebar-navigation:
     url: /categories/dsa/
     children:
       - title: "Child Page B1"
-        url: /
+        url: /categories/dsa/
       - title: "Child Page B2"
-        url: /
+        url: /categories/dsa/
   - title: "WEB"
     url: /categories/web/
     children:
