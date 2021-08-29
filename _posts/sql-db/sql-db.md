@@ -3,7 +3,7 @@ title: sql-db.md
 layout: single
 related: true
 categories:
-- JAVA
+- SQL-DB
 tags:
   - sql-db
   - test
