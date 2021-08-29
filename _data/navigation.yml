@@ -63,6 +63,6 @@ sidebar-navigation:
   - title: "CS"
     url: /categories/cs/
     children:
-      - title: "Child Page F1"
-        url: /
+      - title: "OS"
+        url: /categories/sql-db/os/
  
