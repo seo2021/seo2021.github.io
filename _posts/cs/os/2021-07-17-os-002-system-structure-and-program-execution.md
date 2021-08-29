@@ -4,6 +4,7 @@ layout: single
 related: true
 categories:
 - CS
+- OS
 tags:
   - 운영체제
   - KOCW
