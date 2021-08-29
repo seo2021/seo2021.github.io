@@ -64,5 +64,5 @@ sidebar-navigation:
     url: /categories/cs/
     children:
       - title: "OS"
-        url: /categories/sql-db/os/
+        url: /categories/cs/os/
  
