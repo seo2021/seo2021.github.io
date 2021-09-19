@@ -319,9 +319,19 @@ tags:
     - Kernel Level Thread의 경우 **일반 프로세스와 마찬가지**로 커널의 단기 스케줄러가 어떤 Thread를 스케줄할지 결정.
 
 ## Algorithm Evaluation
-- 30:39
   
+  ![Queueing Models](https://user-images.githubusercontent.com/76505625/133933502-8c8b223e-6c67-43bc-9fa2-b16f7d06d2b0.PNG)
   
+- <u>Queueing Models</u>
+  - **확률 분포**로 주어지는 **Arrival Rate(도착률)**와 **Service Rate(처리율)** 등을 통해 각종 **Performance Index** 값을 계산.
+  - 이론적인 방법.
+
+- <u>Implementation(구현) & Measurement(성능 측정)</u>
+  - **실제 시스템**에 알고리즘을 **구현**하여 **실제 작업(Workload)**에 대해서 성능을 측정 비교.
+
+- <u>Simulation(모의 실험)</u>
+  - 알고리즘을 **모의 프로그램**으로 작성 후, **Trace**(시뮬레이션 프로그램에 Input으로 들어갈 Data)를 입력으로 하여 결과 비교.
   
+
 ## 출처
 - [KOCW \| 운영체제(2014-1) \| 이화여대 \| 반효경](http://www.kocw.net/home/search/kemView.do?kemId=1046323)
