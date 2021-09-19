@@ -230,6 +230,7 @@ tags:
         - 하지만, 일반적으로는 짧은 프로세스와 긴 프로세스가 섞여 있기 때문에 RR이 더 효과를 발휘한다.
   
 - <u>Multilevel Queue</u>
+  
   ![Multilevel Queue](https://user-images.githubusercontent.com/76505625/133917778-0c5eb289-c21c-47fd-9753-8905c82b586d.PNG)
     
   - 프로세스의 종류에 따라 우선순위가 정해지며(어느 큐에 속할지 정해진다), 이는 바꿀 수 없다.
