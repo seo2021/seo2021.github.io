@@ -49,11 +49,14 @@ tags:
     > CPU Scheduler, Dispatcher는 운영체제 안에서 특정 기능을 하는 코드이다.
 
 - CPU 스케줄링이 필요한 경우는 프로세스에게 다음과 같은 상태 변화가 있는 경우이다.
-
+  
   **1. Running ➡ Blocked** (ex. I/O 요청하는 시스템 콜)
-  **2. Running ➡ Ready** (ex. 할당시간만료로 Timer Interrupt) 
+  
+  **2. Running ➡ Ready** (ex. 할당시간만료로 Timer Interrupt)
+  
   **3. Blocked ➡ Ready** (ex. I/O 완료 후 인터럽트)
     - I/O가 끝난 후 바로 CPU를 주지 않지만, 해당 프로세스의 우선순위가 높을 경우 CPU를 바로 넘겨줘야 하는 경우도 있다.
+
   **4. Terminate**
     - 프로세스가 종료된 경우.
 
