@@ -174,16 +174,36 @@ tags:
               - 가장 최근의 과거는 가중치를 높게 반영하고, 오래 전의 것은 가중치를 낮게 반영한 결과가 얻어진다.
 
   
-- <u>Priority Scheduling</u>
+- <u>Priority Scheduling(우선순위 스케줄링)</u>
+  - 각 프로세스마다 우선순위를 나타내는 숫자(정수)가 주어지게 된다.
+  - 높은 우선순위(Highest Priority)를 가진 프로세스에게 CPU 할당.
+    - Smallest Integer = Highest Priority
+  
+  - Two Schemes
+    - **Nonpreemptive**
+    - **Preemptive**
 
+  - **SJF**는 일종의** Priority Scheduling**이다.
+    - SJF에서의 우선순위(Priority)는 Predicted Next CPU Burst Time이다.
+  
+  - 문제점
+    - **Starvation(기아 현상)**: 우선순위가 낮은 프로세스는 영원히 CPU를 얻지 못할 수 있다.
+  
+  - 해결책
+    - **Aging(노화)**: 시간이 지남에 따라 프로세스의 우선순위를 증가시킨다. 
+  
+- <u>RR(Round Robin)</u>
+  - 각 프로세스는 
   
 
   
 
   
 
+  
 
-4. <u>Priority Scheduling</u>
+
+
 5. <u>RR(Round Robin)</u>
 6. <u>Multilevel Queue</u>
 7. <u>Multilevel Feedback Queue</u>
