@@ -183,7 +183,7 @@ tags:
     - **Nonpreemptive**
     - **Preemptive**
 
-  - **SJF**는 일종의** Priority Scheduling**이다.
+  - **SJF**는 일종의 **Priority Scheduling**이다.
     - SJF에서의 우선순위(Priority)는 Predicted Next CPU Burst Time이다.
   
   - 문제점
@@ -193,18 +193,31 @@ tags:
     - **Aging(노화)**: 시간이 지남에 따라 프로세스의 우선순위를 증가시킨다. 
   
 - <u>RR(Round Robin)</u>
-  - 각 프로세스는 
+  - 각 프로세스는 동일한 크기의 **할당 시간(Time Quantum)**을 가진다.
+    - 일반적으로 10-100 Milliseconds.
+  - 할당 시간이 지나면 프로세스는 **선점(Preempted)**당하고, Ready Queue의 제일 뒤에 가서 줄을 선다.
+  - n개의 프로세스가 Ready Queue에 있고 각 할당 시간이 **q Time Unit**인 경우, 각 프로세스는 최대 q Time Unit 단위로 **CPU의 시간을 1/n**을 얻는다.
+    - 어떤 프로세스도 (n-1)q Time Unit 이상 기다리지 않는다.
+      - n-1개의 프로세스가 q만큼의 시간을 쓰고 나면, 적어도 자기 차례가 1번은 돌아온다.
+    - CPU를 짧게 쓰는 프로세스는 1번의 q Time Unit 만에 CPU를 쓰고 나가고, CPU를 오래 쓰는 프로세스는 q Time Unit만큼 CPU를 사용하고 뺏기고, 다시 할당 받는 과정을 반복하므로 응답 시간이 빨라진다.
+    - 대기 시간이 CPU의 사용 시간에 비례한다.
+  - Performance
+    - q Large(할당시간이 큰 경우) 👉 FCFS
+    - q Small(할당 시간이 작은 경우) 👉 Context Switch 오버헤드가 커진다.
+    
+    - 따라서, 적당한 Time Quantum(10-100 Milliseconds)을 주는 것이 바람직하다.
+  
+  - **Example 1**
+ 
+  ![Example of Round Robin](https://user-images.githubusercontent.com/76505625/133916482-49db03eb-5149-4c94-ae8f-5aa72122c68b.png)
+  
+    - CPU Burst Time이 Quantum Time보다 짧은 프로세스는 한 번에 CPU를 사용하고 빠져나가고, 나머지 프로세스는 자신 CPU Burst Time만큼 반복적으로 CPU를 사용한다.
+    - 일반적으로 SJF보다 **Average Turnaround Time**이 길지만, **Response Time**은 더 짧다.
+      - 프로세스들의 CPU Burst Time이 동일할 경우 CPU를 조금씩 서비스 받으면서 모든 프로세스가 마지막에 동시에 빠져나가게 되고, 이는 대기 시간을 길어지게 할 수 있다.
+      - 하지만, 일반적으로는 짧은 프로세스와 긴 프로세스가 섞여 있기 때문에 RR이 더 효과를 발휘한다.
+  
   
 
-  
-
-  
-
-  
-
-
-
-5. <u>RR(Round Robin)</u>
 6. <u>Multilevel Queue</u>
 7. <u>Multilevel Feedback Queue</u>
 
