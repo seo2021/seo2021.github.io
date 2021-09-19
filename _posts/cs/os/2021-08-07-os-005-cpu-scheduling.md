@@ -258,6 +258,7 @@ tags:
       - ex) 80% to Foreground in RR, 20% to Background in FCFS.
   
 - <u>Multilevel Feedback Queue</u>
+  
   ![Multilevel Feedback Queue](https://user-images.githubusercontent.com/76505625/133918698-a704eb51-0cf1-4949-8831-06469202ffcf.PNG)
   
   - 프로세스가 **다른 큐로 이동 가능**.
