@@ -274,9 +274,9 @@ tags:
   
   - **Example 1**
     - Three Queues
-      - Q<sub>0: Time Quantum 8 milliseconds
-      - Q<sub>1: Time Quantum 16 milliseconds
-      - Q<sub>2: FCFS
+      - Q<sub>0</sub>: Time Quantum 8 milliseconds
+      - Q<sub>1</sub>: Time Quantum 16 milliseconds
+      - Q<sub>2</sub>: FCFS
     
     - **Scheduling**
       1. New Job이 Queue Q<sub>0로 들어간다.
