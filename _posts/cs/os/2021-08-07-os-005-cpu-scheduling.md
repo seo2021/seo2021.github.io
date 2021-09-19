@@ -281,21 +281,47 @@ tags:
     - **Scheduling**
       1. New Job이 Queue Q<sub>0로 들어간다.
       2. CPU를 잡아서 할당 시간 8 milliseconds 동안 수행된다.
-      3. 8 milliseconds 동안 다 끝내지 못했으면, Queue Q<sub>1으로 내려간다.
-      4. Q<sub>1에 줄서서 기다렸다가 CPU를 잡아서 16 milliseconds 동안 수행된다.
-      5. 16 milliseconds에 끝내지 못한 경우 Queue Q<sub>2로 쫓겨난다.
+      3. 8 milliseconds 동안 다 끝내지 못했으면, Queue Q<sub>1</sub>으로 내려간다.
+      4. Q<sub>1</sub>에 줄서서 기다렸다가 CPU를 잡아서 16 milliseconds 동안 수행된다.
+      5. 16 milliseconds에 끝내지 못한 경우 Queue Q<sub>2</sub>로 쫓겨난다.
   
 - <u>Multiple-Processor Scheduling</u>
   - CPU가 여러 개인 경우 스케줄링은 더욱 복잡해진다.
   
   - **Homogeneous Process**인 경우
-    - Queue에 한 줄로 세워서 각 프로세서가 알아서 꺼내가게 할 수 있다.
+    - Queue에 **한 줄로 세워서** 각 프로세서가 알아서 꺼내가게 할 수 있다.
     - 반드시 특정 프로세서에서 수행되어야 하는 프로세스가 있는 경우에는 문제가 더 복잡해진다.
   
-  - **Load Sharing**
-    - 일부 프로세서에 Job이 몰리지 않도록 부하를 적절히 공유하는 메커니즘이 필요하다.
+  - **Load Sharing** 필요
+    - 일부 프로세서에 Job이 몰리지 않도록 **부하를 적절히 공유**하는 메커니즘이 필요하다.
+    - 별개의 큐를 두는 방법 vs. 공동 큐를 사용하는 방법.
   
+  - **Symmetric Multiprocessing(SMP)**
+    - 각 프로세서가 각자 알아서 스케줄링 결정.
+  - **Asymmetric Multiprocessing**
+    - 하나의 프로세서가 시스템 데이터의 접근과 공유를 책임지고 나머지 프로세서는 거기에 따른다.
+  
+- <u>Real-Time Scheduling</u>
+  - **Hard Real-Time Systems**
+    - Hard Real-Time Task는 정해진 시간 안에 반드시 끝내도록 스케줄링해야 한다.
+    - 일반적으로 Real-Time Task를 미리 스케줄링해서 데드라인이 보장되도록 한다.
 
+  - **Soft Real-Time Computing**
+    - Soft Real-Time Task는 일반 프로세스에 비해 높은 Priority를 갖도록 해야 한다.
+    - 데드라인을 반드시 보장하지는 않음.
+  
+- <u>Thread Scheduling</u>
+  - **Local Scheduling**
+    - User Level Thread의 경우 사용자 수준의 Thread Library에 의해 어떤 Thread를 스케줄할지 결정.
+    - 운영체제는 쓰레드의 존재를 모르므로 운영체제가 하는 것이 아닌, **사용자 프로세스가 직접 스케줄링**을 한다.
+  
+  - **Global Scheduling** 
+    - Kernel Level Thread의 경우 **일반 프로세스와 마찬가지**로 커널의 단기 스케줄러가 어떤 Thread를 스케줄할지 결정.
 
+## Algorithm Evaluation
+- 30:39
+  
+  
+  
 ## 출처
 - [KOCW \| 운영체제(2014-1) \| 이화여대 \| 반효경](http://www.kocw.net/home/search/kemView.do?kemId=1046323)
