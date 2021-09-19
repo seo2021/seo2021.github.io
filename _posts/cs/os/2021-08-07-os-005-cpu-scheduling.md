@@ -196,30 +196,105 @@ tags:
   - 각 프로세스는 동일한 크기의 **할당 시간(Time Quantum)**을 가진다.
     - 일반적으로 10-100 Milliseconds.
   - 할당 시간이 지나면 프로세스는 **선점(Preempted)**당하고, Ready Queue의 제일 뒤에 가서 줄을 선다.
-  - n개의 프로세스가 Ready Queue에 있고 각 할당 시간이 **q Time Unit**인 경우, 각 프로세스는 최대 q Time Unit 단위로 **CPU의 시간을 1/n**을 얻는다.
-    - 어떤 프로세스도 (n-1)q Time Unit 이상 기다리지 않는다.
+  - n개의 프로세스가 Ready Queue에 있고 각 할당 시간이 **Q Time Unit**인 경우, 각 프로세스는 최대 Q Time Unit 단위로 **CPU의 시간을 1/n**을 얻는다.
+    - 어떤 프로세스도 (n-1)Q Time Unit 이상 기다리지 않는다.
       - n-1개의 프로세스가 q만큼의 시간을 쓰고 나면, 적어도 자기 차례가 1번은 돌아온다.
-    - CPU를 짧게 쓰는 프로세스는 1번의 q Time Unit 만에 CPU를 쓰고 나가고, CPU를 오래 쓰는 프로세스는 q Time Unit만큼 CPU를 사용하고 뺏기고, 다시 할당 받는 과정을 반복하므로 응답 시간이 빨라진다.
-    - 대기 시간이 CPU의 사용 시간에 비례한다.
+    - CPU를 짧게 쓰는 프로세스는 1번의 Q Time Unit 만에 CPU를 쓰고 나가고, CPU를 오래 쓰는 프로세스는 Q Time Unit만큼 CPU를 사용하고 뺏기고, 다시 할당 받는 과정을 반복하므로 응답 시간이 빨라진다.
+    - 대기 시간이 CPU의 사용 시간에 비례하므로, 공정한 스케줄링이라 볼 수 있다.
   - Performance
-    - q Large(할당시간이 큰 경우) 👉 FCFS
-    - q Small(할당 시간이 작은 경우) 👉 Context Switch 오버헤드가 커진다.
+    - Q Large(할당시간이 큰 경우) 👉 FCFS
+    - Q Small(할당 시간이 작은 경우) 👉 Context Switch 오버헤드가 커진다.
     
     - 따라서, 적당한 Time Quantum(10-100 Milliseconds)을 주는 것이 바람직하다.
   
   - **Example 1**
- 
-  ![Example of Round Robin](https://user-images.githubusercontent.com/76505625/133916482-49db03eb-5149-4c94-ae8f-5aa72122c68b.png)
   
-    - CPU Burst Time이 Quantum Time보다 짧은 프로세스는 한 번에 CPU를 사용하고 빠져나가고, 나머지 프로세스는 자신 CPU Burst Time만큼 반복적으로 CPU를 사용한다.
-    - 일반적으로 SJF보다 **Average Turnaround Time**이 길지만, **Response Time**은 더 짧다.
-      - 프로세스들의 CPU Burst Time이 동일할 경우 CPU를 조금씩 서비스 받으면서 모든 프로세스가 마지막에 동시에 빠져나가게 되고, 이는 대기 시간을 길어지게 할 수 있다.
-      - 하지만, 일반적으로는 짧은 프로세스와 긴 프로세스가 섞여 있기 때문에 RR이 더 효과를 발휘한다.
+    | Process | Burst Time |
+    |:-------:|:----------:|
+    | P<sub>1 | 24 |
+    | P<sub>2 | 3 |
+    | P<sub>3 | 3 |
   
-  
+    - 스케줄 순서를 간트 차트로 나타내면 다음과 같다.
 
-6. <u>Multilevel Queue</u>
-7. <u>Multilevel Feedback Queue</u>
+      ![Example of Round Robin](https://user-images.githubusercontent.com/76505625/133917999-76b44904-7ce4-4bf6-add7-b6da0d96d64b.PNG)
+  
+      - CPU Burst Time이 Quantum Time보다 짧은 프로세스는 한 번에 CPU를 사용하고 빠져나가고, 나머지 프로세스는 자신 CPU Burst Time만큼 반복적으로 CPU를 사용한다.
+
+      - 일반적으로 SJF보다 **Average Turnaround Time**이 길지만, **Response Time**은 더 짧다.
+        - 프로세스들의 CPU Burst Time이 동일할 경우 CPU를 조금씩 서비스 받으면서 모든 프로세스가 마지막에 동시에 빠져나가게 되고, 이는 대기 시간을 길어지게 할 수 있다.
+        - 하지만, 일반적으로는 짧은 프로세스와 긴 프로세스가 섞여 있기 때문에 RR이 더 효과를 발휘한다.
+  
+- <u>Multilevel Queue</u>
+  ![Multilevel Queue](https://user-images.githubusercontent.com/76505625/133917778-0c5eb289-c21c-47fd-9753-8905c82b586d.PNG)
+    
+  - 프로세스의 종류에 따라 우선순위가 정해지며(어느 큐에 속할지 정해진다), 이는 바꿀 수 없다.
+  - 우선순위가 높은 프로세스가 빨리 CPU를 얻어야 할 때 사용한다.
+    
+  - Ready Queue를 여러 개로 분할.
+    - **Foreground**(Interactive)
+    - **Background**(Batch - No Human Interaction)
+  
+  - 각 큐는 독립적인 스케줄링 알고리즘을 가진다.
+    - **Foreground** 👉 RR
+    - **Background** 👉 FCFS
+    
+    - 각 큐의 특성에 맞는 스케줄링 방법을 채택해야 한다.
+  
+  - 큐에 대한 스케줄링이 필요하다.
+    - 어떤 큐에 스케줄링을 줄 것인지 결정.
+  
+    - **Fixed Priority Scheduling**
+      - Serve **All From Foreground** Then From Background. 👉 우선 순위가 높은 큐가 비어 있을 때만, 낮은 순위의 큐에 CPU 할당.
+      - Possibility of **Starvation**.
+    - **Time Slice**
+      - 각 큐에 CPU Time을 **적절한 비율로 할당**.
+      - ex) 80% to Foreground in RR, 20% to Background in FCFS.
+  
+- <u>Multilevel Feedback Queue</u>
+  ![Multilevel Feedback Queue](https://user-images.githubusercontent.com/76505625/133918698-a704eb51-0cf1-4949-8831-06469202ffcf.PNG)
+  
+  - 프로세스가 **다른 큐로 이동 가능**.
+  - 에이징(Aging)을 이와 같은 방식으로 구현할 수 있다.
+  
+  - **Multilevel-Feedback-Queue Scheduler**를 정의하는 **파라미터**들.
+    - Queue의 수
+    - 각 큐의 Scheduling Algorithm
+    - Process를 상위 큐로 보내는 기준
+    - Process를 하위 큐로 내쫓는 기준
+    - 프로세스가 CPU 서비스를 받으려 할 때 들어갈 큐를 결정하는 기준
+  
+  - 일반적으로 
+    1. 처음 들어오는 프로세스를 우선순위가 가장 높은 큐에 넣고, 우선순위가 높은 큐는 RR에서 Time Quantum을 짧게 준다.
+    2. 아래의 큐로 내려갈 수록 RR의 Time Quantum을 점점 길게 준다.
+    3. 가장 아래의 큐는 FCFS의 방식을 사용한다.
+  
+    - CPU 사용 시간이 긴 프로세스는 아래의 큐로 점점 이동을 하면서 Time Quantum은 더 받게 되지만, 우선순위는 낮아진다.
+    - **CPU 사용 시간이 짧은 프로세스에게 우선순위를 많이 주는 방식**. 
+  
+  - **Example 1**
+    - Three Queues
+      - Q<sub>0: Time Quantum 8 milliseconds
+      - Q<sub>1: Time Quantum 16 milliseconds
+      - Q<sub>2: FCFS
+    
+    - **Scheduling**
+      1. New Job이 Queue Q<sub>0로 들어간다.
+      2. CPU를 잡아서 할당 시간 8 milliseconds 동안 수행된다.
+      3. 8 milliseconds 동안 다 끝내지 못했으면, Queue Q<sub>1으로 내려간다.
+      4. Q<sub>1에 줄서서 기다렸다가 CPU를 잡아서 16 milliseconds 동안 수행된다.
+      5. 16 milliseconds에 끝내지 못한 경우 Queue Q<sub>2로 쫓겨난다.
+  
+- <u>Multiple-Processor Scheduling</u>
+  - CPU가 여러 개인 경우 스케줄링은 더욱 복잡해진다.
+  
+  - **Homogeneous Process**인 경우
+    - Queue에 한 줄로 세워서 각 프로세서가 알아서 꺼내가게 할 수 있다.
+    - 반드시 특정 프로세서에서 수행되어야 하는 프로세스가 있는 경우에는 문제가 더 복잡해진다.
+  
+  - **Load Sharing**
+    - 일부 프로세서에 Job이 몰리지 않도록 부하를 적절히 공유하는 메커니즘이 필요하다.
+  
 
 
 ## 출처
