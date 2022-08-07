@@ -16,6 +16,8 @@ main:
     url: /categories/linux/
   - title: "CS"
     url: /categories/cs/
+  - title: "ENGLISH"
+    url: /categories/english/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
@@ -56,4 +58,9 @@ sidebar-navigation:
     children:
       - title: "OS"
         url: /categories/cs/os/
+  - title: "ENGLISH"
+    url: /categories/english/
+    children:
+      - title: "TOEIC"
+        url: /categories/english/toeic/
  
