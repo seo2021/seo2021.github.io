@@ -21,16 +21,20 @@ tags:
 
 ## 핵심 표현
 ```
-be renowned + for (명사) = (명사)로 저명하다
-```
-- renowned는 famous보다 훨씬 더 높은 유명세를 표현한다. 명사 대신 -ing를 써도 좋다. 
+**be renowned + for (명사) = (명사)로 저명하다**
 
-## 핵심 표현 예문
+renowned는 famous보다 훨씬 더 높은 유명세를 표현한다. 명사 대신 -ing를 써도 좋다. 
+```
+
 1. Steven Spielberg는 저명하다 / 그의 창의력으로.
 - Steven Spielberg is renowned for his creativity.
 2. 그 35세의 사업가는 저명하다 / 엄청 영감을 주는 연설들을 하는 것으로.
 - __The 35-years old businessman is renowned__ / for giving such inspirational speeches.
-3. 
+3. Stephen Hawking은 저명했다 / 그의 과학의 지식으로.
+- __Stephen Hawking was renowned for his scientific knowledge__.
+
+## 핵심 단어
+
 
 ## 핵심 문장 미리 보기
 1. [Edward Scissorhands]는 창의적인 작품으로 저명한 Tim Burton이 만든 판타지 로맨스 영화다.
